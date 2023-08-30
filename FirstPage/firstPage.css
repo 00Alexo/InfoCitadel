@@ -7,7 +7,7 @@ body{
 
 /* Contine informatii + login/register */
 .divPrincipal{
-    margin: 0 auto;
+    margin-left: 37vw;
     margin-top: 15vh;
     border-radius: 0.9rem;
     display: flex;
@@ -21,6 +21,43 @@ body{
         display: flex;
         width: 40%;
         height: calc(100% - 2vh);
-        background-color: green;
+        background-color:darkslategray;
         border-radius: 0.9rem;
     }
+
+    /* Reguster/Login Forms */
+    .signUpItems{
+        margin: 0 auto;
+        width: 50%;
+    }
+    .inputsDiv{
+        margin-top: 35%;
+        margin-left: 5%;
+        justify-content: center;
+        gap: 2vh;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputsDiv div{
+        position: relative;
+    }
+    .inputsDiv input{
+        transition: all 0.5s ease-in-out;
+        outline-style: groove;
+        width: 100%;
+    }
+    .inputsDiv input:focus {
+        outline-color: blue;
+        outline-width: 0.2rem;
+        outline-style: groove;
+    }
+    .signLabel{
+        position: absolute;
+        transition: all 1s ease-in-out;
+    }
+    
+
+
+
+
