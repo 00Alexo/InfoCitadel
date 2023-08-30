@@ -1,0 +1,26 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+
+/* Contine informatii + login/register */
+.divPrincipal{
+    margin: 0 auto;
+    margin-top: 15vh;
+    border-radius: 0.9rem;
+    display: flex;
+    background-color: #313131;
+    width: 60vw;
+    height: 70vh;
+}
+    /* Carusel cu informatii */
+    .carousel{
+        margin: 1vh;
+        display: flex;
+        width: 40%;
+        height: calc(100% - 2vh);
+        background-color: green;
+        border-radius: 0.9rem;
+    }
