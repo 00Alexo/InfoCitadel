@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: white;
+    animation: fadeIn 1s ease-in-out;
 }
 
 
@@ -57,7 +58,16 @@ body{
         transition: all 1s ease-in-out;
     }
 
-    
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
     
 
 
