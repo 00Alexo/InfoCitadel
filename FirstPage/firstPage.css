@@ -87,11 +87,36 @@ body{
         }
     }
 
+    @keyframes slideFromBottom {
+        0%{
+            transform: translateY(200%);
+        }
+        50%{
+            transform: translateY(200%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
 /* Added a font */
 @font-face {
     font-family: "SuperCorn";
     src: url(/Fonts/Super\ Corn.ttf);
 }
+@font-face {
+    font-family: "Montserrat ExtraBold";
+    src: url(/Fonts/Montserrat-ExtraBold.otf);
+}
+@font-face {
+    font-family: "RobotoThin";
+    src: url(/Fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/Fonts/Poppins-Thin.otf);
+}
+
 
 /* Carousel buttons - div */
 .carouselButtons{
@@ -133,6 +158,7 @@ body{
     width: 100%;
     height: 10vh;
     margin-bottom: auto;
+    animation: slideFromBottom 1s ease-in-out;
 }
 /* Fotografie profil */
     .personDataPhoto{
@@ -156,11 +182,12 @@ body{
 
     .personDataText span:nth-child(1){
         font-size: 1.2rem;
-        font-family: "SuperCorn", sans-serif;
+        font-family: "Montserrat";
     }
 
     .personDataText span:nth-child(2){
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        font-family: 'Open Sans', sans-serif;
     }
 
 
