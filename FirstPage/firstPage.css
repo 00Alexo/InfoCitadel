@@ -26,17 +26,17 @@ body{
         border-radius: 0.9rem;
     }
 
-    /* Reguster/Login Forms */
+    /* Register/Login Forms */
     .signUpItems{
         margin: 0 auto;
-        width: 50%;
+        width: 60%;
     }
     .inputsDiv{
         margin-top: 35%;
-        margin-left: 5%;
+        margin-left: 10%;
         justify-content: center;
         gap: 2vh;
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-direction: column;
     }
@@ -53,12 +53,21 @@ body{
         outline-width: 0.2rem;
         outline-style: groove;
     }
-    .signLabel{
+    .inputSVGS{
+        margin-top: 12.4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        justify-content: space-between;
         position: absolute;
-        transition: all 1s ease-in-out;
+        height: 26.4%;
+        width: 3.5%;
     }
 
-    @keyframes fadeIn {
+
+    @keyframes fadeIn { /* Animatie ptr intrarea elementelor in body*/
         from{
             opacity: 0;
             transform: translateX(-200%);
@@ -68,7 +77,15 @@ body{
             transform: translateX(0%);
         }
     }
+
+/* Added a font */
+@font-face {
+    font-family: "SuperCorn";
+    src: url(/Fonts/Super\ Corn.ttf);
+}
+
     
+
 
 
 
