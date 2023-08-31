@@ -109,7 +109,7 @@ body{
 .carouselButtons button{
     width: 1rem;
     height: 1rem;
-    background-color: rgb(40, 114, 114);
+    background-color: rgb(133, 179, 179);
     transform: scale(0.5);
     border-radius: 50%;
     border: none;
