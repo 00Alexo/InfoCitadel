@@ -19,7 +19,6 @@ body{
     /* Carusel cu informatii */
     .carousel{
         margin: 1vh;
-        display: flex;
         width: 40%;
         height: calc(100% - 2vh);
         background-color:darkslategray;
@@ -46,13 +45,13 @@ body{
     }
     .inputsDiv input{
         transition: all 0.5s ease-in-out;
-        outline-style: groove;
         width: 100%;
     }
     .inputsDiv input:focus {
-        outline-color: blue;
-        outline-width: 0.2rem;
-        outline-style: groove;
+        outline-color: darkslategrey  !important;
+        outline-style: solid;
+        outline-width: 0.3rem;
+        
     }
     .inputSVGS{
         animation: fadeIn 1.7s ease-in-out;
@@ -97,7 +96,7 @@ body{
 /* Carousel buttons - div */
 .carouselButtons{
     margin: 0 auto;
-    margin-top: 60vh;
+    margin-top: 0.3vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +113,55 @@ body{
     border-radius: 50%;
     border: none;
 }
+
+/* Comentarii */
+
+.comments{
+    border-radius: 0.9rem;
+    margin: 0 auto;
+    margin-top: 40vh;
+    background-color:#313131;
+    width: 80%;
+    height: 20vh;
+}
+/* fotografie + nume + ocupatie*/
+.personData{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10vh;
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: auto;
+}
+/* Fotografie profil */
+    .personDataPhoto{
+        margin-top: 0.8rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        padding: 0.5rem;
+    }
+
+    .personDataPhoto img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+/* Nume + ocupatie */
+    .personDataText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .personDataText span:nth-child(1){
+        font-size: 1.2rem;
+        font-family: "SuperCorn", sans-serif;
+    }
+
+    .personDataText span:nth-child(2){
+        font-size: 0.8rem;
+    }
 
 
 
