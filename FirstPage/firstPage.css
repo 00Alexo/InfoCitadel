@@ -98,6 +98,28 @@ body{
             transform: translateY(0%);
         }
     }
+    @keyframes slideFromTop {
+        0%{
+            transform: translateY(-1000%);
+        }
+        50%{
+            transform: translateY(-1000%);
+        }
+        100%{
+            transform:translateY(0%);
+        }
+    }
+    @keyframes slideFromRight {
+        0%{
+            transform: translateX(1000%);
+        }
+        50%{
+            transform: translateX(1000%);
+        }
+        100%{
+            transform:translateX(0%);
+        }
+    }
 
 /* Added a font */
 @font-face {
@@ -116,7 +138,10 @@ body{
     font-family: "Poppins";
     src: url(/Fonts/Poppins-Thin.otf);
 }
-
+@font-face {
+    font-family: "StormGust";
+    src: url(/Fonts/Storm\ Gust.woff);
+}
 
 /* Carousel buttons - div */
 .carouselButtons{
@@ -209,6 +234,62 @@ body{
         font-family: 'Open Sans', sans-serif;
     }
 
+/* numele care ii deasupra comentariilor */
+.siteNameText{
+    position: absolute;
+}
+.siteNameText p{
+    font-family: "StormGust";
+    font-size: 1rem;
+    padding: 1rem;
+    padding-left: 2.25vw;
+    color: rgb(133, 179, 179);
+}
+
+/* motive sa iti incepi aventura cu noi*/
+
+.motive{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 85%;
+    height: 20vh;
+    position: absolute;
+    margin-top: 12vh;
+    margin-left: 2.25vw;
+}
+
+    .moto{
+        height: 50%;
+        width: 100%;
+    }
+        .moto p{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2rem;
+            color: white;
+        }
+    .motoContinuare{
+        height: 50%;
+        width: 100%;
+    }
+        .motoContinuare p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: white;
+        }
+            .programmingLanguagesIcons{
+                position: absolute;
+                margin-left: -0.5vw;
+            }
+            .jsIcon, .htmlIcon, .cssIcon{
+                animation: slideFromTop 1s ease-in-out;
+            }
+            .cppIcon, .csIcon{
+                animation: slideFromBottom 1.3s ease-in-out;
+            }
+            .javaIcon, .pythonIcon{
+                animation: slideFromRight 1.5s ease-in-out;
+            }
 
 
     
