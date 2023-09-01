@@ -96,6 +96,7 @@ body{
         height: 5vh;
         background-color: darkslategrey;
         border-color: darkslategrey;
+        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit button:hover{
         background-color: rgb(31, 48, 48);
