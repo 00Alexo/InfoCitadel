@@ -1,5 +1,21 @@
-const changeColorButtons = document.querySelectorAll('.changeColorButton');
+//Face parte din aia cu culoarea butoanelor
+const changeColorButtons = document.querySelectorAll('.changeColorButton'); 
+//Astea s pentru animatia cu textul din comentarii
+const stringAnimatedText = "A fost odata ca-n povesti, a fost ca niciodata, un site prea frumos de mi-a rupt inimioara toata! Multumesc si te iubesc..."
+let charAnimatedText = stringAnimatedText.split('');
+const mesaj = document.getElementById("mesaj");
+let i=0;
 
+const animatedText= () => {
+if (i < charAnimatedText.length){
+    mesaj.innerHTML += charAnimatedText[i];
+    i++;
+    console.log(charAnimatedText[i]);
+    setTimeout(animatedText, 10);
+}};
+setTimeout(() => {
+    animatedText();
+}, 1500);
 
 changeColorButtons[0].style.backgroundColor = '#313131'; // Default color
 

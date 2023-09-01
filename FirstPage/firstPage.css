@@ -190,6 +190,25 @@ body{
         font-family: 'Open Sans', sans-serif;
     }
 
+/* comentariul lu yang */
+
+    .comentariu{
+        display: flex;
+        margin-left: 1vw;
+        position: absolute;
+        width: 70%;
+        height: 12vh;
+        align-items: center;
+    }
+    .comentariu p{
+        color: white;
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 1rem;
+        font-size: 0.9rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
 
 
     
