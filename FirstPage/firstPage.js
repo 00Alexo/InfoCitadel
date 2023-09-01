@@ -4,13 +4,13 @@ const changeColorButtons = document.querySelectorAll('.changeColorButton');
 const stringAnimatedText = "A fost odata ca-n povesti, a fost ca niciodata, un site prea frumos de mi-a rupt inimioara toata! Multumesc si te iubesc..."
 let charAnimatedText = stringAnimatedText.split('');
 const mesaj = document.getElementById("mesaj");
-let i=0;
+let mesaji=0;
 
 const animatedText= () => {
-if (i < charAnimatedText.length){
-    mesaj.innerHTML += charAnimatedText[i];
-    i++;
-    console.log(charAnimatedText[i]);
+if (mesaji < charAnimatedText.length){
+    mesaj.innerHTML += charAnimatedText[mesaji];
+    mesaji++;
+    console.log(charAnimatedText[mesaji]);
     setTimeout(animatedText, 10);
 }};
 setTimeout(() => {
