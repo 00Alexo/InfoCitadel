@@ -155,12 +155,15 @@ body{
     @keyframes slideFromRight {
         0%{
             transform: translateX(1000%);
+            opacity: 0;
         }
         50%{
             transform: translateX(1000%);
+            opacity: 0;
         }
         100%{
             transform:translateX(0%);
+            opacity: 1;
         }
     }
 
