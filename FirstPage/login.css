@@ -24,7 +24,7 @@ body{
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        width: 10vw;
+        width: 15vw;
         height: 10vh;
     }
         .textSignInText{
@@ -86,8 +86,8 @@ body{
     .divForSubmit button{
         animation: slideFromBottom 1s ease-in-out;
         margin-top: 1vh;
-        width: 5vw;
-        height: 5vh;
+        width: 6rem;
+        height: 3rem;
         background-color: darkslategrey;
         border-color: darkslategrey;
         font-family: "Montserrat ExtraBold", sans-serif;
@@ -286,7 +286,7 @@ body{
     .comentariu{
         display: flex;
         margin-left: 1vw;
-        width: 19vw;
+        width: 22vw;
         height: 12vh;
         align-items: center;
     }
@@ -372,7 +372,7 @@ body{
                 animation: slideFromBottom 1s ease-in-out;
             }
 
-            @media (max-width: 1650px) {
+            @media (min-width:1320px) and (max-width: 1650px) {
                 .personData{
                     margin-top: -2vh;
                 }
@@ -392,6 +392,59 @@ body{
                 }
                 .motoContinuare p{
                     font-size: 0.8rem;
+                }
+                .divForSubmit{
+                    margin-top: 0vh;
+                }
+                .divForSubmit button{
+                    font-size: 0.8rem;
+                    width: 5rem;
+                    height: 3rem;
+                }
+                .divForSubmit span{
+                    font-size: 0.8rem;
+                }
+                .programmingLanguagesIcons svg{
+                    width: 40px;
+                    height: 40px;
+                }
+                .inputSVGS svg{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            @media (min-width:768px) and (max-width: 1319px) {
+                .personData{
+                    margin-top: -2vh;
+                }
+                .motoContinuare{
+                    margin-top: 1vh;
+                }
+            
+                .personDataText span:nth-child(1){
+                    font-size: 1.1rem;
+                }
+                .personDataText span:nth-child(2){
+                    font-size: 0.7rem;
+                }
+                .personDataPhoto img{
+                    width: 3.7rem;
+                    height: 3.7rem;
+                }
+                .motoContinuare p{
+                    font-size: 0.8rem;
+                }
+                .divForSubmit{
+                    margin-top: 0vh;
+                }
+                .programmingLanguagesIcons svg{
+                    width: 35px;
+                    height: 35px;
+                }
+                .inputSVGS svg{
+                    width: 40px;
+                    height: 40px;
                 }
             }
     
