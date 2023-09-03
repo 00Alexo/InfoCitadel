@@ -411,10 +411,11 @@ body{
                 .inputSVGS svg{
                     width: 40px;
                     height: 40px;
+                    margin-left: -0.3rem;
                 }
             }
 
-            @media (min-width:768px) and (max-width: 1319px) {
+            @media (min-width:1200px) and (max-width: 1319px) {
                 .personData{
                     margin-top: -2vh;
                 }
@@ -438,13 +439,35 @@ body{
                 .divForSubmit{
                     margin-top: 0vh;
                 }
+                .divForSubmit button{
+                    font-size: 0.8rem;
+                    width: 5rem;
+                    height: 3rem;
+                }
+                .divForSubmit span{
+                    font-size: 0.8rem;
+                }
                 .programmingLanguagesIcons svg{
                     width: 35px;
                     height: 35px;
                 }
                 .inputSVGS svg{
-                    width: 40px;
-                    height: 40px;
+                    margin-left: -0.5rem;
+                    width: 35px;
+                    height: 35px;
+                }
+                .motoContinuare p{
+                    margin-top: -0.7rem;
+                    font-size: 0.735rem;
+                }
+                .moto p{
+                    font-size: 1.7rem;
+                }
+                #mesaj{
+                    font-size: 0.8rem;
+                }
+                .textSignInText{
+                    font-size: 2rem;
                 }
             }
     
