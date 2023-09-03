@@ -8,23 +8,16 @@ body{
 
 /* Contine informatii + login/register */
 .divPrincipal{
-    margin-left: 37vw;
+    margin-left: 33vw;
     margin-top: 15vh;
     border-radius: 0.9rem;
     display: flex;
     background-color: #313131;
-    width: 60vw;
-    height: 70vh;
+    width: 66vw;
+    height: 75vh;
 }
     /* Carusel cu informatii */
-    .carousel{
-        margin: 1vh;
-        margin-right: 0vh !important;
-        width: 24vw;
-        height: calc(100% - 2vh);
-        background-color:darkslategray;
-        border-radius: 0.9rem;
-    }
+
 
     .textSignIn{
         display: flex;
@@ -43,8 +36,9 @@ body{
     /* Register/Login Forms */
     .signUpItems{
         margin: 0 auto;
-        width: 35.5vw;
+        width: 36.5vw;
         margin-top: 5vh;
+        margin-left: 14px;
     }
     .inputsDiv{
         animation: fadeIn 2s ease-in-out;
@@ -167,6 +161,20 @@ body{
             opacity: 1;
         }
     }
+    @keyframes slideFromLeft {
+        0%{
+            transform: translateX(-1000%);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(-1000%);
+            opacity: 0;
+        }
+        100%{
+            transform:translateX(0%);                
+            opacity: 1;
+            }
+    }
 
 /* Added a font */
 @font-face {
@@ -190,6 +198,16 @@ body{
     src: url(/Fonts/Storm\ Gust.woff);
 }
 
+/* carusel cu informatii */
+.carousel{
+    margin: 1vh;
+    margin-right: 0vh !important;
+    width: 29vw;
+    height: calc(100% - 2vh);
+    background-color:darkslategray;
+    border-radius: 0.9rem;
+}
+
 /* Carousel buttons - div */
 .carouselButtons{
     margin: 0 auto;
@@ -198,7 +216,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 3vh;
-    width: 50%;
+    width: 10vw;
     border-radius: 1rem;
 }
 
@@ -214,30 +232,31 @@ body{
 /* Comentarii */
 
 .comments{
+    display: flex;
+    flex-direction: column;
     border-radius: 0.9rem;
     margin: 0 auto;
-    margin-top: 40vh;
+    margin-top: vh;
     background-color:#313131;
-    width: 80%;
+    width: 25vw;
     height: 20vh;
 }
+
 /* fotografie + nume + ocupatie*/
 .personData{
     display: flex;
     flex-direction: row;
-    margin-top: 10vh;
-    position: absolute;
-    width: 100%;
-    height: 10vh;
-    margin-bottom: auto;
+    width: 20vw;
+    height: 10vh;   
     animation: slideFromBottom 1s ease-in-out;
 }
 /* Fotografie profil */
     .personDataPhoto{
-        margin-top: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 5.5rem;
         height: 5.5rem;
-        padding: 0.5rem;
     }
 
     .personDataPhoto img{
@@ -267,28 +286,25 @@ body{
     .comentariu{
         display: flex;
         margin-left: 1vw;
-        position: absolute;
-        width: 70%;
+        width: 19vw;
         height: 12vh;
         align-items: center;
     }
     .comentariu p{
         color: white;
-        padding-top: 1rem;
+        padding-top: 1vh;
         padding-left: 0rem;
-        padding-right: 1rem;
+        padding-right: 1vw;
         font-size: 0.9rem;
         font-family: 'Open Sans', sans-serif;
     }
 
 /* numele care ii deasupra comentariilor */
-.siteNameText{
-    position: absolute;
-}
+
 .siteNameText p{
     font-family: "StormGust";
     font-size: 1rem;
-    padding: 1rem;
+    padding-top: 2vh;
     padding-left: 2.25vw;
     color: rgb(133, 179, 179);
 }
@@ -296,19 +312,18 @@ body{
 /* motive sa iti incepi aventura cu noi*/
 
 .motive{
+    margin-top: 5vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 85%;
+    width: 22vw;
     height: 20vh;
-    position: absolute;
-    margin-top: 12vh;
     margin-left: 2.25vw;
 }
 
     .moto{
-        height: 50%;
-        width: 100%;
+        height: 10vh;
+        width: 22vw;
     }
         .moto p{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -316,8 +331,8 @@ body{
             color: white;
         }
     .motoContinuare{
-        height: 50%;
-        width: 100%;
+        height: 10vh;
+        width: 22vw;
     }
         .motoContinuare p{
             font-family: 'Open Sans', sans-serif;
@@ -325,20 +340,60 @@ body{
             color: white;
         }
             .programmingLanguagesIcons{
-                position: absolute;
-                margin-left: -0.5vw;
+                margin-left: 2vw;
+                width: 25vw;
+                height: 15vh;
+            }
+            .webProgrammingLanguagesIcons{
+                display: flex;
+                justify-content: space-between;
+            }
+            .otherProgrammingLanguagesIcons{
+                display: flex;
+                justify-content: space-between;
             }
             .jsIcon, .htmlIcon, .cssIcon{
+                animation: slideFromLeft 1.2s ease-in-out;
+            }
+            .cppIcon, .csIcon, .cIcon{
+                animation: slideFromLeft 1.4s ease-in-out;
+            }
+
+            .javaIcon, .pythonIcon, .swiftIcon{
+                animation: slideFromRight 1.2s ease-in-out;
+            }
+            .reactIcon, .vueIcon, .bootstrapIcon{
+                animation: slideFromRight 1.4s ease-in-out;
+            }
+            .mongoDBIcon{
                 animation: slideFromTop 1s ease-in-out;
             }
-            .cppIcon, .csIcon{
-                animation: slideFromBottom 1.3s ease-in-out;
-            }
-            .javaIcon, .pythonIcon{
-                animation: slideFromRight 1.5s ease-in-out;
+            .mySqlIcon{
+                animation: slideFromBottom 1s ease-in-out;
             }
 
-
+            @media (max-width: 1650px) {
+                .personData{
+                    margin-top: -2vh;
+                }
+                .motoContinuare{
+                    margin-top: 1vh;
+                }
+            
+                .personDataText span:nth-child(1){
+                    font-size: 1.1rem;
+                }
+                .personDataText span:nth-child(2){
+                    font-size: 0.7rem;
+                }
+                .personDataPhoto img{
+                    width: 3.7rem;
+                    height: 3.7rem;
+                }
+                .motoContinuare p{
+                    font-size: 0.8rem;
+                }
+            }
     
 
 
