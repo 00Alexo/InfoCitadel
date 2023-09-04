@@ -6,6 +6,7 @@
     <title>InfoPalace</title>
     <link rel="stylesheet" href="FirstPage/login.css">
     <link rel="stylesheet" href="FirstPage/night1337blue.css">
+    <link rel="stylesheet" href="FirstPage/navbar.css">
     <link rel="stylesheet" href="Fonts/Super Corn.ttf">
     <link rel="stylesheet" href="Fonts/Montserrat-ExtraBold.otf">
     <link rel="stylesheet" href="Fonts/Roboto-Thin.ttf">
@@ -26,7 +27,29 @@
         let isNight1337BlueThemeActive = false;
     </script>
 
-    <button class="changeThemeButton" style="width: 50px; height: 50px;"></button>
+    <div class = "liniutaNavbar"></div>
+    <div class = "MyNavbar">
+        <div class = "dropdownHead">
+            <a href="index.html" style="text-decoration: none;"> InfoPalace</a>
+        </div>
+        <div class = "otherNavbarElements">
+            <div class = "dropdownHead">
+                <a href="#" style="text-decoration: none;"> Probleme</a>
+            </div>
+            <div class = "dropdownHead">
+                <a href="#" style="text-decoration: none; padding: 0.5rem;"> Themes</a>
+                <div class = "dropdownContent">
+                    <ul>
+                        <li> Default</li>
+                        <li> Light Theme</li>
+                        <li> Night1337</li>
+                        <li class="changeThemeButtonNight1337Blue"> Night1337Blue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class = "divPrincipal">
         <div class="carousel">
             <div class = "siteNameText">

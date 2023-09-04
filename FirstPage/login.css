@@ -10,7 +10,7 @@ body{
 .divPrincipal{
     margin: 0 auto;
     /*margin-top: calc(100vh - 43.75rem);*/
-    margin-top: 15vh;
+    margin-top: 10vh;
     border-radius: 0.9rem;
     display: flex;
     background-color: #313131;

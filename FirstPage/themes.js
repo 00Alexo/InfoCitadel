@@ -12,7 +12,7 @@ const siteNameText = document.querySelector('.siteNameText');
 const moto = document.querySelector('.motop');
 const motoContinuare = document.querySelector('.motoContinuare');
 const changeBootstrapButton = document.querySelector('.btn');
-const changeThemeButton = document.querySelector('.changeThemeButton');
+const changeThemeButtonNight1337Blue = document.querySelector('.changeThemeButtonNight1337Blue');
 
 function toggleNight1337BlueTheme() {
     isNight1337BlueThemeActive = !isNight1337BlueThemeActive;
@@ -33,5 +33,5 @@ function toggleNight1337BlueTheme() {
     changeBootstrapButton.classList.toggle('btn-primary');
 }
 
-changeThemeButton.addEventListener('click', toggleNight1337BlueTheme);
+changeThemeButtonNight1337Blue.addEventListener('click', toggleNight1337BlueTheme);
 

@@ -1,0 +1,80 @@
+@keyframes slidein {
+    from{
+        opacity:0;
+        margin-bottom: 100px;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+@keyframes slideout {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+.MyNavbar{
+    display: flex;
+    background-color: darkslategrey;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.liniutaNavbar{
+    height: 0.5rem;
+    background-color: #313131;
+}
+.otherNavbarElements{
+    display: flex;
+    width: 60rem;
+    align-items: center;
+    height: 100%;
+}
+.dropdownHead a{
+    color: white;
+    font-size: 2rem;
+}
+.dropdownHead a:hover{
+    color: rgb(133, 179, 179);
+}
+.dropdownHead{
+    padding-left: 1rem;
+    position: relative;
+    display: inline-block;
+}
+.dropdownContent{
+    display: block;
+    position: absolute;
+    background-color: #313131;
+    z-index: 1;
+    min-width: 120px;
+    color: white;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    animation: slideout 1s;
+}
+.dropdownHead:hover .dropdownContent{
+    display: block;
+    visibility: visible;
+    animation: slidein 1.5s; 
+}
+.dropdownContent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownContent li {
+    font-family: andale mono, monospace;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid darkslategray;
+}
+
+.dropdownContent li:hover{
+    color: rgb(133, 179, 179);
+}
