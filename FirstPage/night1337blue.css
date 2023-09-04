@@ -1,0 +1,137 @@
+.Night1337BlueBody{
+    background-color: black !important;
+}
+
+
+/* Contine informatii + login/register */
+.Night1337BlueDivPrincipal{
+    background-color: #5548C5;
+}
+    /* Carusel cu informatii */
+
+        .Night1337BluetextSignInText{
+            color: white;
+            font-size: 2.5;
+            font-family: Corrupted, sans-serif;
+        }
+
+    /* Register/Login Forms */
+
+    .Night1337BlueinputsDiv div{
+        font-family: Jogan;
+    }
+
+    .Night1337BlueinputsDiv input:focus {
+        outline-color: whitesmoke !important;
+    }
+
+
+    .Night1337BluedivForSubmit button{
+        background-color: #8C92FF;
+        border-color: whitesmoke;
+    }
+    .Night1337BluedivForSubmit button:hover{
+        background-color: rgb(112, 210, 255);
+        border-color: gray;
+    }
+        .Night1337BluedivForSubmit span{
+            color: white;
+            font-family: Jogan;
+        }
+            .Night1337BluedivForSubmit span a{
+                color: rgb(112, 210, 255);
+            }
+
+
+/* Added a font */
+@font-face {
+    font-family: "SuperCorn";
+    src: url(/Fonts/Super\ Corn.Night1337Bluettf);
+}
+@font-face {
+    font-family: "Montserrat ExtraBold";
+    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf);
+}
+@font-face {
+    font-family: "RobotoThin";
+    src: url(/Fonts/Roboto-Thin.Night1337Bluettf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/Fonts/Poppins-Thin.Night1337Blueotf);
+}
+@font-face {
+    font-family: "StormGust";
+    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff);
+}
+
+@font-face {
+    font-family: "Jogan";
+    src: url(/Fonts/JoganSoft-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Corrupted";
+    src: url(/Fonts/Corrupted\ File.ttf)
+}
+
+/* carusel cu informatii */
+.Night1337Bluecarousel{
+    background-color: #8C92FF;
+}
+
+/* Carousel buttons - div */
+
+
+.Night1337BluecarouselButtons button{
+    background-color: white;
+}
+
+/* Comentarii */
+
+.Night1337Bluecomments{
+    background-color: white;
+}
+
+
+/* Nume + ocupatie */
+
+    .Night1337BluepersonDataText span:nth-child(1){
+        font-size: 1.2rem;
+        font-family: "Montserrat";
+        color: black;
+    }
+
+    .Night1337BluepersonDataText span:nth-child(2){
+        font-size: 0.75rem;
+        font-family: 'Open Sans', sans-serif;
+        color: black;
+    }
+
+/* comentariul lu yang */
+
+    .Night1337Bluecomentariu p{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+/* numele care ii deasupra comentariilor */
+
+.Night1337BluesiteNameText p{
+    font-family: "StormGust";
+    color: white;
+}
+
+/* motive sa iti incepi aventura cu noi*/
+
+        .Night1337Bluemotop{
+            font-size: 2rem;
+            color: white;
+        }
+        .Night1337BluemotoContinuare{
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+
+

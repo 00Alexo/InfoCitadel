@@ -180,23 +180,33 @@ body{
 /* Added a font */
 @font-face {
     font-family: "SuperCorn";
-    src: url(/Fonts/Super\ Corn.ttf);
+    src: url(/Fonts/Super\ Corn.Night1337Bluettf);
 }
 @font-face {
     font-family: "Montserrat ExtraBold";
-    src: url(/Fonts/Montserrat-ExtraBold.otf);
+    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf);
 }
 @font-face {
     font-family: "RobotoThin";
-    src: url(/Fonts/Roboto-Thin.ttf);
+    src: url(/Fonts/Roboto-Thin.Night1337Bluettf);
 }
 @font-face {
     font-family: "Poppins";
-    src: url(/Fonts/Poppins-Thin.otf);
+    src: url(/Fonts/Poppins-Thin.Night1337Blueotf);
 }
 @font-face {
     font-family: "StormGust";
-    src: url(/Fonts/Storm\ Gust.woff);
+    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff);
+}
+
+@font-face {
+    font-family: "Jogan";
+    src: url(/Fonts/JoganSoft-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Corrupted";
+    src: url(/Fonts/Corrupted\ File.ttf)
 }
 
 /* carusel cu informatii */
@@ -274,11 +284,13 @@ body{
     .personDataText span:nth-child(1){
         font-size: 1.2rem;
         font-family: "Montserrat";
+        color:white;
     }
 
     .personDataText span:nth-child(2){
         font-size: 0.75rem;
         font-family: 'Open Sans', sans-serif;
+        color:white;
     }
 
 /* comentariul lu yang */
@@ -640,7 +652,9 @@ body{
     }
 }
 @media  (max-width: 480px){
-
+        .divPrincipal{
+        visibility: hidden;
+    }
 }
 
 
