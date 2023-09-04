@@ -1,5 +1,5 @@
 //Astea s pentru animatia cu textul din comentarii
-const stringAnimatedText = "A fost odata ca-n povesti, a fost ca niciodata, un site prea frumos de mi-a rupt inimioara toata! Multumesc si te iubesc..."
+const stringAnimatedText = "Site-ul acestui prieten este o sursă minunată. Plin de informații valoroase și ușor de navigat, te va captiva cu siguranță.";
 let charAnimatedText = stringAnimatedText.split('');
 const mesaj = document.getElementById("mesaj");
 let mesaji=0;

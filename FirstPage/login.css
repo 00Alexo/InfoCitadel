@@ -8,9 +8,9 @@ body{
 
 /* Contine informatii + login/register */
 .divPrincipal{
-    margin-left: auto;
-    margin-top: 10vh;
-    margin-right: 2.5vw;
+    margin: 0 auto;
+    /*margin-top: calc(100vh - 43.75rem);*/
+    margin-top: 15vh;
     border-radius: 0.9rem;
     display: flex;
     background-color: #313131;
@@ -37,7 +37,7 @@ body{
     /* Register/Login Forms */
     .signUpItems{
         margin: 0 auto;
-        width: 43.8rem;
+        width: 55%;
         margin-top: 3.125rem;
         margin-left: 0.9rem;
     }
@@ -203,7 +203,7 @@ body{
 .carousel{
     margin: 0.625rem;
     margin-right: 0vh !important;
-    width: 34.8rem;
+    width: 45%;
     height: calc(100% - 1.25rem);
     background-color:darkslategray;
     border-radius: 0.9rem;
@@ -237,7 +237,6 @@ body{
     flex-direction: column;
     border-radius: 0.9rem;
     margin: 0 auto;
-    margin-top: vh;
     background-color:#313131;
     width: 27.4rem;
     height: 11rem;
@@ -310,11 +309,7 @@ body{
     color: rgb(133, 179, 179);
 }
 
-/* motive sa iti incepi aventura cu noi*/
-:root{
-    --min-font-size-moto: 2rem;
-    --max-font-size-moto:2rem;
-}
+
 .motive{
     margin-top: 3.125rem;
     display: flex;
@@ -368,109 +363,285 @@ body{
                 animation: slideFromBottom 1s ease-in-out;
             }
 
+@media (min-width: 1281px) and (max-width: 1450px){
+    .divPrincipal{
+        margin: 0 auto;
+        /*margin-top: calc(100vh - 43.75rem);*/
+        margin-top: 15vh;
+        border-radius: 0.9rem;
+        height: 40rem;
+        width: 70rem;
+    }
+    .signUpItems{
+        width: 55%;
+        margin-top: 3.125rem;
+        margin-left: 0.9rem;
+    }
+    .inputsDiv{
+        margin-top: calc(13.75rem - 9.25rem);
+        margin-left: 10%;  
+        gap: 1.25rem;
+        height: 16.875rem;
+        width: 29rem;
+    }
+    .inputSVGS{
+        margin-top: calc(11rem);
+        height: 15rem;
+        width: 3rem;
+    }
+    .divForSubmit{
+        height: 9.375rem;
+        width: 29rem;
+        margin-left: 10%;
+        margin-top: -0.925rem;
+    }
+    .divForSubmit button{
+        margin-top: 0.625rem;
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+        .divForSubmit span{
+            font-size: 0.8rem;
+        }
 
-            @media (min-width:1320px) and (max-width: 1650px) {
-
-                .motoContinuare{
-                    margin-top: -1.25rem;
-                }
-            
-                .personDataText span:nth-child(1){
-                    font-size: 1.1rem;
-                }
-                .personDataText span:nth-child(2){
-                    font-size: 0.7rem;
-                }
-                .personDataPhoto img{
-                    width: 3.7rem;
-                    height: 3.7rem;
-                }
-                .motoContinuare{
-                    font-size: 0.8rem;
-                }
-                .divForSubmit{
-                    margin-top: 0rem;
-                }
-                .divForSubmit button{
-                    font-size: 0.8rem;
-                    width: 5rem;
-                    height: 3rem;
-                }
-                .divForSubmit span{
-                    font-size: 0.8rem;
+    .carousel{
+        margin: 0.5rem;
+        width: 45%;
+        height: calc(100% - 0.9rem);
+        border-radius: 0.9rem;
+    }
+    .motive{
+        margin-top: 2rem;
+        width: 26.4rem;
+        height: 12rem;
+        margin-left: 2.7rem;
+    }
+            .motop{
+                font-size: 2rem;
+            }
+            .motoContinuare {
+                margin-top: -2vh;
+                font-size: 1rem;
+            }
+                .programmingLanguagesIcons{
+                    margin-top: 0.425rem;
+                    margin-left: 2.5rem;
+                    width: 25.4rem;
+                    height: 8.375rem;
                 }
                 .programmingLanguagesIcons svg{
-                    width: 40px;
-                    height: 40px;
+                    width: 45px;
+                    height: 45px;
                 }
-                .inputSVGS svg{
-                    width: 40px;
-                    height: 40px;
-                    margin-left: -0.3rem;
+                .comments{
+                    border-radius: 0.9rem;
+                    margin: 0 auto;
+                    width: 25rem;
+                    height: 10rem;
                 }
-            }
-
-            @media (min-width:1200px) and (max-width: 1319px) {
                 .personData{
-                    margin-top: -1.25rem;
+                    width: 24rem;
+                    height: 6.25rem;   
                 }
-                .motoContinuare{
-                    margin-top: -1.25rem;   
+                /* Fotografie profil */
+                    .personDataPhoto{
+                        margin-left: 0.35rem;
+                        width: 5rem;
+                        height: 4rem;
+                    }
+                
+                    .personDataPhoto img{
+                        width: 3.7rem;
+                        height: 3.7rem;
+                    }
+                
+                
+                    .personDataText span:nth-child(1){
+                        font-size: 1.2rem;
+                    }
+                
+                    .personDataText span:nth-child(2){
+                        font-size: 0.75rem;
+                    }
+                
+                /* comentariul lu yang */
+                
+                    .comentariu{
+                        margin-left: 1.2rem;
+                        width: 22.4rem;
+                        height: 7.5rem;
+                    }
+                    .comentariu p{
+                        padding-top: 0.325rem;
+                        padding-left: 0rem;
+                        padding-right: 1.2rem;
+                        font-size: 0.9rem;
+                    }
+                
+                /* numele care ii deasupra comentariilor */
+                
+                .siteNameText p{
+                    font-size: 1rem;
+                    padding-top: 1.25rem;
+                    padding-left: 2.7rem;
                 }
-            
-                .personDataText span:nth-child(1){
-                    font-size: 1.1rem;
-                }
-                .personDataText span:nth-child(2){
-                    font-size: 0.7rem;
-                }
-                .personDataPhoto img{
-                    width: 3.7rem;
-                    height: 3.7rem;
-                }
-                .motoContinuare{
-                    font-size: 0.8rem;
-                }
-                .divForSubmit{
-                    margin-top: 0rem;
-                }
-                .divForSubmit button{
-                    font-size: 0.8rem;
-                    width: 5rem;
-                    height: 3rem;
-                }
-                .divForSubmit span{
-                    font-size: 0.8rem;
+}
+ @media (min-width: 1025px) and (max-width: 1280px){
+    .divPrincipal{
+        margin: 0 auto;
+        /*margin-top: calc(100vh - 43.75rem);*/
+        margin-top: 15vh;
+        border-radius: 0.9rem;
+        height: 35rem;
+        width: 60rem;
+    }
+    .signUpItems{
+        width: 55%;
+        margin-top: 3.125rem;
+        margin-left: 0.9rem;
+    }
+    .inputsDiv{
+        margin-top: calc(13.75rem - 9.25rem);
+        margin-left: 10%;  
+        gap: 1.25rem;
+        height: 16.875rem;
+        width: 25rem;
+    }
+    .inputsDiv input{
+        height: 3rem !important;
+    }
+    .inputsDiv label{
+        margin-top: -0.2rem;
+        font-size: 0.8rem;
+    }
+    .textSignIn{
+        width: 15rem;
+        height: 4rem;
+    }
+        .textSignInText{
+            font-size: 2rem;
+        }
+    .inputSVGS{
+        margin-top: calc(10rem);
+        height: 13rem;
+        width: 3rem;
+    }
+    .inputSVGS svg{
+        width: 40px;
+        height: 40px;
+    }
+    .divForSubmit{
+        height: 5.375rem;
+        width: 25rem;
+        margin-left: 10%;
+        margin-top: -1.925rem;
+    }
+    .divForSubmit button{
+        margin-top: 0.625rem;
+        width: 4rem;
+        height: 2rem;
+        font-size: 0.7rem;
+    }
+        .divForSubmit span{
+            font-size: 0.8rem;
+        }
+
+    .carousel{
+        margin: 0.5rem;
+        width: 45%;
+        height: calc(100% - 0.9rem);
+        border-radius: 0.9rem;
+    }
+    .motive{
+        margin-top: 2rem;
+        width: 26.4rem;
+        height: 10.5rem;
+        margin-left: 2.7rem;
+    }
+            .motop{
+                font-size: 1.7rem;
+            }
+            .motoContinuare {
+                margin-top: -2vh;
+                font-size: 0.8rem;
+            }
+                .programmingLanguagesIcons{
+                    margin-top: 0.425rem;
+                    margin-left: 2.5rem;
+                    width: 22.4rem;
+                    height: 7.375rem;
                 }
                 .programmingLanguagesIcons svg{
-                    width: 35px;
-                    height: 35px;
+                    width: 40px;
+                    height: 40px;
                 }
-                .inputSVGS svg{
-                    margin-left: -0.5rem;
-                    width: 35px;
-                    height: 35px;
+                .comments{
+                    border-radius: 0.9rem;
+                    margin: 0 auto;
+                    width: 22rem;
+                    height: 8rem;
                 }
-                .motoContinuare p{
-                    margin-top: -0.7rem;
-                    font-size: 0.735rem;
+                .personData{
+                    width: 24rem;
+                    height: 6.25rem;   
                 }
-                .moto p{
-                    font-size: 1.7rem;
+                /* Fotografie profil */
+                    .personDataPhoto{
+                        margin-left: 0.35rem;
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                
+                    .personDataPhoto img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                
+                
+                    .personDataText span:nth-child(1){
+                        font-size: 1rem;
+                    }
+                
+                    .personDataText span:nth-child(2){
+                        font-size: 0.65rem;
+                    }
+                
+                /* comentariul lu yang */
+                
+                    .comentariu{
+                        margin-left: 1.2rem;
+                        width: 19.4rem;
+                        height: 4rem;
+                    }
+                    .comentariu p{
+                        padding-top: 0.925rem;
+                        padding-left: 0rem;
+                        padding-right: 1.2rem;
+                        font-size: 0.8rem;
+                    }
+                
+                /* numele care ii deasupra comentariilor */
+                
+                .siteNameText p{
+                    font-size: 1rem;
+                    padding-top: 1.25rem;
+                    padding-left: 2.7rem;
                 }
-                #mesaj{
-                    font-size: 0.8rem;
-                }
-                .textSignInText{
-                    font-size: 2rem;
-                }
-            }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .divPrincipal{
+        visibility: hidden;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px){
+    .divPrincipal{
+        visibility: hidden;
+    }
+}
+@media  (max-width: 480px){
 
-            @media (min-width:1px) and (max-width: 1199px) {
-                .divPrincipal{
-                    visibility:hidden;
-                }
-            }
+}
 
 
 
