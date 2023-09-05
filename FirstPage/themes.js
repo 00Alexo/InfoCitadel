@@ -20,17 +20,7 @@ const changeThemeButtonChatGPT = document.querySelector('.changeThemeButtonChatG
 const valuechatGPT = changeThemeButtonChatGPT.getAttribute('data-value');
 let temaActiva;
 
-const verificareTemaOnPageLoad = () =>{
-    temaActiva = localStorage.getItem('theme');
-    if (temaActiva == valueNight1337Blue) {
-        toggleNight1337BlueTheme();
-    }else if(temaActiva == valuechatGPT) {
-        togglechatGPTTheme();
-    }else{
-        toggleDefaultTheme();
-    }
-}
-verificareTemaOnPageLoad();
+
 
 const removeChatGPTTheme = () =>{
     body.classList.remove('chatGPTBody');
@@ -108,6 +98,7 @@ function togglechatGPTTheme() {
     changeBootstrapButton.classList.remove('btn-success');
     changeBootstrapButton.classList.add('btn-dark');
     localStorage.setItem('theme', temaActiva);
+        removeNight1337BlueTheme();
 }
 
 function toggleDefaultTheme() {
@@ -117,7 +108,6 @@ function toggleDefaultTheme() {
         removeNight1337BlueTheme();
         removeChatGPTTheme();
     changeBootstrapButton.classList.add('btn-success'); 
-
     localStorage.setItem('theme', temaActiva);
 }
 
@@ -127,3 +117,14 @@ changeThemeButtonNight1337Blue.addEventListener('click', toggleNight1337BlueThem
 changeThemeButtonChatGPT.addEventListener('click', togglechatGPTTheme);
 changeThemeButtonDefault.addEventListener('click', toggleDefaultTheme);
 
+const verificareTemaOnPageLoad = () =>{
+    temaActiva = localStorage.getItem('theme');
+    if (temaActiva == valueNight1337Blue) {
+        toggleNight1337BlueTheme();
+    }else if(temaActiva == valuechatGPT) {
+        togglechatGPTTheme();
+    }else{
+        toggleDefaultTheme();
+    }
+}
+verificareTemaOnPageLoad();
