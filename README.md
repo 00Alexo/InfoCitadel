@@ -1,2 +1,2 @@
 # InfoPalace
-Empty 
+https://infopalace.netlify.app
