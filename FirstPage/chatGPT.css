@@ -1,0 +1,99 @@
+/* Body */
+.chatGPTBody {
+    background-color: #0a0a0a; /* Very dark gray */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif; /* Standard font for better readability */
+}
+
+/* Main Content Container */
+.chatGPTDivPrincipal {
+    background-color: #333; /* Dark gray */
+}
+
+/* Text in the Sign In/Register Section */
+.chatGPTtextSignInText {
+    color: #ffffff; /* White text */
+    font-family: 'Corrupted', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+/* Register/Login Forms */
+.chatGPTinputsDiv div {
+    font-family: 'Jogan', sans-serif;
+}
+
+.chatGPTinputsDiv input:focus {
+    outline-color: #8C92FF; /* Light blue outline on focus */
+}
+
+.chatGPTdivForSubmit button {
+    background-color: #8C92FF;
+    border-color: #ffffff; /* White border */
+    color: #ffffff; /* White text */
+}
+
+.chatGPTdivForSubmit button:hover {
+    background-color: #6cd0ff; /* Lighter blue on hover */
+}
+
+.chatGPTdivForSubmit span {
+    color: #ffffff; /* White text */
+    font-family: 'Jogan', sans-serif;
+}
+
+.chatGPTdivForSubmit span a {
+    color: #70D2FF; /* Light blue link color */
+}
+
+/* Carusel cu informatii */
+.chatGPTcarousel {
+    background-color: #444; /* Dark gray background */
+}
+
+/* Carousel buttons */
+.chatGPTcarouselButtons button {
+    background-color: #ffffff; /* White button background */
+    color: #333; /* Dark gray text */
+    border: none; /* Remove button border */
+}
+
+/* Comentarii */
+.chatGPTcomments {
+    background-color: #333; /* Dark gray background */
+    color: #ffffff; /* White text */
+}
+
+/* Nume + ocupatie */
+.chatGPTpersonDataText span:nth-child(1) {
+    font-family: 'Montserrat', sans-serif; /* Change to Montserrat font */
+    color: #ffffff; /* White text */
+}
+
+.chatGPTpersonDataText span:nth-child(2) {
+    font-family: 'Open Sans', sans-serif;
+    color: #ccc; /* Light gray text */
+}
+
+/* Comentariul lu yang */
+.chatGPTcomentariu p {
+    color: #ffffff; /* White text */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Numele care ii deasupra comentariilor */
+.chatGPTsiteNameText p {
+    font-family: 'StormGust', sans-serif;
+    color: #70D2FF; /* Light blue text */
+}
+
+/* Motive sa iti incepi aventura cu noi */
+.chatGPTmotop {
+    color: #ffffff; /* White text */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.chatGPTmotoContinuare {
+    font-family: 'Open Sans', sans-serif;
+    color: #ccc; /* Light gray text */
+}
+
