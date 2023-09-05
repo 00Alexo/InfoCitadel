@@ -17,15 +17,18 @@
 }
 
 .MyNavbar{
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #313131;
     display: flex;
     background-color: darkslategrey;
-    height: 4rem;
+    height: 3.3rem;
+    width: 100rem;
     align-items: center;
     justify-content: space-between;
-}
-.liniutaNavbar{
-    height: 0.5rem;
-    background-color: #313131;
 }
 .otherNavbarElements{
     display: flex;
@@ -35,7 +38,7 @@
 }
 .dropdownHead a{
     color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 .dropdownHead a:hover{
     color: rgb(133, 179, 179);
