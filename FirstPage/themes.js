@@ -21,7 +21,7 @@ const valuechatGPT = changeThemeButtonChatGPT.getAttribute('data-value');
 let temaActiva;
 
 
-
+ 
 const removeChatGPTTheme = () =>{
     body.classList.remove('chatGPTBody');
     divPrincipal.classList.remove('chatGPTDivPrincipal');

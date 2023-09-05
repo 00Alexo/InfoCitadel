@@ -31,9 +31,11 @@
     justify-content: space-between;
 }
 .otherNavbarElements{
+    justify-content: center;
     display: flex;
-    width: 60rem;
+    width:70rem;
     align-items: center;
+    gap: 4rem;
     height: 100%;
 }
 .dropdownHead a{
@@ -59,6 +61,7 @@
     cursor: pointer;
     transition: all 1s ease-out;
     animation: slideout 1s;
+    margin-left: -1.3rem;
 }
 .dropdownHead:hover .dropdownContent{
     display: block;
@@ -80,4 +83,10 @@
 
 .dropdownContent li:hover{
     color: rgb(133, 179, 179);
+}
+.dropdownHead svg{
+    margin-left: 5px;
+    position: absolute;
+    margin-top: 0.55rem;
+    cursor: pointer;
 }
