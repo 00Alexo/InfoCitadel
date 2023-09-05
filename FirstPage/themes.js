@@ -32,6 +32,39 @@ const verificareTemaOnPageLoad = () =>{
 }
 verificareTemaOnPageLoad();
 
+const removeChatGPTTheme = () =>{
+    body.classList.remove('chatGPTBody');
+    divPrincipal.classList.remove('chatGPTDivPrincipal');
+    textSignInText.classList.remove('chatGPTtextSignInText');
+    inputsDiv.classList.remove('chatGPTinputsDiv');
+    divForSubmit.classList.remove('chatGPTdivForSubmit');
+    carousel.classList.remove('chatGPTcarousel');
+    carouselButtons.classList.remove('chatGPTcarouselButtons');
+    comments.classList.remove('chatGPTcomments');
+    personDataText.classList.remove('chatGPTpersonDataText');
+    comentariu.classList.remove('chatGPTcomentariu');
+    siteNameText.classList.remove('chatGPTsiteNameText');
+    moto.classList.remove('chatGPTmoto');
+    motoContinuare.classList.remove('chatGPTmotoContinuare');
+    changeBootstrapButton.classList.remove('btn-dark');
+};
+const removeNight1337BlueTheme = () => {
+    body.classList.remove('Night1337BlueBody');
+    divPrincipal.classList.remove('Night1337BlueDivPrincipal');
+    textSignInText.classList.remove('Night1337BluetextSignInText');
+    inputsDiv.classList.remove('Night1337BlueinputsDiv');
+    divForSubmit.classList.remove('Night1337BluedivForSubmit');
+    carousel.classList.remove('Night1337Bluecarousel');
+    carouselButtons.classList.remove('Night1337BluecarouselButtons');
+    comments.classList.remove('Night1337Bluecomments');
+    personDataText.classList.remove('Night1337BluepersonDataText');
+    comentariu.classList.remove('Night1337Bluecomentariu');
+    siteNameText.classList.remove('Night1337BluesiteNameText');
+    moto.classList.remove('Night1337Bluemoto');
+    motoContinuare.classList.remove('Night1337BluemotoContinuare');
+    changeBootstrapButton.classList.remove('btn-primary');
+};
+
 function toggleNight1337BlueTheme() {
     isNight1337BlueThemeActive = !isNight1337BlueThemeActive;
     ischatGPTThemeActive = false;
@@ -52,20 +85,7 @@ function toggleNight1337BlueTheme() {
     changeBootstrapButton.classList.remove('btn-success');
     changeBootstrapButton.classList.add('btn-primary');
     localStorage.setItem('theme', temaActiva);
-        body.classList.remove('chatGPTBody');
-        divPrincipal.classList.remove('chatGPTDivPrincipal');
-        textSignInText.classList.remove('chatGPTtextSignInText');
-        inputsDiv.classList.remove('chatGPTinputsDiv');
-        divForSubmit.classList.remove('chatGPTdivForSubmit');
-        carousel.classList.remove('chatGPTcarousel');
-        carouselButtons.classList.remove('chatGPTcarouselButtons');
-        comments.classList.remove('chatGPTcomments');
-        personDataText.classList.remove('chatGPTpersonDataText');
-        comentariu.classList.remove('chatGPTcomentariu');
-        siteNameText.classList.remove('chatGPTsiteNameText');
-        moto.classList.remove('chatGPTmoto');
-        motoContinuare.classList.remove('chatGPTmotoContinuare');
-        changeBootstrapButton.classList.remove('btn-dark');
+        removeChatGPTTheme();;
 }
 
 function togglechatGPTTheme() {
@@ -94,34 +114,9 @@ function toggleDefaultTheme() {
     isNight1337BlueThemeActive = false;
     ischatGPTThemeActive = false;
     temaActiva = valueDefault;
-    body.classList.remove('Night1337BlueBody');
-    divPrincipal.classList.remove('Night1337BlueDivPrincipal');
-    textSignInText.classList.remove('Night1337BluetextSignInText');
-    inputsDiv.classList.remove('Night1337BlueinputsDiv');
-    divForSubmit.classList.remove('Night1337BluedivForSubmit');
-    carousel.classList.remove('Night1337Bluecarousel');
-    carouselButtons.classList.remove('Night1337BluecarouselButtons');
-    comments.classList.remove('Night1337Bluecomments');
-    personDataText.classList.remove('Night1337BluepersonDataText');
-    comentariu.classList.remove('Night1337Bluecomentariu');
-    siteNameText.classList.remove('Night1337BluesiteNameText');
-    moto.classList.remove('Night1337Bluemoto');
-    motoContinuare.classList.remove('Night1337BluemotoContinuare');
-        body.classList.remove('chatGPTBody');
-        divPrincipal.classList.remove('chatGPTDivPrincipal');
-        textSignInText.classList.remove('chatGPTtextSignInText');
-        inputsDiv.classList.remove('chatGPTinputsDiv');
-        divForSubmit.classList.remove('chatGPTdivForSubmit');
-        carousel.classList.remove('chatGPTcarousel');
-        carouselButtons.classList.remove('chatGPTcarouselButtons');
-        comments.classList.remove('chatGPTcomments');
-        personDataText.classList.remove('chatGPTpersonDataText');
-        comentariu.classList.remove('chatGPTcomentariu');
-        siteNameText.classList.remove('chatGPTsiteNameText');
-        moto.classList.remove('chatGPTmoto');
-        motoContinuare.classList.remove('chatGPTmotoContinuare');
-        changeBootstrapButton.classList.remove('btn-dark');
-        changeBootstrapButton.classList.add('btn-success'); 
+        removeNight1337BlueTheme();
+        removeChatGPTTheme();
+    changeBootstrapButton.classList.add('btn-success'); 
 
     localStorage.setItem('theme', temaActiva);
 }
