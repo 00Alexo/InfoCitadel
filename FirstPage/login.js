@@ -15,7 +15,6 @@ SigninNavButton.addEventListener('click', (e) => {
           isDivVisual = false
       }
   };
-  const html = document.querySelector('html');
   document.addEventListener('click', (e) => {
     if (!divPrincipal.contains(e.target) && e.target !== SigninNavButton) {
       divPrincipal.style.display = 'none';
