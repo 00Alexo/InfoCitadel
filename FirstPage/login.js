@@ -10,7 +10,6 @@ SigninNavButton.addEventListener('click', (e) => {
   });
   window.onkeydown = function(e) {
       if (e.keyCode === 27) {
-        console.log('ok')
           divPrincipal.style.display = 'none';
           isDivVisual = false
       }
