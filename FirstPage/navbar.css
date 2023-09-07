@@ -82,8 +82,8 @@
     color: white;
     visibility: hidden;
     cursor: pointer;
-    transition: all 0.5s;
-    animation: slideout 0.5s;
+    transition: all 0.3s;
+    animation: slideout 0.3s;
 }
 
 .dropdownHead:hover .dropdownContent{
