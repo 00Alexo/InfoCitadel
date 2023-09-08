@@ -85,6 +85,13 @@
     transition: all 0.3s;
     animation: slideout 0.3s;
 }
+.theUsingDiv p{
+    font-size: 0.6rem;
+    color: white;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+}
 
 .dropdownHead:hover .dropdownContent{
     display: block;
