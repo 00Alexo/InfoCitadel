@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoPalace</title>
     <link rel="stylesheet" href="FirstPage/login.css">
-    <link rel="stylesheet" href="FirstPage/themeSelector.css">
     <link rel="stylesheet" href="FirstPage/night1337blue.css">
     <link rel = "stylesheet" href="FirstPage/chatGPT.css">
     <link rel="stylesheet" href="FirstPage/navbar.css">
@@ -43,9 +42,18 @@
                 <a href="#" style="text-decoration: none;"> Themes</a>
                 <div class = "dropdownContent">
                     <ul>
-                        <li class="changeThemeButtonDefault" data-value="defaultTheme"> Change <br> Theme</li>
-                        <li class="changeThemeButtonNight1337Blue" data-value = "skoskTheme"> Create your <br> own theme</li>
-                        <li class="changeThemeButtonChatGPT" data-value = "ChatGPTTheme">Community <br> Contribution</li>
+                        <li class="secondForHoverDropdown">
+                             Change <br> Theme
+                             <div class = "dropDownContent secondDropdownContent">
+                                <ul>
+                                    <li class="changeThemeButtonDefault secondForHoverDropdown" data-value="defaultTheme"> Default</li>
+                                    <li class="changeThemeButtonNight1337Blue" data-value = "skoskTheme"> Skosk</li>
+                                    <li class="changeThemeButtonChatGPT" data-value = "ChatGPTTheme"> ChatGPT</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li> Create your <br> own theme</li>
+                        <li>Community <br> Contribution</li>
                     </ul>
                 </div>
             </div>
@@ -80,12 +88,7 @@
     <div class = "theUsingDiv">
         <p class="theUsingDivp"></p>
     </div>
-    <div class = "themeSelectorDiv">
-        <div class = "selectTheme"> 
 
-        </div>
-        <a class = "themeSelectorText"> Theme <br> Selector</a>
-    </div>
     <div class = "divPrincipal">
         <div class="carousel">
             <div class = "siteNameText">
