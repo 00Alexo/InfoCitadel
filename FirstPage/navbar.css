@@ -133,14 +133,11 @@
 .secondDropdownContent{
     visibility: hidden;
     position: absolute;
-    margin-left:7.5rem;
+    margin-left:6.5rem;
     z-index: 1;
     cursor: pointer;
 }
-.secondForHoverDropdown:hover .secondDropdownContent{
-    visibility: visible;
-    display: block;
-}
+
 .secondDropdownContent ul {
     list-style: none;
     margin: 0;
