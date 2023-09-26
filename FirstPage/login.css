@@ -647,19 +647,13 @@ body{
                 }
 }
 @media (min-width: 768px) and (max-width: 1024px){
-    .divPrincipal{
-        visibility: hidden;
-    }
+
 }
 @media (min-width: 481px) and (max-width: 767px){
-    .divPrincipal{
-        visibility: hidden;
-    }
+
 }
 @media  (max-width: 480px){
-        .divPrincipal{
-        visibility: hidden;
-    }
+
 }
 
 

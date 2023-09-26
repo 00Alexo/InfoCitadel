@@ -96,8 +96,8 @@
 .dropdownHead:hover .dropdownContent{
     display: block;
     visibility: visible;
-    animation: slidein 0.7s;
-    animation: slidefromtopDropDown 0.5s; 
+    animation: slidein 0.5s;
+    animation: slidefromtopDropDown 0.3s; 
 }
 .dropdownContent ul {
     list-style: none;
