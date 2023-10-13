@@ -3,10 +3,17 @@ const secondDropdownContent = document.querySelector('.secondDropdownContent');
 const dropDownContentJS = document.getElementById('dropDownContentJS');
 const phone_NavBar = document.querySelector('.phone_NavBar');
 const phone_divSVG = document.querySelector('.phone_divSVG');
+const svgTreiBari = document.querySelector('.svgTreiBari');
 
 phone_divSVG.addEventListener('click', () => {
     phone_NavBar.classList.toggle('ascuns');
+    phone_divSVG.classList.toggle('marireLungime');
+    svgTreiBari.classList.toggle('marireHeightWidth');
 });
+phone_SigninNavButton.addEventListener('click', () => {
+    phone_NavBar.classList.toggle('ascuns');
+});
+
 
 secondForHoverDropdown.addEventListener('click', () => {
     const computedStyle = window.getComputedStyle(secondDropdownContent);

@@ -382,6 +382,15 @@
     .ascuns{
         display: flex;
     }
+    .marireLungime{
+        margin-top: 0rem !important;
+        margin-right: 0rem !important;
+        width: 10rem !important;
+    }
+    .marireHeightWidth{
+        height: 3rem !important;
+        width: 10rem !important;
+    }
     .phone_divSVG{
         margin-right: 0.5rem;
         margin-top: 0.5rem;
@@ -396,6 +405,9 @@
     }
     .phone_NavBar{
         flex-direction: column;
+    }
+    .phone_dropDownNavbarDiv{
+        animation: slidefromtopDropDown 1s ease-in-out;
     }
     .phone_NavBar{
         margin-left: auto;
