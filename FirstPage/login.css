@@ -380,6 +380,11 @@ body{
                 animation: slideFromBottom 1s ease-in-out;
             }
 
+@media (min-width: 1451px) and (max-width: 1584px){
+    .divPrincipal{
+        margin-top: 7vh;
+    }
+}
 @media (min-width: 1281px) and (max-width: 1450px){
     .divPrincipal{
         margin: 0 auto;

@@ -343,9 +343,9 @@
         min-width: 60px;
     }
     .theUsingDiv p{
-        font-size: 0.4rem;
-        left: 0.4rem;
-        top: 0.4rem;
+        font-size: 0.35rem;
+        left: 0.25rem;
+        top: 0.25rem;
     }
     
     .dropdownContent li {
