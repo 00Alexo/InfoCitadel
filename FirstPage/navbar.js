@@ -1,11 +1,11 @@
 const secondForHoverDropdown = document.querySelector('.secondForHoverDropdown');
 const secondDropdownContent = document.querySelector('.secondDropdownContent');
 const dropDownContentJS = document.getElementById('dropDownContentJS');
-const MyNavbar = document.querySelector('.MyNavbar');
-const phone_dropDownNavbarDiv = document.querySelector('.phone_dropDownNavbarDiv');
+const phone_NavBar = document.querySelector('.phone_NavBar');
+const phone_divSVG = document.querySelector('.phone_divSVG');
 
-phone_dropDownNavbarDiv.addEventListener('click', () => {
-    MyNavbar.classList.toggle('ascuns');
+phone_divSVG.addEventListener('click', () => {
+    phone_NavBar.classList.toggle('ascuns');
 });
 
 secondForHoverDropdown.addEventListener('click', () => {

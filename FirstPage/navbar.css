@@ -56,6 +56,9 @@
     height: 3.3rem;
     gap: 3rem;
 }
+.phone_NavBar{
+    display: none;
+}
 .dropdownHead a{
     color: white;
     margin: 0 auto;
@@ -369,13 +372,17 @@
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
-    .MyNavbar{
+    .contineNavBar{
+        margin-left: auto;
+        width: 10rem;
+    }
+    .phone_NavBar{
         display: none;
     }
     .ascuns{
         display: flex;
     }
-    .phone_dropDownNavbarDiv{
+    .phone_divSVG{
         margin-right: 0.5rem;
         margin-top: 0.5rem;
         width: 3.5rem;
@@ -387,50 +394,30 @@
     .svgTreiBari{
         display: block;
     }
-    .MyNavbar{
+    .phone_NavBar{
         flex-direction: column;
     }
-    .otherNavbarElements{
-        flex-direction: column;
-    }
-    .MyNavbar{
-        margin-right: 0;
+    .phone_NavBar{
+        margin-left: auto;
         margin-top: 0rem;
         border-radius: 0px;
         border-width: 0px;
         border-style: solid;
         border-color: #313131;
-        background-color: darkslategrey;
-        height: 10rem;
-        width: 5rem;
-        align-items: center;
-        justify-content: space-between;
+        background-color: black;
+        height: 100vh;
+        width: 10rem;
+        align-items: stretch;
+        justify-content: flex-start;
     }
     .otherNavbarElements{
-        justify-content: center;
-        display: flex;
-        width:5rem;
-        align-items: center;
-        height: 10rem;
-        gap: 0.5rem;
+        display: none;
     }
-
-    .dropdownHead a{
-        color: white;
-        margin: 0 auto;
-        font-size: 0.5rem;
-    }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
+    .MyNavbar{
+        display: none;
     }
     .dropdownHead{
-        margin-top: 0rem;
-        position: relative;
-        display: inline-block;
-        height: 1rem;
+        display: none;
     }
 
     body{
@@ -438,138 +425,12 @@
     }
 }
 @media (min-width: 481px) and (max-width: 767px){
-    .MyNavbar{
-        display: none;
-    }
-    .ascuns{
-        display: flex;
-    }
-    .phone_dropDownNavbarDiv{
-        margin-right: 0.5rem;
-        margin-top: 0.5rem;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-color: black;
-        margin-left: auto;
-    }
-
-    .svgTreiBari{
-        display: block;
-    }
-    .MyNavbar{
-        flex-direction: column;
-    }
-    .otherNavbarElements{
-        flex-direction: column;
-    }
-    .MyNavbar{
-        margin-right: 0;
-        margin-top: 0rem;
-        border-radius: 0px;
-        border-width: 0px;
-        border-style: solid;
-        border-color: #313131;
-        background-color: darkslategrey;
-        height: 10rem;
-        width: 5rem;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .otherNavbarElements{
-        justify-content: center;
-        display: flex;
-        width:5rem;
-        align-items: center;
-        height: 10rem;
-        gap: 0.5rem;
-    }
-
-    .dropdownHead a{
-        color: white;
-        margin: 0 auto;
-        font-size: 0.5rem;
-    }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
-    }
-    .dropdownHead{
-        margin-top: 0rem;
-        position: relative;
-        display: inline-block;
-        height: 1rem;
-    }
 
     body{
         overflow-x: hidden;
     }
 }
 @media  (max-width: 480px){
-    .MyNavbar{
-        display: none;
-    }
-    .ascuns{
-        display: flex;
-    }
-    .phone_dropDownNavbarDiv{
-        margin-right: 0.5rem;
-        margin-top: 0.5rem;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-color: black;
-        margin-left: auto;
-    }
-
-    .svgTreiBari{
-        display: block;
-    }
-    .MyNavbar{
-        flex-direction: column;
-    }
-    .otherNavbarElements{
-        flex-direction: column;
-    }
-    .MyNavbar{
-        margin-right: 0;
-        margin-top: 0rem;
-        border-radius: 0px;
-        border-width: 0px;
-        border-style: solid;
-        border-color: #313131;
-        background-color: darkslategrey;
-        height: 10rem;
-        width: 5rem;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .otherNavbarElements{
-        justify-content: center;
-        display: flex;
-        width:5rem;
-        align-items: center;
-        height: 10rem;
-        gap: 0.5rem;
-    }
-
-    .dropdownHead a{
-        color: white;
-        margin: 0 auto;
-        font-size: 0.5rem;
-    }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
-    }
-    .dropdownHead{
-        margin-top: 0rem;
-        position: relative;
-        display: inline-block;
-        height: 1rem;
-    }
 
     body{
         overflow-x: hidden;
