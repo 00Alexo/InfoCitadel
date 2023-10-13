@@ -12,6 +12,8 @@ phone_divSVG.addEventListener('click', () => {
 });
 phone_SigninNavButton.addEventListener('click', () => {
     phone_NavBar.classList.toggle('ascuns');
+    phone_divSVG.classList.toggle('marireLungime');
+    svgTreiBari.classList.toggle('marireHeightWidth');
 });
 
 

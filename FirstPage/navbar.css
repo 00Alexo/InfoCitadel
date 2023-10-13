@@ -422,6 +422,15 @@
         align-items: stretch;
         justify-content: flex-start;
     }
+    .phone_dropDownHead:nth-child(1){
+        margin-top: 0.7rem !important;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 10rem;
+        height: 2.2rem;
+        border-bottom: rgb(8, 211, 8) solid 1px;
+    }
     .otherNavbarElements{
         display: none;
     }
