@@ -387,7 +387,21 @@
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
+    .MyNavbar{
+        display: none;
+    }
+    .phone_dropDownNavbarDiv{
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: black;
+        margin-left: auto;
+    }
 
+    .svgTreiBari{
+        display: block;
+    }
 }
 @media (min-width: 481px) and (max-width: 767px){
 
