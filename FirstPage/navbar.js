@@ -11,7 +11,7 @@ secondForHoverDropdown.addEventListener('click', () => {
         secondDropdownContent.style.opacity = '1';
     } else {
         secondDropdownContent.style.visibility = 'hidden';
-        secondDropdownContent.style.opacity = '1';
+
     }
 });
 
