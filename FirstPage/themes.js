@@ -9,7 +9,6 @@ const comments = document.querySelector('.comments');
 const personDataText = document.querySelector('.personDataText');
 const comentariu = document.querySelector('.comentariu');
 const siteNameText = document.querySelector('.siteNameText');
-const theUsingDivp = document.querySelector('.theUsingDivp');
 const moto = document.querySelector('.motop');
 const motoContinuare = document.querySelector('.motoContinuare');
 const changeBootstrapButton = document.querySelector('.btn');
@@ -76,7 +75,6 @@ function toggleNight1337BlueTheme() {
     changeBootstrapButton.classList.remove('btn-success');
     changeBootstrapButton.classList.add('btn-primary');
     localStorage.setItem('theme', temaActiva);
-    theUsingDivp.innerHTML = 'Using skosk theme';
         removeChatGPTTheme();;
 }
 
@@ -100,7 +98,6 @@ function togglechatGPTTheme() {
     changeBootstrapButton.classList.remove('btn-success');
     changeBootstrapButton.classList.add('btn-dark');
     localStorage.setItem('theme', temaActiva);
-    theUsingDivp.innerHTML = 'Using chatGPT theme';
         removeNight1337BlueTheme();
 }
 
@@ -112,7 +109,6 @@ function toggleDefaultTheme() {
         removeChatGPTTheme();
     changeBootstrapButton.classList.add('btn-success'); 
     localStorage.setItem('theme', temaActiva);
-    theUsingDivp.innerHTML = 'Using default theme';
 }
 
 
