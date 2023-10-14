@@ -461,7 +461,7 @@
     }
 
     body{
-        overflow-x: hidden;
+        overflow-x: auto;
         overflow-y: auto;
     }
 
@@ -635,7 +635,7 @@
     }
 
     body{
-        overflow-x: hidden;
+        overflow-x: auto;
         overflow-y: auto;
     }
 
@@ -765,7 +765,7 @@
         border-style: solid;
         border-color: #313131;
         background-color: black;
-        height: 100vh;
+        height: 120vh;
         width: 14rem;
         align-items: stretch;
         justify-content: flex-start;
@@ -809,7 +809,7 @@
     }
 
     body{
-        overflow-x: hidden;
+        overflow-x: auto;
         overflow-y: auto;
     }
 
