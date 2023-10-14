@@ -462,6 +462,7 @@
 
     body{
         overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .phone_dropdownContent{
@@ -635,6 +636,7 @@
 
     body{
         overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .phone_dropdownContent{
@@ -808,6 +810,7 @@
 
     body{
         overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .phone_dropdownContent{
