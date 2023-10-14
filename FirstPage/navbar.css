@@ -374,7 +374,7 @@
 @media (min-width: 768px) and (max-width: 1024px){
     .contineNavBar{
         margin-left: auto;
-        width: 10rem;
+        width: 14rem;
     }
     .phone_NavBar{
         display: none;
@@ -385,11 +385,11 @@
     .marireLungime{
         margin-top: 0rem !important;
         margin-right: 0rem !important;
-        width: 10rem !important;
+        width: 14rem !important;
     }
     .marireHeightWidth{
         height: 3rem !important;
-        width: 10rem !important;
+        width: 14rem !important;
     }
     .phone_divSVG{
         margin-right: 0.5rem;
@@ -418,18 +418,27 @@
         border-color: #313131;
         background-color: black;
         height: 100vh;
-        width: 10rem;
+        width: 14rem;
         align-items: stretch;
         justify-content: flex-start;
+        gap:1rem;
     }
     .phone_dropDownHead:nth-child(1){
         margin-top: 0.7rem !important;
         display: flex;
         justify-content: center;
         margin: 0 auto;
-        width: 10rem;
-        height: 2.2rem;
+        width: 14rem;
+        height: 3.7rem;
         border-bottom: rgb(8, 211, 8) solid 1px;
+    }
+    .phone_dropDownHead{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 14rem;
+        height: 2.2rem;
+        font-size: 1.8rem;
     }
     .otherNavbarElements{
         display: none;
