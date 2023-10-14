@@ -421,7 +421,7 @@
         width: 14rem;
         align-items: stretch;
         justify-content: flex-start;
-        gap:1rem;
+        gap:2rem;
     }
     .phone_dropDownHead:nth-child(1){
         margin-top: 0.7rem !important;
@@ -435,10 +435,20 @@
     .phone_dropDownHead{
         display: flex;
         justify-content: center;
+        align-items: center;
         margin: 0 auto;
         width: 14rem;
         height: 2.2rem;
         font-size: 1.8rem;
+    }
+    .phone_dropDownHead a{
+        color: white;
+    }
+    .phone_dropDownHead:hover{
+        border-left: rgb(8, 211, 8) solid 3px !important;
+    }
+    .phone_dropDownHead:hover a{
+    color: green !important;
     }
     .otherNavbarElements{
         display: none;
@@ -452,6 +462,82 @@
 
     body{
         overflow-x: hidden;
+    }
+
+    .phone_dropdownContent{
+        margin-left: -18rem;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        min-width: 120px;
+        color: white;
+        visibility: hidden;
+        cursor: pointer;
+        transition: all 0.3s;
+        animation: slideout 0.3s;
+    }
+    
+    
+    .phone_dropDownHead:hover .phone_dropdownContent{
+        display: block;
+        visibility: visible;
+        animation: slidein 0.5s;
+        animation: slidefromtopDropDown 0.3s; 
+    }
+    .phone_dropdownContent ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .phone_dropdownContent li {
+        margin-bottom: 0.4rem;
+        background-color: #313131;
+        font-family: andale mono, monospace;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 2px solid grey;
+    }
+    .phone_dropdownContent li:nth-child(1){
+        margin-top: 1rem;
+    }
+    
+    .phone_dropdownContent li:hover{
+        background-color: #222121;
+        border-bottom: 2px solid rgb(8, 211, 8);
+    }    
+    
+    /* second drop down */
+    .phone_secondDropdownContent{
+        visibility: hidden;
+        position: absolute;
+        margin-left:6.5rem;
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    .phone_secondDropdownContent ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    .phone_secondDropdownContent li {
+        margin-bottom: 0.4rem;
+        background-color: #313131;
+        font-family: andale mono, monospace;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 2px solid grey;
+    }
+    .phone_secondDropdownContent li:nth-child(1){
+        margin-top: -3rem;
+    }
+    
+    .phone_secondDropdownContent li:hover{
+        background-color: #222121;
+        border-bottom: 2px solid rgb(8, 211, 8);
     }
 }
 @media (min-width: 481px) and (max-width: 767px){
