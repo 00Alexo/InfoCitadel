@@ -123,9 +123,9 @@ changeThemeButtonDefault.addEventListener('click', toggleDefaultTheme);
 
 const verificareTemaOnPageLoad = () =>{
     temaActiva = localStorage.getItem('theme');
-    if (temaActiva == valueNight1337Blue || temaActiva == valueNight1337Blue) {
+    if (temaActiva == valueNight1337Blue) {
         toggleNight1337BlueTheme();
-    }else if(temaActiva == valuechatGPT || temaActiva == valuechatGPT) {
+    }else if(temaActiva == valuechatGPT) {
         togglechatGPTTheme();
     }else{
         toggleDefaultTheme();

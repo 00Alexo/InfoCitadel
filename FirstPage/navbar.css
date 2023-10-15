@@ -380,11 +380,7 @@
     }
 }
 
-@media (min-height: 835px){
-    body{
-        overflow-y: hidden !important;
-    }
-}
+
 
 
 
@@ -447,7 +443,7 @@
         margin: 0 auto;
         width: 14rem;
         height: 3.7rem;
-        border-bottom: rgb(8, 211, 8) solid 1px;
+        border-bottom: rgb(11, 88, 211) solid 1px;
     }
     .phone_dropDownHead{
         display: flex;
@@ -462,10 +458,10 @@
         color: white;
     }
     .phone_dropDownHead:hover{
-        border-right: rgb(8, 211, 8) solid 3px !important;
+        border-right: rgb(11, 88, 211) solid 3px !important;
     }
     .phone_dropDownHead:hover a{
-    color: green !important;
+    color: rgb(11, 88, 211) !important;
     }
     .otherNavbarElements{
         display: none;
@@ -523,7 +519,7 @@
     
     .phone_dropdownContent li:hover{
         background-color: rgb(27, 24, 24);
-        border-bottom: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
     }    
     
     /* second drop down */
@@ -557,8 +553,8 @@
     
     .phone_secondDropdownContent li:hover{
         background-color: #222121;
-        border-bottom: 2px solid rgb(8, 211, 8);
-        border-right: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
+        border-right: 2px solid rgb(11, 88, 211);
     }
 }
 
@@ -622,7 +618,7 @@
         margin: 0 auto;
         width: 11rem;
         height: 3.7rem;
-        border-bottom: rgb(8, 211, 8) solid 1px;
+        border-bottom: rgb(11, 88, 211) solid 1px;
     }
 
     .phone_dropDownHead:nth-child(3), .phone_dropDownHead:nth-child(4){
@@ -644,10 +640,10 @@
         color: white;
     }
     .phone_dropDownHead:hover{
-        border-right: rgb(8, 211, 8) solid 3px !important;
+        border-right: rgb(11, 88, 211) solid 3px !important;
     }
     .phone_dropDownHead:hover a{
-    color: green !important;
+    color: rgb(11, 88, 211) !important;
     }
     .otherNavbarElements{
         display: none;
@@ -705,7 +701,7 @@
     
     .phone_dropdownContent li:hover{
         background-color: rgb(27, 24, 24);
-        border-bottom: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
     }    
     
     /* second drop down */
@@ -740,8 +736,8 @@
     
     .phone_secondDropdownContent li:hover{
         background-color: #222121;
-        border-bottom: 2px solid rgb(8, 211, 8);
-        border-right: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
+        border-right: 2px solid rgb(11, 88, 211);
     }
 }
 @media  (max-width: 480px){
@@ -804,7 +800,7 @@
         margin: 0 auto;
         width: 8rem;
         height: 3.7rem;
-        border-bottom: rgb(8, 211, 8) solid 1px;
+        border-bottom: rgb(11, 88, 211) solid 1px;
     }
 
     .phone_dropDownHead:nth-child(3), .phone_dropDownHead:nth-child(4){
@@ -832,10 +828,10 @@
         color: white;
     }
     .phone_dropDownHead:hover{
-        border-right: rgb(8, 211, 8) solid 3px !important;
+        border-right: rgb(11, 88, 211) solid 3px !important;
     }
     .phone_dropDownHead:hover a{
-    color: green !important;
+    color: rgb(11, 88, 211) !important;
     }
     .otherNavbarElements{
         display: none;
@@ -893,7 +889,7 @@
     
     .phone_dropdownContent li:hover{
         background-color: rgb(27, 24, 24);
-        border-bottom: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
     }    
     
     /* second drop down */
@@ -928,8 +924,8 @@
     
     .phone_secondDropdownContent li:hover{
         background-color: #222121;
-        border-bottom: 2px solid rgb(8, 211, 8);
-        border-right: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(11, 88, 211);
+        border-right: 2px solid rgb(11, 88, 211);
     }
 }
 
