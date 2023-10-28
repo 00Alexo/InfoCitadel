@@ -153,10 +153,10 @@ body{
     }
     @keyframes slideFromTop {
         0%{
-            transform: translateY(-1000%);
+            transform: translateY(-500%);
         }
         50%{
-            transform: translateY(-1000%);
+            transform: translateY(-500%);
         }
         100%{
             transform:translateY(0%);
