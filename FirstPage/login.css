@@ -745,6 +745,7 @@ body{
         display: none;
     }
     .divPrincipal{
+        height: 42rem;
         width: 28rem;
         margin-top: 1rem;
         background-color: black;
@@ -761,7 +762,7 @@ body{
         fill: white;
     }
     .inputsDiv{
-        margin-top: 5rem !important;
+        margin-top: 3rem !important;
         margin: 0 auto;
         gap: 1.25rem;
         height: 23rem;
@@ -805,7 +806,8 @@ body{
         display: none;
     }
     .divPrincipal{
-        width: 24rem;
+        height: 41rem;
+        width: 22rem;
         margin-top: 1rem;
         background-color: black;
     }
@@ -821,7 +823,7 @@ body{
         fill: white;
     }
     .inputsDiv{
-        margin-top: 5rem !important;
+        margin-top: 3rem !important;
         margin: 0 auto;
         gap: 1.25rem;
         height: 23rem;
@@ -864,7 +866,8 @@ body{
         display: none;
     }
     .divPrincipal{
-        width: 22rem;
+        height: 39rem;
+        width: 20rem;
         margin-top: 1rem;
         background-color: black;
     }
@@ -880,11 +883,11 @@ body{
         fill: white;
     }
     .inputsDiv{
-        margin-top: 5rem !important;
+        margin-top: 2rem !important;
         margin: 0 auto;
         gap: 1.25rem;
         height: 23rem;
-        width: 16.6rem;
+        width: 16.4rem;
     }
     .divForSubmit{
         height: 3.375rem;
