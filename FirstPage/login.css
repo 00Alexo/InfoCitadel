@@ -14,7 +14,7 @@ body{
     animation: slideIn 1s ease-in-out;
     margin: 0 auto;
     /*margin-top: calc(100vh - 43.75rem);*/
-    margin-top: 10vh;
+    margin-top: 3vh;
     border-radius: 0.9rem;
     display: none;
     background-color: #313131;
@@ -391,14 +391,14 @@ body{
 
 @media (min-width: 1451px) and (max-width: 1584px){
     .divPrincipal{
-        margin-top: 7vh;
+        margin-top: 3vh;
     }
 }
 @media (min-width: 1281px) and (max-width: 1450px){
     .divPrincipal{
         margin: 0 auto;
         /*margin-top: calc(100vh - 43.75rem);*/
-        margin-top: 15vh;
+        margin-top: 3vh;
         border-radius: 0.9rem;
         height: 40rem;
         width: 70rem;
@@ -520,7 +520,7 @@ body{
     .divPrincipal{
         margin: 0 auto;
         /*margin-top: calc(100vh - 43.75rem);*/
-        margin-top: 15vh;
+        margin-top: 3vh;
         border-radius: 0.9rem;
         height: 35rem;
         width: 60rem;
