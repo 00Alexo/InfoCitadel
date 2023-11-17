@@ -661,8 +661,9 @@ body{
         display: none;
     }
     .divPrincipal{
-        width: 45rem;
-        margin-top: 1rem;
+        height: 41rem;
+        width: 41rem;
+        margin-top: 0.5rem;
         background-color: black;
     }
 
@@ -677,7 +678,7 @@ body{
         fill: white;
     }
     .inputsDiv{
-        margin-top: 5rem !important;
+        margin-top: 2.5rem !important;
         margin: 0 auto;
         gap: 1.25rem;
         height: 23rem;
@@ -745,10 +746,13 @@ body{
         display: none;
     }
     .divPrincipal{
-        height: 42rem;
+        height: 39rem;
         width: 28rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         background-color: black;
+    }
+    .textSignIn{
+        margin-top: 1rem;
     }
 
     .signUpItems{
@@ -806,10 +810,13 @@ body{
         display: none;
     }
     .divPrincipal{
-        height: 41rem;
+        height: 39rem;
         width: 22rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         background-color: black;
+    }
+    .textSignIn{
+        margin-top: 1rem;
     }
 
     .signUpItems{

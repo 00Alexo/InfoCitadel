@@ -58,8 +58,6 @@ const removeNight1337BlueTheme = () => {
 };
 
 function toggleNight1337BlueTheme() {
-    isNight1337BlueThemeActive = !isNight1337BlueThemeActive;
-    ischatGPTThemeActive = false;
     temaActiva = valueNight1337Blue;
     body.classList.add('Night1337BlueBody');
     divPrincipal.classList.add('Night1337BlueDivPrincipal');
@@ -78,11 +76,10 @@ function toggleNight1337BlueTheme() {
     changeBootstrapButton.classList.add('btn-primary');
     localStorage.setItem('theme', temaActiva);
         removeChatGPTTheme();
+    changeColorButtons[0].style.backgroundColor = 'black';
 }
 
 function togglechatGPTTheme() {
-    isNight1337BlueThemeActive = false;
-    ischatGPTThemeActive = !ischatGPTThemeActive;
     temaActiva = valuechatGPT;
     body.classList.add('chatGPTBody');
     divPrincipal.classList.add('chatGPTDivPrincipal');
@@ -104,8 +101,6 @@ function togglechatGPTTheme() {
 }
 
 function toggleDefaultTheme() {
-    isNight1337BlueThemeActive = false;
-    ischatGPTThemeActive = false;
     temaActiva = valueDefault;
         removeNight1337BlueTheme();
         removeChatGPTTheme();
