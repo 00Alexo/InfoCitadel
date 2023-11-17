@@ -866,10 +866,13 @@ body{
         display: none;
     }
     .divPrincipal{
-        height: 39rem;
+        height: 37rem;
         width: 20rem;
         margin-top: 0.5rem;
         background-color: black;
+    }
+    .textSignIn{
+        margin-top: 1rem;
     }
 
     .signUpItems{
