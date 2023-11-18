@@ -77,6 +77,8 @@ function toggleNight1337BlueTheme() {
     localStorage.setItem('theme', temaActiva);
         removeChatGPTTheme();
     changeColorButtons[0].style.backgroundColor = 'black';
+    changeColorButtons[1].style.backgroundColor = 'white';
+    changeColorButtons[2].style.backgroundColor = 'white';
 }
 
 function togglechatGPTTheme() {
@@ -98,7 +100,10 @@ function togglechatGPTTheme() {
     changeBootstrapButton.classList.add('btn-dark');
     localStorage.setItem('theme', temaActiva);
         removeNight1337BlueTheme();
-}
+    changeColorButtons[0].style.backgroundColor = 'black';
+    changeColorButtons[1].style.backgroundColor = 'white';
+    changeColorButtons[2].style.backgroundColor = 'white';
+    }
 
 function toggleDefaultTheme() {
     temaActiva = valueDefault;
@@ -106,6 +111,9 @@ function toggleDefaultTheme() {
         removeChatGPTTheme();
     changeBootstrapButton.classList.add('btn-success'); 
     localStorage.setItem('theme', temaActiva);
+    changeColorButtons[0].style.backgroundColor = '#313131';
+    changeColorButtons[1].style.backgroundColor = 'rgb(133, 179, 179)';
+    changeColorButtons[2].style.backgroundColor = 'rgb(133, 179, 179)';
 }
 
 

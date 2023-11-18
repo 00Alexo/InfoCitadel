@@ -388,7 +388,11 @@ body{
             .mySqlIcon{
                 animation: slideFromBottom 1s ease-in-out;
             }
-
+@media (min-width: 1451px){
+    .comentariu p{
+        height: 4rem;
+    }
+}
 @media (min-width: 1451px) and (max-width: 1584px){
     .divPrincipal{
         margin-top: 3vh;

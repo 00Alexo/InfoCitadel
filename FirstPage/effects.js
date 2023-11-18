@@ -8,11 +8,9 @@ const animatedText= () => {
 if (mesaji < charAnimatedText.length){
     mesaj.innerHTML += charAnimatedText[mesaji];
     mesaji++;
-    setTimeout(animatedText, 10);
+    setTimeout(animatedText, 15);
 }};
-setTimeout(() => {
-    animatedText();
-}, 1500);
+
 
 
 
