@@ -50,8 +50,8 @@ const thirdSignInView = () =>{
     photoPersonDataPhoto.src=('firstPage/Photos/EnderDatslt.png');
     occupationPersonDataText.innerHTML = 'Game Developer';
     namePersonDataText.innerHTML = 'EnderDatslt';
-    moto.innerHTML = 'Limbajele pionierilor, codul primelor descoperiri.';
-    motoContinuare.innerHTML = 'În zilele limbajelor precum Fortran și în era mașinii ENIAC, codul nostru a fost o simfonie a cunoașterii, împletind matematica și electricitatea pentru a da naștere primei revoluții digitale.';
+    moto.innerHTML = 'Limbajele pionierilor, <br>codul primelor descoperiri.';
+    motoContinuare.innerHTML = 'În zilele limbajelor precum Fortran și în era mașinii ENIAC, <br> codul a fost o simfonie a cunoașterii, împletind matematica <br>și electricitatea pentru a da naștere primei revoluții digitale.';
     animatedText();
     }, 100);
     setTimeout(() => {
@@ -68,7 +68,7 @@ const secondSignInView = () => {
     occupationPersonDataText.innerHTML = 'Student';
     namePersonDataText.innerHTML = 'xndadelin';
     moto.innerHTML = 'Incepe aventura <br>nesfarsita cu noi!';
-    motoContinuare.innerHTML = "Descoperă fascinanta lume a algoritmicii! Alătură-te comunității și explorează cele mai frumoase limbaje și provocări. Începe aventura ta digitală astăzi!";
+    motoContinuare.innerHTML = "Descoperă fascinanta lume a algoritmicii! Alătură-te <br>comunității și explorează cele mai frumoase limbaje <br>și provocări. Începe aventura ta digitală astăzi!";
     animatedText();
     }, 100);
     setTimeout(() => {
