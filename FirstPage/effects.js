@@ -9,7 +9,7 @@ if (mesaji < charAnimatedText.length){
     mesaj.innerHTML += charAnimatedText[mesaji];
     mesaji++;
     if(stringAnimatedText.length > 125){
-    setTimeout(animatedText, 5);
+    setTimeout(animatedText, 7);
     }else{
         setTimeout(animatedText, 12);
     }

@@ -1,7 +1,30 @@
 .motiveSecondSignInView{
-    visibility: hidden;
+    
 }
 
 .programmingLanguagesIconsSecondSignInView{
     visibility: hidden;
 }
+
+@keyframes lateralSlideIn {
+    0%, 100% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-125%);
+      }
+
+}
+
+.carouselFirstSignInView{
+    animation: lateralSlideIn 0.5s ease-in-out;
+}
+
+.carouselSecondSignInView{
+    animation: lateralSlideIn 0.5s ease-in-out;
+}
+
+.carouselThirdSignInView{
+    animation: lateralSlideIn 0.5s ease-in-out;
+}
+

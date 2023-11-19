@@ -8,7 +8,7 @@ SigninNavButton.addEventListener('click', (e) => {
         mesaji = 0;
       } else {
         divPrincipal.style.display = 'flex';
-        setTimeout(1500, animatedText());
+        setTimeout(2000, animatedText());
       }
   });
 
