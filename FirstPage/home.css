@@ -1,0 +1,82 @@
+.leaderboard{
+    width: 500px;
+    height: 500px;
+    grid-area: 1 / 1 / 2 / 2; /* Specifică aceeași zonă grid pentru a suprapune */
+    margin-left: auto;
+    margin-right: 15vw;
+    margin-top: 100px;
+
+
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.3px);
+    -webkit-backdrop-filter: blur(1.3px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+}
+
+.leaderboard-container{
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top:10px;
+}
+.leaderboard-container h1{
+    color:white;
+    font-size: 2.2rem;
+}
+
+.topUsersTop{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    height:400px;
+    background-color:black;
+    justify-content: space-between;
+}
+
+.mostProblems{
+    gap:20px;
+    display:flex;
+    flex-direction: column;
+    width: 150px;
+    height:390px;
+}
+
+.mostProblems div{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 55px;
+}
+.topNumber{
+    padding-left:5px;
+    padding-right:20px;
+    margin-top:10px;
+    width: 20px;
+    height: 25px;
+}
+
+.mostProblems img{
+    width: 50px;
+    height: 50px;
+}
+
+.registerDate{
+    display:flex;
+    flex-direction: row;
+    width: 150px;
+    height: 390px;
+}
+
+.mostProblems p{
+    font-family: "Super Corn";
+    font-size:1.1rem;
+    color:white;
+}
+
+.registerDate p{
+    font-family: "Super Corn";
+    font-size: 1.1rem;
+    color:white;
+}

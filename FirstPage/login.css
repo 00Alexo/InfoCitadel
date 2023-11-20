@@ -8,6 +8,10 @@ body{
 }
 
 
+
+.container1 {
+    display: grid;
+}
 /* Contine informatii + login/register */
 .divPrincipal{
     overflow-y: hidden;
@@ -20,6 +24,8 @@ body{
     background-color: #313131;
     width: 75rem;
     height: 43.75rem;
+    grid-area: 1 / 1 / 2 / 2; /* Specifică zona grid unde să se afișeze */
+    z-index: 99;
 }
     /* Carusel cu informatii */
 
