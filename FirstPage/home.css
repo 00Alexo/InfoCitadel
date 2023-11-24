@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: 15vw;
     margin-top: 100px;
-
+ 
 
     background: rgba(255, 255, 255, 0.11);
     border-radius: 16px;
@@ -64,22 +64,51 @@
 
 /* Add this to your existing CSS */
 
-body {
-    scrollbar-width: thin; /* "thin" or "auto" */
+
+
+:root {
+    --shadow: #43a047 !important; 
+    --scrollbarBG: #eee !important;
+    --thumbBG: #66bb6a !important;
+ }
+::-webkit-scrollbar {
+    width: 16px;
+ } 
+::-webkit-scrollbar-track {
+    background: var(--scrollbarBG) !important;
+ }
+::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) !important;
+    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
+ }
+
+/* For Firefox and Edge */
+/* selector here is for your overflow container, adjust it according to your case */
+.overflowhidden::-moz-scrollbar {
+    width: 16px;
+}
+.overflowhidden::-moz-scrollbar-track {
+    background: var(--scrollbarBG) !important;
+}
+.overflowhidden::-moz-scrollbar-thumb {
+    background-color: var(--thumbBG) !important;
+    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
 }
 
-body::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
+/* For Chrome, Safari, and other webkit-based browsers */
+/* selector here is for your overflow container, adjust it according to your case */
+.overflowhidden::-webkit-scrollbar {
+    width: 16px;
+}
+.overflowhidden::-webkit-scrollbar-track {
+    background: var(--scrollbarBG) !important;
+}
+.overflowhidden::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) !important;
+    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.11); /* Set the color of the scrollbar track */
-}
 
-body::-webkit-scrollbar-thumb {
-    background-color: darkgrey; /* Set the color of the scrollbar thumb */
-    border-radius: 4px; /* Optional: Rounded corners for the thumb */
-}
 
 
 .mostProblemsElmDiv{
