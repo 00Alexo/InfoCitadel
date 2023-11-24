@@ -1,6 +1,8 @@
+/* Leaderboard */
+
 .leaderboard{
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 475px;
     grid-area: 1 / 1 / 2 / 2; /* Specifică aceeași zonă grid pentru a suprapune */
     margin-left: auto;
     margin-right: 15vw;
@@ -29,7 +31,7 @@
 .topUsersTop{
     display: flex;
     margin: 0 auto;
-    width: 80%;
+    width: 86%;
     height:400px;
     justify-content: space-between;
 }
@@ -38,17 +40,19 @@
     gap:20px;
     display:flex;
     flex-direction: column;
-    width: 150px;
+    width: 225px;
     height:390px;
 }
 
-.test12345{
+.mostProblemsDivForContent{
     gap:20px;
     display:flex;
     flex-direction: column;
-    width: 150px;
-    height:250px;
+    width: 225px;
+    height:275px;
     justify-content: center;
+    overflow-y:hidden;
+    overflow-x:hidden;
 
     background: rgba(255, 255, 255, 0.11);
     border-radius: 16px;
@@ -58,23 +62,46 @@
     border: 1px solid rgba(255, 255, 255, 0.43);
 }
 
+/* Add this to your existing CSS */
+
+body {
+    scrollbar-width: thin; /* "thin" or "auto" */
+}
+
+body::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.11); /* Set the color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* Set the color of the scrollbar thumb */
+    border-radius: 4px; /* Optional: Rounded corners for the thumb */
+}
+
+
 .mostProblemsElmDiv{
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 225px;
     height: 55px;
 }
 .topNumber{
     padding-left:5px;
     padding-right:20px;
-    margin-top:10px;
+    margin-top:15px;
     width: 20px;
     height: 25px;
 }
 
-.mostProblems p:last-child{
+.showMore{
     font-size: 0.8rem !important;
-    margin-left: 25px;
+}
+
+.showMore2{
+    font-size: 0.8rem !important;
 }
 
 .mostProblemsElmDiv img{
@@ -83,10 +110,11 @@
 }
 
 .registerDate{
+    gap:20px;
     display:flex;
-    flex-direction: row;
-    width: 150px;
-    height: 390px;
+    flex-direction: column;
+    width: 225px;
+    height:390px;
 }
 
 .mostProblems p{
@@ -94,9 +122,43 @@
     font-size:1.1rem;
     color:white;
 }
+.leaderboardTopText {
+    margin: 0 auto;
+}
 
 .registerDate p{
     font-family: "Super Corn";
     font-size: 1.1rem;
     color:white;
+}
+
+.userLeaderboardData{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+}
+
+.userLeaderboardDataName{
+    font-family: "Super Corn";
+    font-size: 0.9rem !important;
+    margin-bottom: 0rem;
+}
+
+.userLeaderboardDataData{
+    font-family: "Super Corn";
+    font-size: 0.7rem !important;
+    margin-bottom: 0rem;
+}
+
+.leaderboardSVG{
+    margin-top:20px !important;
+    margin: 0 auto;
+    margin-right: 20px !important;
+    cursor: pointer;
+}
+
+.overflowhidden{
+    overflow-y:scroll;
 }

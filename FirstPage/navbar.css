@@ -87,6 +87,7 @@
     cursor: pointer;
     transition: all 0.3s;
     animation: slideout 0.3s;
+    z-index: 100;
 }
 
 
