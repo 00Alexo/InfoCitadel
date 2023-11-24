@@ -62,51 +62,7 @@
     border: 1px solid rgba(255, 255, 255, 0.43);
 }
 
-/* Add this to your existing CSS */
 
-
-
-:root {
-    --shadow: #43a047 !important; 
-    --scrollbarBG: #eee !important;
-    --thumbBG: #66bb6a !important;
- }
-::-webkit-scrollbar {
-    width: 16px;
- } 
-::-webkit-scrollbar-track {
-    background: var(--scrollbarBG) !important;
- }
-::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) !important;
-    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
- }
-
-/* For Firefox and Edge */
-/* selector here is for your overflow container, adjust it according to your case */
-.overflowhidden::-moz-scrollbar {
-    width: 16px;
-}
-.overflowhidden::-moz-scrollbar-track {
-    background: var(--scrollbarBG) !important;
-}
-.overflowhidden::-moz-scrollbar-thumb {
-    background-color: var(--thumbBG) !important;
-    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
-}
-
-/* For Chrome, Safari, and other webkit-based browsers */
-/* selector here is for your overflow container, adjust it according to your case */
-.overflowhidden::-webkit-scrollbar {
-    width: 16px;
-}
-.overflowhidden::-webkit-scrollbar-track {
-    background: var(--scrollbarBG) !important;
-}
-.overflowhidden::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) !important;
-    box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black !important;
-}
 
 
 
