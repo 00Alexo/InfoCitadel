@@ -1,2 +1,2 @@
-# InfoPalace
-https://infopalace.netlify.app
+# InfoCitadel
+https://infocitadel.netlify.app
