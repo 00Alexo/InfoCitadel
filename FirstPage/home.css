@@ -51,8 +51,7 @@
     width: 225px;
     height:275px;
     justify-content: center;
-    overflow-y:hidden;
-    overflow-x:hidden;
+
 
     background: rgba(255, 255, 255, 0.11);
     border-radius: 16px;
@@ -144,6 +143,32 @@
     cursor: pointer;
 }
 
-.overflowhidden{
-    overflow-y:scroll;
+.simplebar-content{
+    margin-top: 0px !important;
+    gap:20px !important;
+    display:flex !important;
+    flex-direction: column !important;
+    width: 225px !important;
+    height:270px;
+    justify-content: center !important;
 }
+
+.simplebarReHeight{
+    height: 800px !important;
+}
+
+.simplebarReHeight2{
+    height: 800px !important;
+}
+
+.simplebar-content-2{
+    margin-top: 0px !important;
+    gap:20px !important;
+    display:flex !important;
+    flex-direction: column !important;
+    width: 225px !important;
+    height:270px;
+    justify-content: center !important;
+}
+
+
