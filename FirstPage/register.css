@@ -1,0 +1,52 @@
+.registerDiv{
+    display: none;
+    margin: 0 auto;
+    width: 55%;
+    margin-top: 1rem;
+    margin-left: 0.9rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.registerInput input{
+    width: 450px !important;
+    height: 50px !important;
+}
+
+.registerInput label{
+    font-size: 0.9rem;
+}
+.registerInText{
+    margin-top: 1rem !important;
+    width: 400px;
+}
+.registerInText p{
+    width: 400px;
+}
+
+.register-control {
+    padding: 1rem 0.75rem;
+    margin-top: 3px;
+}
+
+.loginIcons{
+    display: flex;
+    justify-content: center;
+}
+.altRegisterText{
+    margin-top: 10px !important;
+    width: 200px;
+}
+.AccountDataDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 98%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.divForSubmit{
+    margin-top: 20px;
+}

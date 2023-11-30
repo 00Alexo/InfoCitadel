@@ -43,7 +43,6 @@ SigninNavButton.addEventListener('click', (e) => {
   if(window.innerWidth < 1024){
     changeBootstrapButton.classList.remove('btn-success');
     changeBootstrapButton.classList.add('btn-dark');
-    console.log("Screen width is greater than 1000px");
   }
 
 

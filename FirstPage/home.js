@@ -1,4 +1,11 @@
 // Leaderboard
+var simplebar = new SimpleBar(document.getElementById('mostProblemsDivForContent'), {            
+});
+var simplebar2 = new SimpleBar(document.getElementById('mostProblemsDivForContent2'), {
+    
+});
+const contentEl = simplebar2.contentEl;
+contentEl.className = contentEl.className.replace('simplebar-content', 'simplebar-content-2');
 
 const showMore = document.querySelector('.showMore');
 let showMoreToggle = false;

@@ -9,6 +9,17 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 .container1 {
     display: grid;
 }
@@ -47,13 +58,13 @@ body{
 
     /* Register/Login Forms */
     .signUpItems{
+        animation: fadeIn 1s ease-in-out;
         margin: 0 auto;
         width: 55%;
         margin-top: 1rem;
         margin-left: 0.9rem;
     }
     .inputsDiv{
-        animation: fadeIn 2s ease-in-out;
         margin-top: 3rem;
         margin-left: 10%;
         gap: 1.25rem;
