@@ -13,6 +13,14 @@ app.use(express.urlencoded({extended:false}));
 app.use('/FirstPage', express.static(path.join(__dirname, 'FirstPage')));
 app.use('/Fonts', express.static(path.join(__dirname, 'Fonts')));
 
+app.use('/home/login', (req, res) => {
+    res.redirect('/home');
+});
+
+app.use('/home/signup', (req, res) => {
+    res.redirect('/home');
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(templatePath, 'index.html'));
 });
