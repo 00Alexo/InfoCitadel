@@ -56,23 +56,23 @@
 /* Added a font */
 @font-face {
     font-family: "SuperCorn";
-    src: url(/Fonts/Super\ Corn.Night1337Bluettf);
+    src: url(/Fonts/Super\ Corn.ttf);
 }
 @font-face {
     font-family: "Montserrat ExtraBold";
-    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf);
+    src: url(/Fonts/Montserrat-ExtraBold.otf);
 }
 @font-face {
     font-family: "RobotoThin";
-    src: url(/Fonts/Roboto-Thin.Night1337Bluettf);
+    src: url(/Fonts/Roboto-Thin.ttf);
 }
 @font-face {
     font-family: "Poppins";
-    src: url(/Fonts/Poppins-Thin.Night1337Blueotf);
+    src: url(/Fonts/Poppins-Thin.otf);
 }
 @font-face {
     font-family: "StormGust";
-    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff);
+    src: url(/Fonts/Storm\ Gust.woff);
 }
 
 @font-face {

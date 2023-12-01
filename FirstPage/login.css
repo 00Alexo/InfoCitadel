@@ -115,7 +115,7 @@ body{
         width: 33.6rem;
         margin-left: 10%;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         animation: slideFromBottom 1s ease-in-out;
         width: 6rem;
         height: 3rem;
@@ -123,7 +123,7 @@ body{
         border-color: darkslategrey;
         font-family: "Montserrat ExtraBold", sans-serif;
     }
-    .divForSubmit button:hover{
+    .divForSubmit input:hover{
         background-color: rgb(31, 48, 48);
         border-color: rgb(31, 48, 48);
     }
@@ -211,23 +211,23 @@ body{
 /* Added a font */
 @font-face {
     font-family: "SuperCorn";
-    src: url(/Fonts/Super\ Corn.Night1337Bluettf) format('opentype');
+    src: url(/Fonts/Super\ Corn.ttf) format('opentype');
 }
 @font-face {
     font-family: "Montserrat ExtraBold";
-    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf) format('opentype');
+    src: url(/Fonts/Montserrat-ExtraBold.otf) format('opentype');
 }
 @font-face {
     font-family: "RobotoThin";
-    src: url(/Fonts/Roboto-Thin.Night1337Bluettf) format('opentype');
+    src: url(/Fonts/Roboto-Thin.ttf) format('opentype');
 }
 @font-face {
     font-family: "Poppins";
-    src: url(/Fonts/Poppins-Thin.Night1337Blueotf) format('opentype');
+    src: url(/Fonts/Poppins-Thin.otf) format('opentype');
 }
 @font-face {
     font-family: "StormGust";
-    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff) format('opentype');
+    src: url(/Fonts/Storm\ Gust.woff) format('opentype');
 }
 
 @font-face {
@@ -446,7 +446,7 @@ body{
         width: 29rem;
         margin-left: 10%;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 5rem;
         height: 2.5rem;
         font-size: 0.9rem;
@@ -586,7 +586,7 @@ body{
         width: 25rem;
         margin-left: 10%;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 4rem;
         height: 2rem;
         font-size: 0.7rem;
@@ -710,14 +710,14 @@ body{
         width: 33.6rem;
         margin: 0 auto;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 6rem;
         height: 3rem;
         background-color: black;
         border-color: white;
         font-family: "Montserrat ExtraBold", sans-serif;
     }
-    .divForSubmit button:hover{
+    .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
         border-color: rgb(0, 0, 0);
     }
@@ -798,14 +798,14 @@ body{
         width: 20.6rem;
         margin: 0 auto;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 5rem;
         height: 2.5rem;
         background-color: black;
         border-color: white;
         font-family: "Montserrat ExtraBold", sans-serif;
     }
-    .divForSubmit button:hover{
+    .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
         border-color: rgb(0, 0, 0);
     }
@@ -862,14 +862,14 @@ body{
         width: 18.6rem;
         margin: 0 auto;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 5rem;
         height: 2.5rem;
         background-color: black;
         border-color: white;
         font-family: "Montserrat ExtraBold", sans-serif;
     }
-    .divForSubmit button:hover{
+    .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
         border-color: rgb(0, 0, 0);
     }
@@ -925,7 +925,7 @@ body{
         width: 16.6rem;
         margin: 0 auto;
     }
-    .divForSubmit button{
+    .divForSubmit input{
         width: 4rem;
         height: 2.5rem;
         font-size: 0.8rem;
@@ -933,7 +933,7 @@ body{
         border-color: white;
         font-family: "Montserrat ExtraBold", sans-serif;
     }
-    .divForSubmit button:hover{
+    .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
         border-color: rgb(0, 0, 0);
     }
