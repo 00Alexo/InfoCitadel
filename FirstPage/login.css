@@ -211,33 +211,33 @@ body{
 /* Added a font */
 @font-face {
     font-family: "SuperCorn";
-    src: url(/Fonts/Super\ Corn.Night1337Bluettf);
+    src: url(/Fonts/Super\ Corn.Night1337Bluettf) format('opentype');
 }
 @font-face {
     font-family: "Montserrat ExtraBold";
-    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf);
+    src: url(/Fonts/Montserrat-ExtraBold.Night1337Blueotf) format('opentype');
 }
 @font-face {
     font-family: "RobotoThin";
-    src: url(/Fonts/Roboto-Thin.Night1337Bluettf);
+    src: url(/Fonts/Roboto-Thin.Night1337Bluettf) format('opentype');
 }
 @font-face {
     font-family: "Poppins";
-    src: url(/Fonts/Poppins-Thin.Night1337Blueotf);
+    src: url(/Fonts/Poppins-Thin.Night1337Blueotf) format('opentype');
 }
 @font-face {
     font-family: "StormGust";
-    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff);
+    src: url(/Fonts/Storm\ Gust.Night1337Bluewoff) format('opentype');
 }
 
 @font-face {
     font-family: "Jogan";
-    src: url(/Fonts/JoganSoft-Regular.ttf);
+    src: url(/Fonts/JoganSoft-Regular.ttf) format('opentype');
 }
 
 @font-face {
     font-family: "Corrupted";
-    src: url(/Fonts/Corrupted\ File.ttf)
+    src: url(/Fonts/Corrupted\ File.ttf) format('opentype');
 }
 
 /* carusel cu informatii */
