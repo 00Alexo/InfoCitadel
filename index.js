@@ -13,25 +13,19 @@ app.use(express.urlencoded({extended:false}));
 app.use('/FirstPage', express.static(path.join(__dirname, 'FirstPage')));
 app.use('/Fonts', express.static(path.join(__dirname, 'Fonts')));
 
-app.use('/home/login', (req, res) => {
-    res.redirect('/home');
+app.use('/login', (req, res) => {
+    res.redirect('/');
 });
 
-app.use('/home/signup', (req, res) => {
-    res.redirect('/home');
+app.use('/signup', (req, res) => {
+    res.redirect('/');
 });
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(templatePath, 'index.html'));
 });
 
-app.get('/signup', (req, res) => {
-    res.sendFile(path.join(templatePath, 'index.html'));
-});
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(templatePath, 'index.html'));
-});
 
 app.post("/signup",async (req, res) => {
 
