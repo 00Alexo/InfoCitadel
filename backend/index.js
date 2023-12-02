@@ -32,7 +32,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
       await collection.insertMany([data]);
       console.log("New account created successfully");
 
-      res.redirect('/');
+      res.redirect('https://infocitadel.netlify.app');
     } catch (error) {
       console.error("Error in signup:", error);
       res.status(500).send("Internal Server Error");
