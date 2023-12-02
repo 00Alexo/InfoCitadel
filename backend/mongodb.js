@@ -21,9 +21,18 @@ const LogInSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+  admin: {
+    type: Boolean,
+    required: true
+  },
+  email: { 
+    type: String, 
+    required: true
+  },
+}, {timestamps: true});
 
 // Create the model for the collection
 const LogInCollection = mongoose.model("LogInCollection", LogInSchema);
 
 module.exports = LogInCollection;
+

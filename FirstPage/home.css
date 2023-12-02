@@ -174,3 +174,8 @@
 /* TODO ADD PROFILE VIEW */
 
 
+@media (max-width: 767px){
+    .leaderboard{
+        display: none;
+    }
+}
