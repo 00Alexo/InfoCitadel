@@ -1,0 +1,6 @@
+services:
+  - name: InfoCitadelTest
+    type: web
+    env:
+      - key: NODE_ENV
+        value: production
