@@ -1,24 +1,33 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://Alexo:WnwvCW1WsQvOFxxf@infocitadel.ttihf7o.mongodb.net/")
-    .then(() => {
-        console.log("MongoDB connected");
-    })
-    .catch(() => {
-        console.log("MongoDB connection failed:");
-    });
+// Use environment variables for sensitive information
+const { MONGODB_USERNAME, MONGODB_PASSWORD, MONGODB_CLUSTER, MONGODB_DATABASE } = process.env;
 
-const LogInSchema=new mongoose.Schema({
-    username:{
-        type: String,
-        required: true,
-    },
-    password:{
-        type: String,
-        required: true,
-    }
-})
+// Connect to MongoDB
+mongoose.connect(
+    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`,
 
-const collection=new mongoose.model("LogInCollection",  LogInSchema);
+)
+  .then(() => {
+    console.log("MongoDB connected");
+  })
+  .catch((error) => {
+    console.error("MongoDB connection failed:", error);
+  });
 
-module.exports=collection;
+// Define the schema for the collection
+const LogInSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+});
+
+// Create the model for the collection
+const LogInCollection = mongoose.model("LogInCollection", LogInSchema);
+
+module.exports = LogInCollection;
