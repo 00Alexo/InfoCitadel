@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
-// Use environment variables for sensitive information
-const { MONGODB_USERNAME, MONGODB_PASSWORD, MONGODB_CLUSTER, MONGODB_DATABASE } = process.env;
+
 
 // Connect to MongoDB
-mongoose.connect(
-    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/`,
-)
+mongoose.connect(process.env.mongoDB)
   .then(() => {
     console.log("MongoDB connected");
   })
