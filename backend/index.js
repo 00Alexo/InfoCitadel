@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 
 
-app.post("/backend/templates/signup.hbs", async (req, res) => {
+app.post("/backend/templates/signup", async (req, res) => {
     try {
       const data = {
         username: req.body.username,
@@ -45,6 +45,6 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
     console.log('listening on port 3000');
 });*/
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('listening on port', process.env.PORT || 3000);
+app.listen(process.env.PORT || 10000, () => {
+  console.log('listening on port', process.env.PORT || 10000);
 });

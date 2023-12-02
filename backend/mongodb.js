@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Alexo:WnwvCW1WsQvOFxxf@infocitadel.ttihf7o.mongodb.net/', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect("mongodb+srv://Alexo:WnwvCW1WsQvOFxxf@infocitadel.ttihf7o.mongodb.net/")
     .then(() => {
         console.log("MongoDB connected");
     })
