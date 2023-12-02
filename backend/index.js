@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 
 
-app.post("https://infocitadeltest.onrender.com/backend/templates/signup", async (req, res) => {
+app.post("/backend/templates/signup.hbs", async (req, res) => {
     try {
       const data = {
         username: req.body.username,
