@@ -34,7 +34,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
       await collection.insertMany([data]);
       console.log("New account created successfully");
 
-      res.redirect('/');
+      res.redirect('https://infocitadel.netlify.app');
     } catch (error) {
       console.error("Error in signup:", error);
       res.status(500).send("Internal Server Error");
@@ -44,11 +44,24 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
 
   app.post("/backend/templates/login.hbs", async (req, res) => {
     try {
-      
-      const check=await collection.findOne({username: req.body.username});
+      let check;
+      let signinValidator = req.body.username.split("");
+      let isEmail = false;
+      for (let i =0; i < signinValidator.length; i++) {
+        if(signinValidator[i] == '@'){
+          isEmail = true;
+          break;
+        }
+      }
+      if(!isEmail) {
+        check=await collection.findOne({username: req.body.username});
+      }else{
+        check=await collection.findOne({email: req.body.username});
+      }
+
 
       if(check.password === req.body.password){
-        res.redirect('/');
+        res.redirect('https://infocitadel.netlify.app');
         console.log("User logged in: \n", check);
       }else{
         res.send("wrong password");
