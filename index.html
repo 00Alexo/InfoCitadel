@@ -295,7 +295,7 @@
             <div class = "textSignIn">
                 <span class = "textSignInText"> SIGN-IN</span>
             </div>
-            <form action="https://infocitadeltest.onrender.com/backend/templates/login.hbs" method="post">
+            <form action="/backend/templates/login.hbs" method="post">
                 <div class = "inputsDiv">
                     <div class="form-floating mb-3">
                         <input class="form-control" id="floatingInput" name="username" placeholder="Username" maxlength="32" required>
@@ -332,26 +332,26 @@
             </div>
 
         <div class = "registerDiv">
-        <form action="https://infocitadeltest.onrender.com/backend/templates/signup.hbs" method="post">
+        <form action="/backend/templates/signup.hbs" method="post">
             <div class = "textSignIn registerInText">
-                <span class = "textSignInText"> CREATE ACCOUNT</span>
+                <span class = "textSignInText registerTextSignInText"> CREATE ACCOUNT</span>
             </div>
 
             <div class = "AccountDataDiv">
                 <div class="form-floating mb-3 registerInput">
-                    <input class="form-control register-control" id="floatingInput" name="username" placeholder="Username" maxlength="32" required>
+                    <input class="form-control register-control inputRegisterInput" id="floatingInput" name="username" placeholder="Username" maxlength="32" required>
                     <label for="floatingInput">Username</label>
                 </div>
                 <div class="form-floating mb-3 registerInput">
-                    <input type="email" class="form-control register-control" name="email" id="floatingInput" placeholder="Email" required>
+                    <input type="email" class="form-control register-control inputRegisterInput" name="email" id="floatingInput" placeholder="Email" required>
                     <label for="floatingInput">Email</label>
                 </div>
                 <div class="form-floating mb-3 registerInput">
-                    <input type="password" class="form-control register-control" name="password" id="floatingPassword" minlength="8" placeholder="Password" required>
+                    <input type="password" class="form-control register-control inputRegisterInput" name="password" id="floatingPassword" minlength="8" placeholder="Password" required>
                     <label for="floatingPassword">Parola</label>
                 </div>
                 <div class="form-floating mb-3 registerInput">
-                    <input type="password" class="form-control register-control" name="confirmPassword"id="floatingPassword" minlength="8" placeholder="Password" required>
+                    <input type="password" class="form-control register-control inputRegisterInput" name="confirmPassword"id="floatingPassword" minlength="8" placeholder="Password" required>
                     <label for="floatingPassword">Confirmare parola</label>
                 </div>
             </div>

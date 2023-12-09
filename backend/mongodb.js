@@ -16,20 +16,24 @@ const LogInSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-  },
+    unique: true,
+  }, 
   password: {
     type: String,
     required: true,
   },
   admin: {
     type: Boolean,
-    required: true
+    required: true,
   },
   email: { 
     type: String, 
-    required: true
+    required: true,
+    unique: true,
   },
 }, {timestamps: true});
+
+LogInSchema.index({ email: 1 }, { unique: true });
 
 // Create the model for the collection
 const LogInCollection = mongoose.model("LogInCollection", LogInSchema);

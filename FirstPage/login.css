@@ -121,7 +121,6 @@ body{
         height: 3rem;
         background-color: darkslategrey;
         border-color: darkslategrey;
-        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit input:hover{
         background-color: rgb(31, 48, 48);
@@ -630,7 +629,7 @@ body{
                     width: 22rem;
                     height: 8rem;
                 }
-                .personData{
+                .personData{ 
                     width: 24rem;
                     height: 6.25rem;   
                 }
@@ -715,7 +714,6 @@ body{
         height: 3rem;
         background-color: black;
         border-color: white;
-        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
@@ -803,7 +801,6 @@ body{
         height: 2.5rem;
         background-color: black;
         border-color: white;
-        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
@@ -867,7 +864,6 @@ body{
         height: 2.5rem;
         background-color: black;
         border-color: white;
-        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);
@@ -894,7 +890,7 @@ body{
         display: none;
     }
     .divPrincipal{
-        height: 37rem;
+        height: 39rem;
         width: 20rem;
         margin-top: 0.5rem;
         background-color: black;
@@ -931,7 +927,6 @@ body{
         font-size: 0.8rem;
         background-color: black;
         border-color: white;
-        font-family: "Montserrat ExtraBold", sans-serif;
     }
     .divForSubmit input:hover{
         background-color: rgb(14, 21, 21);

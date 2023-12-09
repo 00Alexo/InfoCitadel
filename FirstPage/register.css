@@ -13,7 +13,7 @@
 }
 
 .registerInput label{
-    font-size: 0.9rem;
+    font-size: 0.9rem; 
 }
 .registerInText{
     margin-top: 1rem !important;
@@ -47,6 +47,203 @@
     margin-top: 20px;
 }
 
-.divForSubmit{
+.divForRegister{
     margin-top: 20px;
+}
+
+
+@media (min-width: 1281px) and (max-width: 1450px) {
+
+    .AccountDataDiv{
+        margin-top: 30px;
+        height:250px;
+    }
+
+    .registerInput input{
+        width: 450px !important;
+        height: 50px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.8rem;
+        margin-top: -3px;
+    }
+
+    .registerTextSignInText{
+        font-size:1.8rem;
+    }
+    .altRegisterText{
+        margin-top: 20px !important;
+    }
+    .divForRegister{
+        margin-top: 20px !important;
+    }
+    .registerInText{
+        margin-top: 0px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .registerDiv{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .AccountDataDiv{
+        margin-top: 10px;
+        height:250px;
+    }
+    .mb-3 {
+        margin-bottom: 0rem!important;
+    }
+
+    .registerInput input{
+        width: 380px !important;
+        height: 40px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.8rem;
+        margin-top: -3px;
+    }
+
+    .registerTextSignInText{
+        font-size:1.5rem;
+    }
+    .altRegisterText{
+        margin-top: 10px !important;
+    }
+    .divForRegister{
+        margin-top: 20px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .registerDiv{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .AccountDataDiv{
+        height:280px;
+    }
+
+    .registerInput input{
+        width: 500px !important;
+        height: 50px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.9rem;
+    }
+
+    .registerTextSignInText{
+        font-size:2rem;
+    }
+    .altRegisterText{
+        margin-top: 20px !important;
+    }
+    .divForRegister{
+        margin-top: 50px !important;
+    }
+}
+
+
+@media (min-width: 580px) and (max-width: 767px) {
+    .registerDiv{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .AccountDataDiv{
+        height:250px;
+    }
+
+    .registerInput input{
+        width: 300px !important;
+        height: 40px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.8rem;
+        margin-top: -3px; 
+    }
+
+    .registerTextSignInText{
+        font-size:1.8rem;
+    }
+    .altRegisterText{
+        margin-top: 20px !important;
+    }
+    .divForRegister{
+        margin-top: 50px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 580px) {
+    .registerDiv{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .AccountDataDiv{
+        height:250px;
+    }
+
+    .registerInput input{
+        width: 250px !important;
+        height: 40px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.8rem;
+        margin-top: -3px; 
+    }
+
+    .registerInText{
+        width: 300px;
+    }
+    .registerTextSignInText{
+        font-size:1.5rem;
+    }
+    .altRegisterText{
+        margin-top: 20px !important;
+    }
+    .divForRegister{
+        margin-top: 50px !important;
+    }
+}
+
+@media  (max-width: 480px) {
+    .registerDiv{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .AccountDataDiv{
+        height:250px;
+    }
+
+    .registerInput input{
+        width: 230px !important;
+        height: 40px !important;
+    }
+    
+    .registerInput label{
+        font-size: 0.8rem;
+        margin-top: -3px; 
+    }
+
+    .registerInText{
+        width: 280px;
+    }
+    .registerTextSignInText{
+        font-size:1.4rem;
+    }
+    .altRegisterText{
+        margin-top: 20px !important;
+    }
+    .divForRegister{
+        margin-top: 50px !important;
+    }
 }

@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const hbs = require('hbs');
+const bcrypt = require('bcryptjs');
 const collection= require('./mongodb');
 
 const templatePath = path.join(__dirname);
+const saltRounds= 12;
 
 app.use(express.json());
 app.set('view engine', 'hbs');
@@ -24,20 +26,29 @@ app.get('/', (req, res) => {
 
 app.post("/backend/templates/signup.hbs", async (req, res) => {
     try {
+
+      const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+
       const data = {
         username: req.body.username,
-        password: req.body.password,
+        password: hashedPassword,
         email: req.body.email,
         admin: false,
       };
       
       await collection.insertMany([data]);
-      console.log("New account created successfully");
+      console.log("New account created successfully: ", data);
 
-      res.redirect('https://infocitadel.netlify.app');
+      res.redirect('/');
     } catch (error) {
+
       console.error("Error in signup:", error);
-      res.status(500).send("Internal Server Error");
+ 
+      if(error.code === 11000)
+        res.status(400).send("Email/Username already in use!");
+      else
+        res.status(500).send("Internal Server Error");
+      
     }
   });
 
@@ -60,12 +71,19 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
       }
 
 
-      if(check.password === req.body.password){
-        res.redirect('https://infocitadel.netlify.app');
-        console.log("User logged in: \n", check);
-      }else{
-        res.send("wrong password");
-      }
+      if (check) {
+        // Use bcrypt.compare to check if the entered password matches the stored hashed password
+        const passwordMatch = await bcrypt.compare(req.body.password, check.password);
+
+        if (passwordMatch) {
+            res.redirect('/');
+            console.log("User logged in: \n", check);
+        } else {
+            res.send("Wrong password");
+        }
+    } else {
+        res.send("User not found");
+    }
 
     } catch (error) {
       res.send("Wrong details");
