@@ -35,7 +35,6 @@ const LogInSchema = new mongoose.Schema({
 
 LogInSchema.index({ email: 1 }, { unique: true });
 
-// Create the model for the collection
 const LogInCollection = mongoose.model("LogInCollection", LogInSchema);
 
 module.exports = LogInCollection;
