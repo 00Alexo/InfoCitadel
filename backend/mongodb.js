@@ -26,6 +26,10 @@ const LogInSchema = new mongoose.Schema({
     type: String, 
     required: false, 
   },
+  userProgress: {
+    solutions: Number,
+    points: Number,
+  },
   admin: {
     type: Boolean,
     required: true,

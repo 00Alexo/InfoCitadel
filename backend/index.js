@@ -35,6 +35,10 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
         username: req.body.username,
         password: hashedPassword,
         email: req.body.email,
+        userProgress: {
+          solutions: 0,
+          points: 0,
+        },
         admin: false,
       };
       
@@ -47,7 +51,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
         throw error;
       }
 
-      res.redirect('/');
+      res.redirect('https://infocitadel.netlify.app');
     } catch (error) {
 
       console.error("Error in signup:", error);
@@ -86,7 +90,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
         const passwordMatch = await bcrypt.compare(req.body.password, check.password);
 
         if (passwordMatch) {
-            res.redirect('/');
+            res.redirect('https://infocitadel.netlify.app');
             console.log("User logged in: \n", check);
         } else {
             res.send("Wrong password");
