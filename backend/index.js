@@ -21,13 +21,15 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(templatePath, '../index.html'));
 });
 
-
+ 
 
 
 app.post("/backend/templates/signup.hbs", async (req, res) => {
     try {
 
       const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+
+      const passwordConfirmation = req.body.confirmPassword;
 
       const data = {
         username: req.body.username,
@@ -36,8 +38,14 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
         admin: false,
       };
       
-      await collection.insertMany([data]);
-      console.log("New account created successfully: ", data);
+      if(passwordConfirmation == req.body.password){
+        await collection.insertMany([data]);
+        console.log("New account created successfully: ", data);
+      }else{
+        // Set a variable to hold the error code
+        error = { code: 1838193 };
+        throw error;
+      }
 
       res.redirect('/');
     } catch (error) {
@@ -46,6 +54,8 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
  
       if(error.code === 11000)
         res.status(400).send("Email/Username already in use!");
+      else if(error.code === 1838193)
+        res.status(400).send("Passwords do not match");
       else
         res.status(500).send("Internal Server Error");
       

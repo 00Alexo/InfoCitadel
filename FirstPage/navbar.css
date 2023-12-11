@@ -35,16 +35,16 @@
 }
 
 .MyNavbar{
+    border:none !important;
     margin: 0 auto;
-    margin-top: 1rem;
     border-radius: 5px;
     border-width: 3px;
     border-style: solid;
     border-color: #313131;
     display: flex;
-    background-color: darkslategrey;
+    background-color: #171717;
     height: 3.3rem;
-    width: 100rem;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -65,13 +65,16 @@
     font-size: 1.2rem;
 }
 .otherNavbarElements .dropdownHead:hover{
-    border-bottom: rgb(8, 211, 8) solid 3px;
+    border-bottom: rgb(255, 255, 255) solid 4px;
 }
 .dropdownHead a:hover{
-    color: rgb(133, 179, 179);
+    color: rgb(255, 255, 255);
+}
+.dropdownHead:hover{
+    border-bottom: rgb(255, 255, 255) solid 4px;
 }
 .dropdownHead{
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
     position: relative;
     display: inline-block;
     height: 2.5rem;
@@ -117,7 +120,7 @@
 
 .dropdownContent li:hover{
     background-color: #222121;
-    border-bottom: 2px solid rgb(8, 211, 8);
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 .dropdownHead svg{
     margin-left: 5px;
@@ -156,7 +159,7 @@
 
 .secondDropdownContent li:hover{
     background-color: #222121;
-    border-bottom: 2px solid rgb(8, 211, 8);
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 @media (min-width: 1451px) and (max-width: 1780px){
@@ -176,12 +179,8 @@
     .dropdownHead a{
         font-size: 1rem;
     }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
-    }
+
+
     .dropdownHead{
         margin-top: 0.7rem;
         height: 2.3rem;
@@ -203,7 +202,7 @@
     }
     
     .dropdownContent li:hover{
-        border-bottom: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(0, 0, 0);
     }
     .dropdownHead svg{
         margin-left: 5px;
@@ -226,7 +225,7 @@
     }
     
     .secondDropdownContent li:hover{
-        border-bottom: 2px solid rgb(8, 211, 8);
+        border-bottom: 2px solid rgb(0, 0, 0);
     }
     .dropdownHead:last-child{
         width: 4rem;
@@ -250,12 +249,8 @@
     .dropdownHead a{
         font-size: 0.9rem;
     }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
-    }
+
+
     .dropdownHead{
         margin-top: 0.4rem;
         height: 2rem;
@@ -276,9 +271,6 @@
         margin-top: 1rem;
     }
     
-    .dropdownContent li:hover{
-        border-bottom: 1px solid rgb(8, 211, 8);
-    }
     .dropdownHead svg{
         margin-left: 5px;
         margin-top: 0.55rem;
@@ -300,9 +292,6 @@
         margin-top: -2.3rem;
     }
     
-    .secondDropdownContent li:hover{
-        border-bottom: 1px solid rgb(8, 211, 8);
-    }
 }
  @media (min-width: 1025px) and (max-width: 1280px){
     .MyNavbar{
@@ -321,12 +310,8 @@
     .dropdownHead a{
         font-size: 0.7rem;
     }
-    .otherNavbarElements .dropdownHead:hover{
-        border-bottom: rgb(8, 211, 8) solid 3px;
-    }
-    .dropdownHead a:hover{
-        color: rgb(133, 179, 179);
-    }
+
+
     .dropdownHead{
         margin-top: 0.3rem;
         height: 2rem;
@@ -347,9 +332,7 @@
         margin-top: 0.7rem;
     }
     
-    .dropdownContent li:hover{
-        border-bottom: 1px solid rgb(8, 211, 8);
-    }
+
     .dropdownHead svg{
         margin-left: 5px;
         margin-top: 0.55rem;
@@ -371,9 +354,7 @@
         margin-top: -2rem;
     }
     
-    .secondDropdownContent li:hover{
-        border-bottom: 1px solid rgb(8, 211, 8);
-    }
+
 }
 
 

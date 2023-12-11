@@ -9,7 +9,7 @@ mongoose.connect(process.env.mongoDB)
   })
   .catch((error) => {
     console.error("MongoDB connection failed:", error);
-  });
+  }); 
 
 // Define the schema for the collection
 const LogInSchema = new mongoose.Schema({
@@ -21,6 +21,10 @@ const LogInSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  confirmPassword: {
+    type: String, 
+    required: false, 
   },
   admin: {
     type: Boolean,
