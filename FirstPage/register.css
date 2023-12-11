@@ -47,10 +47,19 @@
     margin-top: 20px;
 }
 
+.AccountDataDiv input{
+    transition: all 0.5s ease-in-out;
+}
+
 .divForRegister{
     margin-top: 20px;
 }
 
+.AccountDataDiv input:focus {
+    outline-color: #1a1a1a  !important;
+    outline-style: solid;
+    outline-width: 0.3rem;
+}
 
 @media (min-width: 1281px) and (max-width: 1450px) {
 
@@ -245,5 +254,5 @@
     }
     .divForRegister{
         margin-top: 50px !important;
-    }
+    } 
 }

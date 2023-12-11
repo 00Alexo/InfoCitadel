@@ -42,7 +42,7 @@
     border-style: solid;
     border-color: #313131;
     display: flex;
-    background-color: #171717;
+    background-color: #222222 ;
     height: 3.3rem;
     width: 100%;
     align-items: center;
@@ -64,20 +64,42 @@
     margin: 0 auto;
     font-size: 1.2rem;
 }
-.otherNavbarElements .dropdownHead:hover{
-    border-bottom: rgb(255, 255, 255) solid 4px;
-}
+
 .dropdownHead a:hover{
     color: rgb(255, 255, 255);
 }
-.dropdownHead:hover{
-    border-bottom: rgb(255, 255, 255) solid 4px;
-}
-.dropdownHead{
+
+
+.dropdownHead {
     margin-top: 0.8rem;
     position: relative;
     display: inline-block;
     height: 2.5rem;
+}
+
+.dropdownHead::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px; /* Set the border height */
+    background-color: rgb(255, 255, 255);
+    transition: width 0.4s ease; /* Adjust the animation speed if needed */
+}
+
+.dropdownHead:hover::before {
+    width: 100%;
+}
+
+.dropdownHead a {
+    color: white;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.otherNavbarElements .dropdownHead:hover {
+    border-bottom: none; /* Remove the bottom border */
 }
 .dropdownContent{
     margin-left: -1.8rem;
@@ -109,11 +131,28 @@
 .dropdownContent li {
     margin-bottom: 0.4rem;
     background-color: #313131;
-    font-family: andale mono, monospace;
+    font-family: 'andale mono', monospace;
     padding: 10px;
     text-align: center;
-    border-bottom: 2px solid grey;
+    position: relative;
 }
+
+.dropdownContent li:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white; /* Set the color of the bottom border */
+    transition: all 0.3s;
+}
+
+.dropdownContent li:hover:before {
+    width: 100%;
+    left: 0;
+}
+
 .dropdownContent li:nth-child(1){
     margin-top: 1rem;
 }

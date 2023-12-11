@@ -1,4 +1,5 @@
 // Leaderboard
+
 var simplebar = new SimpleBar(document.getElementById('mostProblemsDivForContent'), {            
 });
 var simplebar2 = new SimpleBar(document.getElementById('mostProblemsDivForContent2'), {
@@ -48,6 +49,22 @@ showMore2.addEventListener('click', () => {
 }); 
 
 
-
-
+/*function getVideoCardInfo() {
+    const gl = document.createElement('canvas').getContext('webgl');
+    if (!gl) {
+      return {
+        error: "no webgl",
+      };
+    }
+    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+    return debugInfo ? {
+      vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+      renderer:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+    } : {
+      error: "no WEBGL_debug_renderer_info",
+    };
+  }
+  
+  console.log(getVideoCardInfo());
+*/
  

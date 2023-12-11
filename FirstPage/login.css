@@ -109,14 +109,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
 .container1 {
     display: grid;
 }
@@ -189,7 +181,7 @@ body{
         width: 100%;
     }
     .inputsDiv input:focus {
-        outline-color: darkslategrey  !important;
+        outline-color: #1a1a1a  !important;
         outline-style: solid;
         outline-width: 0.3rem;
     }
@@ -216,12 +208,12 @@ body{
         animation: slideFromBottom 1s ease-in-out;
         width: 6rem;
         height: 3rem;
-        background-color: darkslategrey;
-        border-color: darkslategrey;
+        background-color: #1a1a1a;
+        border-color: #1a1a1a;
     }
     .divForSubmit input:hover{
-        background-color: rgb(31, 48, 48);
-        border-color: rgb(31, 48, 48);
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(0, 0, 0);
     }
         .divForSubmit span{
             margin-top: -0.4rem;
@@ -229,7 +221,11 @@ body{
             color:white;
         }
             .divForSubmit span a{
-                color: rgb(133, 179, 179);
+                color: white;
+                transition: 0.5s;
+            }
+            .divForSubmit span a:hover{
+                color: #1a1a1a;
             }
 
 
@@ -342,7 +338,7 @@ body{
     margin-right: 0vh !important;
     width: 45%;
     height: calc(100% - 1.25rem);
-    background-color:darkslategray;
+    background-color:#1a1a1a;
     border-radius: 0.9rem;
 }
 
@@ -361,7 +357,7 @@ body{
 .carouselButtons button{
     width: 1rem;
     height: 1rem;
-    background-color: rgb(133, 179, 179);
+    background-color: white;
     transform: scale(0.5);
     border-radius: 50%;
     border: none;
@@ -445,7 +441,7 @@ body{
     font-size: 1rem;
     padding-top: 1.25rem;
     padding-left: 2.7rem;
-    color: rgb(133, 179, 179);
+    color: white;
 }
 
 

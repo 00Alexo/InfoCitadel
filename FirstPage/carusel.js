@@ -122,7 +122,7 @@ changeColorButtons.forEach((button) => {
                     otherButton.style.backgroundColor = 'white';
                 }
                 else{
-                    otherButton.style.backgroundColor = 'rgb(133, 179, 179)';
+                    otherButton.style.backgroundColor = 'white';
                 }
             }
         });
