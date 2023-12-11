@@ -409,6 +409,10 @@
 
 
 @media (min-width: 768px) and (max-width: 1024px){
+
+    .lines{
+        display: none;
+    }
     .contineNavBar{
         margin-left: auto;
         width: 14rem;
