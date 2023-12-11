@@ -587,7 +587,9 @@
 }
 
 @media (min-width: 481px) and (max-width: 767px){
-
+    .lines{
+        display: none;
+    }
     .contineNavBar{
         margin-left: auto;
         width: 11rem;
@@ -769,7 +771,9 @@
     }
 }
 @media  (max-width: 480px){
-
+    .lines{
+        display: none;
+    }
     .contineNavBar{
         margin-left: auto;
         width: 8rem;
