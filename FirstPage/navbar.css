@@ -37,8 +37,6 @@
 .MyNavbar{
     border:none !important;
     margin: 0 auto;
-    border-radius: 5px;
-    border-width: 3px;
     border-style: solid;
     border-color: #313131;
     display: flex;
@@ -203,11 +201,9 @@
 
 @media (min-width: 1451px) and (max-width: 1780px){
     .MyNavbar{
-        margin-top: 1rem;
         border-radius: 5px;
         border-width: 3px;
         height: 3rem;
-        width: 80.5rem;
     }
 
     .otherNavbarElements{
@@ -273,11 +269,9 @@
 
 @media (min-width: 1281px) and (max-width: 1450px){
     .MyNavbar{
-        margin-top: 0.5rem;
         border-radius: 5px;
         border-width: 3px;
         height: 2.7rem;
-        width: 70rem;
     }
 
     .otherNavbarElements{
@@ -334,11 +328,9 @@
 }
  @media (min-width: 1025px) and (max-width: 1280px){
     .MyNavbar{
-        margin-top: 0.5rem;
         border-radius: 5px;
         border-width: 3px;
         height: 2.3rem;
-        width: 57rem;
     }
 
     .otherNavbarElements{
@@ -960,4 +952,7 @@
         border-right: 2px solid rgb(11, 88, 211);
     }
 }
+
+
+
 

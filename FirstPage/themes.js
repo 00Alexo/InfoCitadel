@@ -11,6 +11,7 @@ const comentariu = document.querySelector('.comentariu');
 const siteNameText = document.querySelector('.siteNameText');
 const moto = document.querySelector('.motop');
 const motoContinuare = document.querySelector('.motoContinuare');
+const MyNavbar = document.querySelector('.MyNavbar');
 const changeBootstrapButton = document.querySelector('.btn');
 const changeThemeButtonNight1337Blue = document.querySelector('.changeThemeButtonNight1337Blue');
 let valueNight1337Blue = changeThemeButtonNight1337Blue.getAttribute('data-value');
@@ -18,6 +19,9 @@ const changeThemeButtonDefault = document.querySelector('.changeThemeButtonDefau
 let valueDefault = changeThemeButtonDefault.getAttribute('data-value');
 const changeThemeButtonChatGPT = document.querySelector('.changeThemeButtonChatGPT');
 let valuechatGPT = changeThemeButtonChatGPT.getAttribute('data-value');
+
+let backgroundAnimation = document.querySelector('.background-animation');
+let lines = document.querySelector('.lines'); 
 
 
 let temaActiva;
@@ -53,8 +57,10 @@ const removeNight1337BlueTheme = () => {
     comentariu.classList.remove('Night1337Bluecomentariu');
     siteNameText.classList.remove('Night1337BluesiteNameText');
     moto.classList.remove('Night1337Bluemoto');
+    MyNavbar.classList.remove('Night1337BlueMyNavbar');
     motoContinuare.classList.remove('Night1337BluemotoContinuare');
     changeBootstrapButton.classList.remove('btn-primary');
+    backgroundAnimation.style.display="none";
 };
 
 function toggleNight1337BlueTheme() {
@@ -71,9 +77,12 @@ function toggleNight1337BlueTheme() {
     comentariu.classList.add('Night1337Bluecomentariu');
     siteNameText.classList.add('Night1337BluesiteNameText');
     moto.classList.add('Night1337Bluemoto');
+    MyNavbar.classList.add('Night1337BlueMyNavbar');
     motoContinuare.classList.add('Night1337BluemotoContinuare');
     changeBootstrapButton.classList.remove('btn-dark');
     changeBootstrapButton.classList.add('btn-primary');
+    backgroundAnimation.style.display="block";
+    lines.style.display="none";
     localStorage.setItem('theme', temaActiva);
         removeChatGPTTheme();
     changeColorButtons[0].style.backgroundColor = 'black';
@@ -98,6 +107,7 @@ function togglechatGPTTheme() {
     motoContinuare.classList.add('chatGPTmotoContinuare');
     changeBootstrapButton.classList.remove('btn-dark');
     changeBootstrapButton.classList.add('btn-dark');
+    lines.style.display="none";
     localStorage.setItem('theme', temaActiva);
         removeNight1337BlueTheme();
     changeColorButtons[0].style.backgroundColor = 'black';
@@ -109,6 +119,7 @@ function toggleDefaultTheme() {
     temaActiva = valueDefault;
         removeNight1337BlueTheme();
         removeChatGPTTheme();
+    lines.style.display="block";
     changeBootstrapButton.classList.add('btn-dark'); 
     localStorage.setItem('theme', temaActiva);
     changeColorButtons[0].style.backgroundColor = '#313131';

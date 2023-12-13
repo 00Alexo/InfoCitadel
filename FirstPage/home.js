@@ -68,3 +68,24 @@ showMore2.addEventListener('click', () => {
   console.log(getVideoCardInfo());
 */
  
+
+/*async function fetchDataAndDisplayLeaderboard() {
+  try {
+    const response = await fetch("/backend/templates/leaderboard.hbs");
+
+    if (response.ok) {
+      const leaderboardHtml = await response.text();
+    
+      // Update your leaderboard container with the fetched HTML
+      const leaderboardContainer = document.getElementById("leaderboard-container");
+      leaderboardContainer.innerHTML = leaderboardHtml;
+    } else {
+      console.error("Error fetching leaderboard:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error fetching leaderboard:", error);
+  }
+}
+
+// Call the asynchronous function
+fetchDataAndDisplayLeaderboard();*/

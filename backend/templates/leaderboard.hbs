@@ -1,0 +1,17 @@
+<!-- templates/leaderboard.hbs -->
+
+<div class="leaderboard-container">
+  <h2>Top 3 Users</h2>
+  <ul>
+    {{#each topUsers}}
+      <li>
+        <p class="topNumber">{{@index + 1}}.</p>
+        <img class="rounded-circle" src="/path-to-user-image/{{this.username}}.png">
+        <div class="userLeaderboardData">
+          <p class="userLeaderboardDataName">{{this.username}}</p>
+          <p class="userLeaderboardDataData">{{this.userProgress.solutions}} Solutions</p>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

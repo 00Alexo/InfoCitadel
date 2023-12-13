@@ -66,6 +66,20 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
     }
   });
 
+  /*app.get("/backend/templates/leaderboard.hbs", async (req, res) => {
+    try {
+      // Fetch the top 3 users based on the number of solutions (descending order)
+      const topUsers = await collection.find({})
+        .sort({ 'userProgress.solutions': -1 })
+        .limit(3);
+  
+        res.render('leaderboard', { topUsers });
+    } catch (error) {
+      console.error("Error fetching leaderboard:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  });*/
+
 
   app.post("/backend/templates/login.hbs", async (req, res) => {
     try {
@@ -117,4 +131,4 @@ app.listen(process.env.PORT || 3000, () => {
 
 // TODO: WHEN DEPLOYING: 
                     // Modify HTML ACTIONS WITH https://infocitadeltest.onrender.com
-                    // Modifiy post redirects to https://infocitadel.netlify.app
+                    // Modifiy post redirects to https://infocitadel.netlify.app 

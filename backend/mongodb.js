@@ -9,7 +9,7 @@ mongoose.connect(process.env.mongoDB)
   })
   .catch((error) => {
     console.error("MongoDB connection failed:", error);
-  }); 
+  });  
 
 // Define the schema for the collection
 const LogInSchema = new mongoose.Schema({
