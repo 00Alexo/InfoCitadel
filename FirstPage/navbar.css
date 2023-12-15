@@ -403,7 +403,7 @@
 @media (min-width: 768px) and (max-width: 1024px){
 
     .lines{
-        display: none;
+        display: none !important;
     }
     .contineNavBar{
         margin-left: auto;
@@ -580,7 +580,7 @@
 
 @media (min-width: 481px) and (max-width: 767px){
     .lines{
-        display: none;
+        display: none !important;
     }
     .contineNavBar{
         margin-left: auto;
@@ -764,7 +764,7 @@
 }
 @media  (max-width: 480px){
     .lines{
-        display: none;
+        display: none !important;
     }
     .contineNavBar{
         margin-left: auto;
