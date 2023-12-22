@@ -1,9 +1,19 @@
 import { useState, useEffect} from 'react'
 import Home from '../pages/Home';
+// import handleSigninClick from '../pages/Home';
 
 
 const Navbar = () => {
+
+    const [viewSignin, setViewSignin] = useState(false);
     
+
+    const handleSigninClick = () => {
+        setViewSignin(true);
+        console.log('test');
+        console.log(viewSignin);
+    };
+
 const {handleShowModal} = Home;
 // State for regular dropdown visibility
 const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -257,7 +267,7 @@ useEffect(() => {
                     </div>
                 </div>
                 <div className = "dropdownHead" style={{marginRight: '1rem'}}> 
-                    <a className="SigninNavButton"  style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</a>
+                    <a className="SigninNavButton"  onClick={handleSigninClick} style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</a>
                 </div>
             </div>
     </div>
@@ -265,4 +275,4 @@ useEffect(() => {
     );
 }
  
-export default Navbar;
+export default Navbar

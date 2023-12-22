@@ -125,6 +125,8 @@ body{
     height: 43.75rem;
     grid-area: 1 / 1 / 2 / 2; /* Specifică zona grid unde să se afișeze */
     z-index: 99;
+    display: flex;
+    flex-direction: row;
 }
     /* Carusel cu informatii */
 
