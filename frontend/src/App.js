@@ -2,11 +2,9 @@ import 'simplebar/dist/simplebar.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/carusel.css'
-import './css/chatGPT.css'
-import './css/home.css'
 import './css/login.css'
 import './css/navbar.css'
-import './css/night1337blue.css'
+import './css/home.css'
 import './css/register.css'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';

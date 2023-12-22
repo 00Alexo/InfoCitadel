@@ -91,7 +91,7 @@ useEffect(() => {
             </div>
             <div className="phone_NavBar">
                 <div className="phone_dropDownHead">
-                    <a className="phone_SigninNavButton" onClick={handleShowModal} style={{textDecoration: 'none', cursor: 'pointer'}}> SIGN-IN</a>
+                    <a className="phone_SigninNavButton" style={{textDecoration: 'none', cursor: 'pointer'}}> SIGN-IN</a>
                 </div>
 
                 <div className = "phone_dropDownHead">
@@ -257,7 +257,7 @@ useEffect(() => {
                     </div>
                 </div>
                 <div className = "dropdownHead" style={{marginRight: '1rem'}}> 
-                    <a className="SigninNavButton" onClick={handleShowModal} style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</a>
+                    <a className="SigninNavButton"  style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</a>
                 </div>
             </div>
     </div>

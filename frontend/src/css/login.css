@@ -299,7 +299,7 @@ body{
             }
     }
 
-/* Added a font */
+
 @font-face {
     font-family: "SuperCorn";
     src: url(../../public/Fonts/Super\ Corn.ttf) format('opentype');
