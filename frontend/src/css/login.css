@@ -38,6 +38,7 @@ body{
     height: 100%;
     margin: auto;
     width: 90vw;
+    z-index: -999;
   } 
   
   .line {

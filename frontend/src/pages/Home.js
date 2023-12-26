@@ -1,18 +1,28 @@
-import {useState, useEffect} from 'react'
-import LoginComponent from "../components/LoginComponent";
-import Navbar from '../components/Navbar'
+import { useEffect, useState } from "react";
 
-const Home = (viewSignin) => {
-    // const [viewSignin, setViewSignin] = useState(false);
+
+const Home = () => {
+    const [activeTheme, setActiveTheme] = useState("defaultTheme")
     
-
-    // const handleSigninClick = () => {
-    //     setViewSignin(true);
-    // };
+     useEffect(() => {
+        setActiveTheme(localStorage.getItem("theme"));
+     }, []);
 
     return (
-        <div className="container1">
-            {viewSignin && <LoginComponent/>}
+        <div className="homecontainer">
+            {activeTheme == 'defaultTheme' || activeTheme == null ?( 
+                <div className="lines">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </div>
+            ): <></>}
+            {activeTheme == 'christmasTheme' ?(    
+                <div className="background-animation">
+                </div>
+            ) : <></>}
         </div>
     );
 }

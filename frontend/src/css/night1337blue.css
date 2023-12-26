@@ -1,8 +1,8 @@
-.Night1337BlueBody{
+.christmasThemeBody{
     background-color: rgb(2, 136, 219) !important;
 }
 
-.Night1337BlueMyNavbar{
+.christmasThemeMyNavbar{
     background-color: #08B2F2!important;
 }
     
@@ -81,12 +81,12 @@
 }
 
 /* Contine informatii + login/register */
-.Night1337BlueDivPrincipal{
+.christmasThemedivPrincipal{
     background-color: #5548C5;
 }
     /* Carusel cu informatii */
 
-        .Night1337BluetextSignInText{
+        .christmasThemetextSignInText{
             color: white;
             font-size: 2.5;
             font-family: Corrupted, sans-serif;
@@ -94,28 +94,28 @@
 
     /* Register/Login Forms */
 
-    .Night1337BlueinputsDiv div{
+    .christmasThemeinputsDiv div{
         font-family: Jogan;
     }
 
-    .Night1337BlueinputsDiv input:focus {
+    .christmasThemeinputsDiv input:focus {
         outline-color: whitesmoke !important;
     }
 
 
-    .Night1337BluedivForSubmit button{
+    .christmasThemedivForSubmit input{
         background-color: #8C92FF;
         border-color: whitesmoke;
     }
-    .Night1337BluedivForSubmit button:hover{
+    .christmasThemedivForSubmit button:hover{
         background-color: rgb(112, 210, 255);
         border-color: gray;
     }
-        .Night1337BluedivForSubmit span{
+        .christmasThemedivForSubmit span{
             color: white;
             font-family: Jogan;
         }
-            .Night1337BluedivForSubmit span a{
+            .christmasThemedivForSubmit span a{
                 color: rgb(112, 210, 255);
             }
 
@@ -153,33 +153,33 @@
 }
 
 /* carusel cu informatii */
-.Night1337Bluecarousel{
+.christmasThemecarousel{
     background-color: #8C92FF;
 }
 
 /* Carousel buttons - div */
 
 
-.Night1337BluecarouselButtons button{
+.christmasThemecarouselButtons button{
     background-color: white;
 }
 
 /* Comentarii */
 
-.Night1337Bluecomments{
+.christmasThemecomments{
     background-color: white;
 }
 
 
 /* Nume + ocupatie */
 
-    .Night1337BluepersonDataText span:nth-child(1){
+    .christmasThemepersonDataText span:nth-child(1){
         font-size: 1.2rem;
         font-family: "Montserrat";
         color: black;
     }
 
-    .Night1337BluepersonDataText span:nth-child(2){
+    .christmasThemepersonDataText span:nth-child(2){
         font-size: 0.75rem;
         font-family: 'Open Sans', sans-serif;
         color: black;
@@ -187,25 +187,25 @@
 
 /* comentariul lu yang */
 
-    .Night1337Bluecomentariu p{
+    .christmasThemecomentariu p{
         color: black;
         font-family: 'Open Sans', sans-serif;
     }
 
 /* numele care ii deasupra comentariilor */
 
-.Night1337BluesiteNameText p{
+.christmasThemesiteNameText p{
     font-family: "StormGust";
     color: white;
 }
 
 /* motive sa iti incepi aventura cu noi*/
 
-        .Night1337Bluemotop{
+        .christmasThememotop{
             font-size: 2rem;
             color: white;
         }
-        .Night1337BluemotoContinuare{
+        .christmasThememotoContinuare{
             font-family: 'Open Sans', sans-serif;
             color: white;
         }

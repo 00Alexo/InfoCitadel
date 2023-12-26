@@ -1,20 +1,73 @@
 import { useState, useEffect} from 'react'
-import Home from '../pages/Home';
-// import handleSigninClick from '../pages/Home';
+import LoginComponent from "../components/LoginComponent";
+import { Link } from "react-router-dom";
+
 
 
 const Navbar = () => {
+    const body = document.querySelector('body');
+
 
     const [viewSignin, setViewSignin] = useState(false);
     
+    window.onkeydown = function(e) {
+        if (e.keyCode === 27) {
+            setViewSignin(false);
+        }
+    }
 
-    const handleSigninClick = () => {
-        setViewSignin(true);
-        console.log('test');
-        console.log(viewSignin);
-    };
+        const handleSigninClick = () => {
+            setViewSignin(!viewSignin);
+        };
 
-const {handleShowModal} = Home;
+
+    const [dropDownActive, isDropDownActive] = useState(false);
+
+    const handleDropDownClick = () => {
+        isDropDownActive(!dropDownActive);
+    }
+
+    const [activeTheme, setActiveTheme] = useState(localStorage.getItem("theme"));
+
+    function toggleChristmasTheme(theme) {
+        window.location.reload()
+        setActiveTheme(theme)
+        localStorage.setItem('theme', theme);
+    }
+    function toggleChatGPTTheme(theme) {
+        window.location.reload()
+        setActiveTheme(theme)
+        localStorage.setItem('theme', theme);
+    }
+    function toggleDefaultTheme(theme) {
+        window.location.reload()
+        setActiveTheme(theme)
+        localStorage.setItem('theme', theme);
+    }
+
+    const handleThemeChange = (theme) =>{
+        switch(theme){
+            case 'christmasTheme':
+                toggleChristmasTheme('christmasTheme');
+                break;
+            case 'chatGPTTheme':
+                toggleChatGPTTheme('chatGPTTheme');
+                break;
+            default:
+                toggleDefaultTheme('defaultTheme');
+                break;
+        }
+    }
+
+    useEffect(() => {
+        body.classList.add(`${activeTheme}Body`);
+    }, [])
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // State for regular dropdown visibility
 const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 // State for phone dropdown visibility
@@ -89,7 +142,6 @@ useEffect(() => {
   };
 }, []);
 
-
     return (
     <div className = "contineNavBar"> 
         <div className="phone_dropDownNavbarDiv">
@@ -101,23 +153,23 @@ useEffect(() => {
             </div>
             <div className="phone_NavBar">
                 <div className="phone_dropDownHead">
-                    <a className="phone_SigninNavButton" style={{textDecoration: 'none', cursor: 'pointer'}}> SIGN-IN</a>
+                    <Link className="phone_SigninNavButton" style={{textDecoration: 'none', cursor: 'pointer'}}> SIGN-IN</Link>
                 </div>
 
                 <div className = "phone_dropDownHead">
-                    <a href="#" style={{textDecoration: 'none'}}> 
+                    <Link to="/" style={{textDecoration: 'none'}}> 
                         <svg  style={{marginRight: '0.8rem'}}xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" className="bi bi-journal-check" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                             <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
                             <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
                           </svg>
                         Probleme
-                    </a>
+                    </Link>
                 </div>
 
 
                 <div className="phone_dropDownHead" style={{width:'18rem', marginLeft:'-4rem', justifyContent:'space-around', alignItems: 'flex-end'}}>
-                    <a href="#" style={{textDecoration: 'none', marginLeft:'3rem'}}> 
+                    <Link to="/" style={{textDecoration: 'none', marginLeft:'3rem'}}> 
                     <svg style={{marginRight: '0.8rem'}}fill="white" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -151,11 +203,11 @@ useEffect(() => {
                                 <li>Community <br/> Contribution</li>
                             </ul>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="phone_dropDownHead" style={{width:'18rem', marginLeft:'-4rem', justifyContent:'space-around', alignItems:'flex-end'}}>
-                    <a href="#" style={{textDecoration: 'none', marginLeft: '2.5rem'}}> 
+                    <Link to="/" style={{textDecoration: 'none', marginLeft: '2.5rem'}}> 
                         <svg style={{marginRight: '0.8rem'}}xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" className="bi bi-journals" viewBox="0 0 16 16">
                             <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"/>
                             <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"/>
@@ -168,11 +220,11 @@ useEffect(() => {
                                 <li> Community <br/> Contribution</li>
                             </ul>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className = "phone_dropDownHead">
-                    <a href="/FirstPage/OtherPages/HTML/compiler.html" style={{textDecoration: 'none'}}> 
+                    <Link to="/compiler" style={{textDecoration: 'none'}}> 
                     <svg style={{marginRight: '0.8rem'}}height="25px" width="25px" fill="white" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xmlSpace="preserve" stroke="#ffffff">
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -184,20 +236,20 @@ useEffect(() => {
                         </g> 
                     </svg>
                         Compiler
-                    </a>
+                    </Link>
                 </div>
 
                 <div className = "phone_dropDownHead">
-                    <a href="#" style={{textDecoration: 'none', marginLeft: '-20px'}} > 
+                    <Link to="/" style={{textDecoration: 'none', marginLeft: '-20px'}} > 
                         <svg style={{marginRight: '0.8rem'}}xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" fill="white" viewBox="0 0 512 512">
                             <path d="M240.1 4.2c9.8-5.6 21.9-5.6 31.8 0l171.8 98.1L448 104l0 .9 47.9 27.4c12.6 7.2 18.8 22 15.1 36s-16.4 23.8-30.9 23.8H32c-14.5 0-27.2-9.8-30.9-23.8s2.5-28.8 15.1-36L64 104.9V104l4.4-1.6L240.1 4.2zM64 224h64V416h40V224h64V416h48V224h64V416h40V224h64V420.3c.6 .3 1.2 .7 1.8 1.1l48 32c11.7 7.8 17 22.4 12.9 35.9S494.1 512 480 512H32c-14.1 0-26.5-9.2-30.6-22.7s1.1-28.1 12.9-35.9l48-32c.6-.4 1.2-.7 1.8-1.1V224z"/>
                         </svg>
                         History
-                    </a>
+                    </Link>
                 </div>
 
                 <div className = "phone_dropDownHead">
-                    <a href="#" style={{textDecoration: 'none', marginLeft: '-20px'}} >
+                    <Link to="/" style={{textDecoration: 'none', marginLeft: '-20px'}} >
                     <svg style={{marginRight: '0.8rem'}}viewBox="0 0 48 48" fill="none" width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -207,39 +259,41 @@ useEffect(() => {
                     </g>
                     </svg>
                         Forum
-                    </a>
+                    </Link>
                 </div>
 
                 <div className = "phone_dropDownHead">
-                    <a href="#" style={{textDecoration: 'none', marginLeft: '15px'}}>
+                    <Link to="/" style={{textDecoration: 'none', marginLeft: '15px'}}>
                         <svg style={{marginRight: '0.8rem'}}viewBox="0 0 24 24" fill="none" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 19H9V12.5V8.6C9 8.26863 9.26863 8 9.6 8H14.4C14.7314 8 15 8.26863 15 8.6V14.5V19Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M15 5H9" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M20.4 19H15V15.1C15 14.7686 15.2686 14.5 15.6 14.5H20.4C20.7314 14.5 21 14.7686 21 15.1V18.4C21 18.7314 20.7314 19 20.4 19Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M9 19V13.1C9 12.7686 8.73137 12.5 8.4 12.5H3.6C3.26863 12.5 3 12.7686 3 13.1V18.4C3 18.7314 3.26863 19 3.6 19H9Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                         TopUsers
-                    </a>
+                    </Link>
                 </div>
             </div>
             
         </div>
-            <div className = "MyNavbar">
+            <div className = {`${activeTheme}MyNavbar MyNavbar`}>
                 <div className = "dropdownHead" >
-                    <a href="index.html" style={{textDecoration: 'none'}}> <img src="logoCTD.gif" style={{width:'178px',height:'55px', marginTop: '-15px'}}/></a>
+                    <Link to="/" style={{textDecoration: 'none'}}> <img src="logoCTD.gif" style={{width:'178px',height:'55px', marginTop: '-15px'}}/></Link>
                 </div>
                 <div className = "otherNavbarElements">
                     <div className = "dropdownHead">
-                        <a href="#" style={{textDecoration: 'none'}}> Probleme</a>
+                        <Link to="/" style={{textDecoration: 'none'}}> Probleme</Link>
                     </div>
                     <div className = "dropdownHead">
-                        <a href="#" style={{textDecoration: 'none'}}> Themes</a>
+                        <Link to="/" style={{textDecoration: 'none'}}> Themes</Link>
                         <div className = "dropdownContent" id = "dropDownContentJS">
                             <ul>
-                                <li className="secondForHoverDropdown">
+                                <li className="secondForHoverDropdown" onClick={handleDropDownClick}>
                                     Change <br/> Theme
+                                    {dropDownActive && (
                                     <div className = "dropDownContent secondDropdownContent">
                                         <ul>
-                                            <li className="changeThemeButtonDefault" data-value="defaultTheme"> Default</li>
-                                            <li className="changeThemeButtonNight1337Blue" data-value = "skoskTheme"> Christmas</li>
-                                            <li className="changeThemeButtonChatGPT" data-value = "ChatGPTTheme"> ChatGPT</li>
-                                        </ul>
+                                            <li className="changeThemeButtonDefault" data-value="defaultTheme" onClick={() =>handleThemeChange("defaultTheme")}> Default</li>
+                                            <li className="changeThemeButtonNight1337Blue" data-value = "skoskTheme" onClick={() =>handleThemeChange("christmasTheme")}> Christmas</li>
+                                            <li className="changeThemeButtonChatGPT" data-value = "ChatGPTTheme" onClick={() =>handleThemeChange("chatGPTTheme")}> ChatGPT</li>
+                                        </ul> 
                                     </div>
+                                    )}
                                 </li>
                                 <li> Create your <br/> own theme</li>
                                 <li>Community <br/> Contribution</li>
@@ -247,7 +301,7 @@ useEffect(() => {
                         </div>
                     </div>
                     <div className = "dropdownHead">
-                        <a href="#" style={{textDecoration: 'none'}}> Cursuri</a>
+                        <Link to="/" style={{textDecoration: 'none'}}> Cursuri</Link>
                         <div className = "dropdownContent">
                             <ul>
                                 <li> Course <br/> Catalog</li>
@@ -257,19 +311,20 @@ useEffect(() => {
                         </div>
                     </div>
                     <div className = "dropdownHead"> 
-                        <a href="/FirstPage/OtherPages/HTML/compiler.html" style={{textDecoration: 'none'}}> Compiler</a>
+                        <Link to="compiler" style={{textDecoration: 'none'}}> Compiler</Link>
                     </div>
                     <div className = "dropdownHead"> 
-                        <a href="#" style={{textDecoration: 'none'}}> ProgHistory</a>
+                        <Link to="/" style={{textDecoration: 'none'}}> ProgHistory</Link>
                     </div>
                     <div className = "dropdownHead"> 
-                        <a href="#" style={{textDecoration: 'none'}}> Forum</a>
+                        <Link to="/" style={{textDecoration: 'none'}}> Forum</Link>
                     </div>
                 </div>
                 <div className = "dropdownHead" style={{marginRight: '1rem'}}> 
-                    <a className="SigninNavButton"  onClick={handleSigninClick} style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</a>
+                    <Link  className="SigninNavButton"  onClick={handleSigninClick} style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</Link>
                 </div>
             </div>
+            {viewSignin && <LoginComponent activeTheme ={activeTheme}/>}
     </div>
 
     );

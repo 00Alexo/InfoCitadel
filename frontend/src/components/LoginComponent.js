@@ -1,16 +1,16 @@
-import {useState, useEffect} from 'react'
 
-const LoginComponent = () => {
+
+const LoginComponent = ({activeTheme}) => {
 
     return (
-        <div className = "divPrincipal">
-            <div className="carousel">
-                <div className = "siteNameText">
+        <div className = {`${activeTheme}divPrincipal divPrincipal`}>
+            <div className={`${activeTheme}carousel carousel`}>
+                <div className = {`${activeTheme}siteNameText siteNameText`}>
                     <p> InfoCitadel</p>
                 </div>
                 <div className = "motive">
-                        <p className ="motop"> Codifică pasiunea, rezolvă <br/> provocările cu stil.</p>
-                        <p className="motoContinuare">Descopera cele mai frumoase limbaje si probleme <br/>
+                        <p className ={`${activeTheme}motop motop`}> Codifică pasiunea, rezolvă <br/> provocările cu stil.</p>
+                        <p className={`${activeTheme}motoContinuare motoContinuare`}>Descopera cele mai frumoase limbaje si probleme <br/>
                             alaturi de ceilalti membri ai comunitatii, <br/>
                             nu ezita, esti binevenit oricand!<br/></p>
                 </div>
@@ -72,22 +72,22 @@ const LoginComponent = () => {
                     </div>
                     </div>
                     </div>
-                <div className = "comments">
-                    <div className = "comentariu"> 
+                <div className = {`${activeTheme}comments comments`}>
+                    <div className = {`${activeTheme}comentariu comentariu`}> 
                         <p id ="mesaj"> </p>
                     </div>
                     <div className = "personData">
                         <div className = "personDataPhoto">
                             <img className="photoPersonDataPhoto" src = "AlexoProfilePicture.png"/>
                         </div>
-                        <div className = "personDataText">
+                        <div className = {`${activeTheme}personDataText personDataText`}>
                             <span className = "namePersonDataText"> SuperYang </span>
                             <span className = "occupationPersonDataText"> Web Developer </span>
                         </div>
                     </div>
                 </div>
 
-                <div className="carouselButtons">
+                <div className={`${activeTheme}carouselButtons carouselButtons`}>
                     <button className="changeColorButton"></button>
                     <button className="changeColorButton"></button>
                     <button className="changeColorButton"></button>
@@ -95,6 +95,7 @@ const LoginComponent = () => {
             </div>
 
             <div className = "signUpItems">
+                
                 <div className = "inputSVGS">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" className="bi bi-person" viewBox="0 0 16 16">
                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
@@ -107,10 +108,10 @@ const LoginComponent = () => {
                     </svg>
                 </div>
                 <div className = "textSignIn">
-                    <span className = "textSignInText"> SIGN-IN</span>
+                    <span className = {`${activeTheme}textSignInText textSignInText`}> SIGN-IN</span>
                 </div>
                 <form action="https://infocitadeltest.onrender.com/backend/templates/login.hbs" method="post">
-                    <div className = "inputsDiv">
+                    <div className = {`${activeTheme}inputsDiv inputsDiv`} >
                         <div className="form-floating mb-3">
                             <input className="form-control" id="floatingInput" name="username" placeholder="Username" maxLength="32" required/>
                             <label htmlFor="floatingInput">Username or password</label>
@@ -150,7 +151,7 @@ const LoginComponent = () => {
                         </div>
 
                     </div>
-                    <div className = "divForSubmit">
+                    <div className = {`${activeTheme}divForSubmit divForSubmit`}>
                         <input className="btn btn-dark" type="submit"></input>
                         <span className="registerSpanText"> Not registered? <a href = "#" className="registerPopUp"> Create an account</a></span>
                     </div>
@@ -211,7 +212,7 @@ const LoginComponent = () => {
 
                 </div>
 
-                <div className = "divForSubmit divForRegister">
+                <div className = {`${activeTheme}divForSubmit divForSubmit divForRegister`}>
                     <input className="btn btn-dark" type="submit"/>
                     <span className="registerSpanText"> Already have an account? <a href="#" className="loginPopUp"> Sign in</a></span>
                 </div>
