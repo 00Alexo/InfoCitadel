@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, useRef} from 'react'
 import LoginComponent from "../components/LoginComponent";
 import { Link } from "react-router-dom";
 
@@ -88,7 +88,6 @@ useEffect(() => {
   return () => {
     document
       .querySelector('.secondForHoverDropdown')
-      .removeEventListener('click', handleDropdownClick);
   };
 }, [isDropdownVisible]); // Dependency array includes isDropdownVisible
 
@@ -107,7 +106,7 @@ useEffect(() => {
   return () => {
     document
       .querySelector('.phone_secondForHoverDropdown')
-      .removeEventListener('click', handlePhoneDropdownClick);
+
   };
 }, [isPhoneDropdownVisible]); // Dependency array includes isPhoneDropdownVisible
 
@@ -142,15 +141,19 @@ useEffect(() => {
   };
 }, []);
 
+
+
+
     return (
     <div className = "contineNavBar"> 
         <div className="phone_dropDownNavbarDiv">
             <div className = "phone_divSVG" style={{cursor:'pointer'}}>
-                <svg className = "svgTreiBari" display = "none" clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className = "svgTreiBari" height = "56px" style={{margin:'0 auto'}} width="56px" display = "none" clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414
                             0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fillRule="nonzero" fill="white"/>
                 </svg>
             </div>
+            
             <div className="phone_NavBar">
                 <div className="phone_dropDownHead">
                     <Link className="phone_SigninNavButton" style={{textDecoration: 'none', cursor: 'pointer'}}> SIGN-IN</Link>
@@ -269,6 +272,7 @@ useEffect(() => {
                     </Link>
                 </div>
             </div>
+            
             
         </div>
             <div className = {`${activeTheme}MyNavbar MyNavbar`}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import CloseIcon from '@mui/icons-material/Close';
 
 const Home = () => {
     const [activeTheme, setActiveTheme] = useState("defaultTheme")

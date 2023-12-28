@@ -576,6 +576,9 @@
         border-bottom: 2px solid rgb(11, 88, 211);
         border-right: 2px solid rgb(11, 88, 211);
     }
+    .background-animation{
+        display: none;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px){
@@ -760,6 +763,9 @@
         background-color: #222121;
         border-bottom: 2px solid rgb(11, 88, 211);
         border-right: 2px solid rgb(11, 88, 211);
+    }
+    .background-animation{
+        display: none;
     }
 }
 @media  (max-width: 480px){
@@ -951,8 +957,8 @@
         border-bottom: 2px solid rgb(11, 88, 211);
         border-right: 2px solid rgb(11, 88, 211);
     }
+
+    .background-animation{
+        display: none;
+    }
 }
-
-
-
-
