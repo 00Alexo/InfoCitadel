@@ -46,7 +46,6 @@ const LoginComponent = ({activeTheme}) => {
 
 
 
-
     return (
         <div className = {`${activeTheme}divPrincipal divPrincipal`}>
             <div className={`${activeTheme}carousel carousel ${additionalClass}`}>

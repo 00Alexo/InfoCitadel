@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
+import Leaderboard from "../components/Leaderboard";
 
 const Home = () => {
     const [activeTheme, setActiveTheme] = useState("defaultTheme")
@@ -10,6 +10,7 @@ const Home = () => {
 
     return (
         <div className="homecontainer">
+            <Leaderboard/>
             {activeTheme == 'defaultTheme' || activeTheme == null ?( 
                 <div className="lines">
                     <div className="line"></div>

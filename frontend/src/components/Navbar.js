@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef} from 'react'
 import LoginComponent from "../components/LoginComponent";
 import { Link } from "react-router-dom";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 
@@ -328,7 +329,8 @@ useEffect(() => {
                     <Link  className="SigninNavButton"  onClick={handleSigninClick} style={{textDecoration: 'none', cursor:'pointer'}}> SIGN-IN</Link>
                 </div>
             </div>
-            {viewSignin && <LoginComponent activeTheme ={activeTheme}/>}
+            {viewSignin && <LoginComponent activeTheme ={activeTheme} viewSignin = {viewSignin}/>}
+            {viewSignin && <CloseIcon onClick={handleSigninClick} style={{right: '345', top: '85', position: 'absolute', cursor: 'pointer', animation: 'slideIn 1s ease-in-out'}}/>}
     </div>
 
     );

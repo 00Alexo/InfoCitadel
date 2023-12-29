@@ -49,7 +49,6 @@
     display:flex;
     flex-direction: column;
     width: 225px;
-    height:275px;
     justify-content: center;
 
 
@@ -144,32 +143,14 @@
 }
 
 .simplebar-content{
-    margin-top: 0px !important;
-    gap:20px !important;
+    gap:30px;
     display:flex !important;
     flex-direction: column !important;
     width: 225px !important;
-    height:270px;
     justify-content: center !important;
 }
 
-.simplebarReHeight{
-    height: 800px !important;
-}
 
-.simplebarReHeight2{
-    height: 800px !important;
-}
-
-.simplebar-content-2{
-    margin-top: 0px !important;
-    gap:20px !important;
-    display:flex !important;
-    flex-direction: column !important;
-    width: 225px !important;
-    height:270px;
-    justify-content: center !important;
-}
 
 /* TODO ADD PROFILE VIEW */
 
