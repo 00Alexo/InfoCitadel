@@ -8,8 +8,10 @@ import './css/home.css'
 import './css/register.css'
 import './css/chatGPT.css'
 import './css/night1337blue.css'
+import './css/probleme.css'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Probleme from './pages/Probleme'
 
 
 function App() {
@@ -25,6 +27,14 @@ function App() {
           <Route 
             path="/home"
             element={<Home />}
+          />
+          <Route 
+            path="/probleme"
+            element={<Probleme />}
+          />
+          <Route 
+            path="/probleme/clsIX"
+            element={<Probleme />}
           />
         </Routes>
       </div>

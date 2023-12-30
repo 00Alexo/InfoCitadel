@@ -47,7 +47,7 @@ const Leaderboard = () => {
             top: 7
         },
         {
-            username: 'ajhfin',
+            username: 'ajhkamfhfin',
             points: 300,
             solutions: 3,
             top: 8
@@ -59,7 +59,7 @@ const Leaderboard = () => {
             top: 9
         },
         {
-            username: 'ajhfin',
+            username: 'ajhlakfhlaahgdffin',
             points: 100,
             solutions: 1,
             top: 10

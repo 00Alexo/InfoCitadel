@@ -1,0 +1,13 @@
+.problemeContainer{
+    margin-top: 3%;
+    background-color: #292e34;
+    min-height: 750px;
+    max-height: 1000px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    --bs-gutter-x: 0rem !important; 
+}
+
+
+

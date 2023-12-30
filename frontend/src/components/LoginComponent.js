@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
 const LoginComponent = ({activeTheme}) => {
@@ -245,7 +246,7 @@ const LoginComponent = ({activeTheme}) => {
                 <div className = "textSignIn">
                     <span className = {`${activeTheme}textSignInText textSignInText`}> SIGN-IN</span>
                 </div>
-                <form action="https://infocitadeltest.onrender.com/backend/templates/login.hbs" method="post">
+                <form action="/backend/templates/login.hbs" method="post">
                     <div className = {`${activeTheme}inputsDiv inputsDiv`} >
                         <div className="form-floating mb-3">
                             <input className="form-control" id="floatingInput" name="username" placeholder="Username" maxLength="32" required/>
@@ -288,14 +289,14 @@ const LoginComponent = ({activeTheme}) => {
                     </div>
                     <div className = {`${activeTheme}divForSubmit divForSubmit`}>
                         <input className="btn btn-dark" type="submit"></input>
-                        <span className="registerSpanText" onClick={handleTextClick}> Not registered? <a href = "#" className="registerPopUp"> Create an account</a></span>
+                        <span className="registerSpanText" onClick={handleTextClick}> Not registered? <Link to="/" className="registerPopUp"> Create an account</Link></span>
                     </div>
                 </form>
             </div>
             ):(
 
             <div className = "registerDiv">
-                <form action="https://infocitadeltest.onrender.com/backend/templates/signup.hbs" method="post">
+                <form action="backend/templates/signup.hbs" method="post">
                     <div className = "textSignIn registerInText">
                         <span className = "textSignInText registerTextSignInText"> CREATE ACCOUNT</span>
                     </div>
@@ -350,7 +351,7 @@ const LoginComponent = ({activeTheme}) => {
 
                     <div className = {`${activeTheme}divForSubmit divForSubmit divForRegister`}>
                         <input className="btn btn-dark" type="submit"/>
-                        <span className="registerSpanText" onClick={handleTextClick}> Already have an account? <a href="#" className="loginPopUp"> Sign in</a></span>
+                        <span className="registerSpanText" onClick={handleTextClick}> Already have an account? <Link to="/" className="loginPopUp"> Sign in</Link></span>
                     </div>
                 </form>
             </div>
