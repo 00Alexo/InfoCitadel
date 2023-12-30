@@ -1,5 +1,5 @@
 # InfoCitadel
-https://infocitadel.netlify.app
+https://infocitadel.vercel.app
 
 
 
