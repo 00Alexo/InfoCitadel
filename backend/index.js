@@ -4,6 +4,7 @@ const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require('bcryptjs');
 const collection= require('./mongodb');
+require('dotenv').config();
 
 const templatePath = path.join(__dirname);
 const saltRounds= 12;
@@ -18,10 +19,14 @@ app.use('/Fonts', express.static(path.join(__dirname, '../Fonts')));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(templatePath, '../index.html'));
+    res.sendFile(path.join(templatePath, '../frontend/src/index.js'));
 });
 
- 
+
+app.use((req, res, next) =>{
+    console.log(req.path, req.method)
+    next();
+ })
 
 
 app.post("/backend/templates/signup.hbs", async (req, res) => {
@@ -124,10 +129,10 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
     console.log('listening on port 3000');
 });*/
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('listening on port', process.env.PORT || 3000);
+app.listen(process.env.PORT, () => {
+  console.log('listening on port', process.env.PORT);
 });
-
+ 
 
 // TODO: WHEN DEPLOYING: 
                     // Modify HTML ACTIONS WITH https://infocitadeltest.onrender.com

@@ -9,6 +9,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import SplitButton from 'react-bootstrap/SplitButton';
 import {Link} from 'react-router-dom'
 
+
 const ProblemeContainer = () => {
     return ( 
         <Navbar variant="dark" bg="dark" expand="lg" className='problemeNavbar'>
@@ -22,11 +23,24 @@ const ProblemeContainer = () => {
                                 title="Liceu"
                                 menuVariant="dark"
                                 >
-                                <NavDropdown.Item href="/probleme/clsIX">Clasa a IX a</NavDropdown.Item>
-                                <NavDropdown.Item >
-                                    Clasa a X a
+                                <NavDropdown.Item> 
+                                    <Link to = "/probleme/cls_IX" style={{textDecoration:'none', color:'white'}}>
+                                        <div style={{width: '125%', marginLeft:'-15px'}}> 
+                                        <p style={{padding: '0', marginBottom:'0',marginLeft:'15px'}}>Clasa a IX a </p> </div>
+                                    </Link>
+                                </NavDropdown.Item> 
+                                <NavDropdown.Item>
+                                    <Link to = "/probleme/cls_X" style={{textDecoration:'none', color:'white'}}>
+                                        <div style={{width: '125%', marginLeft:'-15px'}}> 
+                                        <p style={{padding: '0', marginBottom:'0',marginLeft:'15px'}}>Clasa a X a </p> </div>
+                                    </Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item >Clasa a XI a</NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <Link to = "/probleme/cls_XI" style={{textDecoration:'none', color:'white'}}>
+                                        <div style={{width: '125%', marginLeft:'-15px'}}> 
+                                        <p style={{padding: '0', marginBottom:'0',marginLeft:'15px'}}>Clasa a XI a </p> </div>
+                                    </Link>
+                                </NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item >
                                     All

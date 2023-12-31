@@ -33,7 +33,7 @@ function App() {
             element={<Probleme />}
           />
           <Route 
-            path="/probleme/clsIX"
+            path="/probleme/:category"
             element={<Probleme />}
           />
         </Routes>
