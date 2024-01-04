@@ -79,7 +79,7 @@ const Leaderboard = () => {
                         <p className="leaderboardTopText"> Problems solved</p>
                         
                         <div className="mostProblemsDivForContent">
-                            <SimpleBarReact style={{ maxHeight: 275 }}>
+                            <SimpleBarReact style={{ maxHeight: 275, overflowX: 'hidden' }}>
                         {userData.map((data) => (
                             <div className = "mostProblemsElmDiv" key={data.username}>
                                 <p className="topNumber"> {data.top}</p>
@@ -118,7 +118,7 @@ const Leaderboard = () => {
                         <p className="leaderboardTopText"> Accumulated points</p>
                         
                         <div className="mostProblemsDivForContent">
-                            <SimpleBarReact style={{ maxHeight: 275 }}>
+                            <SimpleBarReact style={{ maxHeight: 275, overflowX: 'hidden' }}>
                         {userData.map((data) => (
                             <div className = "mostProblemsElmDiv" key={data.username}>
                                 <p className="topNumber"> {data.top}</p>

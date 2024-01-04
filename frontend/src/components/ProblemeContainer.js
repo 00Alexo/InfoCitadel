@@ -25,7 +25,7 @@ const ProblemeContainer = () => {
                                 >
                                 <NavDropdown.Item> 
                                     <Link to = "/probleme/cls_IX" style={{textDecoration:'none', color:'white'}}>
-                                        <div style={{width: '125%', marginLeft:'-15px'}}> 
+                                        <div style={{width: '125%',marginLeft:'-15px'}}> 
                                         <p style={{padding: '0', marginBottom:'0',marginLeft:'15px'}}>Clasa a IX a </p> </div>
                                     </Link>
                                 </NavDropdown.Item> 

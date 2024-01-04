@@ -12,7 +12,8 @@ import './css/probleme.css'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Probleme from './pages/Probleme'
-
+import PageNotFound from './pages/404'
+import ProblemeSelector from './pages/ProblemeSelector'
 
 function App() {
   return (
@@ -36,6 +37,14 @@ function App() {
             path="/probleme/:category"
             element={<Probleme />}
           />
+          <Route 
+            path="/probleme/:category/:subcategory"
+            element={<ProblemeSelector />}
+          />
+          <Route 
+            path="*"
+            element={<PageNotFound/>}
+          /> 
         </Routes>
       </div>
     </BrowserRouter>

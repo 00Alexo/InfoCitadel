@@ -14,6 +14,7 @@
     backdrop-filter: blur(1.3px);
     -webkit-backdrop-filter: blur(1.3px);
     border: 1px solid rgba(255, 255, 255, 0.43);
+    overflow: hidden !important;
 }
 
 .leaderboard-container{
@@ -57,6 +58,7 @@
     backdrop-filter: blur(1.3px);
     -webkit-backdrop-filter: blur(1.3px);
     border: 1px solid rgba(255, 255, 255, 0.43);
+    overflow-x: hidden !important;
 }
 
 
@@ -142,10 +144,10 @@
 }
 
 .simplebar-content{
+    overflow-y: hidden !important;
     gap:30px;
     display:flex !important;
     flex-direction: column !important;
-    width: 225px !important;
     justify-content: center !important;
 }
 

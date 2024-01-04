@@ -1,4 +1,5 @@
 .problemeContainer{
+    color: white;
     margin-top: 3%;
     background-color: #292e34;
     min-height: 750px;
@@ -11,10 +12,78 @@
 
 .divCategorie{
     margin-top: 30px;
+    max-height: 300px;
     background-color: #171a1c;
     width: 90%;
+    border-radius:16px;
 }
 
+.problemeSubcategorii{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.3px);
+    -webkit-backdrop-filter: blur(1.3px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+    cursor: pointer; 
+}
+.problemeSubcategorii h5{
+    font-family: Cormorant;
+}
+.problemeSubcategorii p{
+    font-family: Cormorant;
+}
+.titluDiv h4{
+    font-family: "Montserrat ExtraBold", sans-serif;
+}
 
+.titluDiv{
+    background-color: #212529;
+    height: 40px;
+}
 
+.corp{
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
 
+.contineProbleme{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 46%;
+    height: 100%;
+    padding-bottom: 25px;
+}
+
+.filterDiv{
+    border-left: 3px solid #171a1c;
+    border-top: 3px solid #171a1c;
+    background-color: #212529;
+    margin-left: auto;
+    min-height: 692px;
+    max-height: 900px;
+    min-width: 200px;
+    max-width: 375px;
+}
+
+.filtrareText{
+    padding: 25px;
+    max-width: 175px;
+    min-width: 150px;
+}
+.filtrareText h1{
+    font-family: "Montserrat ExtraBold", sans-serif;
+}
+
+.inputDivFilter{
+    margin-left: 25px;
+    max-width: 325px;
+}

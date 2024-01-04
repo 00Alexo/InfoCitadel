@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require('bcryptjs');
-const collection= require('./mongodb');
+const collection= require('./models/login.js');
 require('dotenv').config();
 
 const templatePath = path.join(__dirname);
@@ -29,7 +29,7 @@ app.use((req, res, next) =>{
  })
 
 
-app.post("/backend/templates/signup.hbs", async (req, res) => {
+app.post("/register", async (req, res) => {
     try {
 
       const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
@@ -48,7 +48,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
       };
       
       if(passwordConfirmation == req.body.password){
-        await collection.insertMany([data]);
+        const Collection = await collection.create(data);
         console.log("New account created successfully: ", data);
       }else{
         // Set a variable to hold the error code
@@ -86,7 +86,7 @@ app.post("/backend/templates/signup.hbs", async (req, res) => {
   });*/
 
 
-  app.post("/backend/templates/login.hbs", async (req, res) => {
+  app.post("/login", async (req, res) => {
     try {
       let check;
       let signinValidator = req.body.username.split("");
