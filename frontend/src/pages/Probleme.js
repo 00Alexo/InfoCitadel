@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SimpleBarReact from "simplebar-react";
 import 'simplebar-react/dist/simplebar.min.css';
 import {Link} from 'react-router-dom'
+import PosteazaOProblema from '../components/PosteazaOProblema';
 import { useParams } from 'react-router-dom';
-import Alert from 'react-bootstrap/Alert';
 
 const Probleme = () => {
-    const {category} = useParams();
+    const {category} = useParams();;
     const categorii = [
         {
             titlu: 'Elemente de baza ale limbajului',
@@ -84,6 +84,10 @@ const Probleme = () => {
                 ))}
             </SimpleBarReact> 
             ) : <></>}
+
+            {category==="Posteaza o problema" ? (
+              <PosteazaOProblema/>
+            ): <></>}
         </div> 
     );
 }

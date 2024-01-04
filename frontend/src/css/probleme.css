@@ -87,3 +87,73 @@
     margin-left: 25px;
     max-width: 325px;
 }
+
+.PosteazaOProblemaDivPrincipal{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 600px;
+    height: 650px;
+    border: 1px solid #ffffff;
+}
+
+.bottomItems{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat ExtraBold", sans-serif;
+    
+}
+
+.topItems{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.topItems input{
+    width: 100%;
+    padding:5px 5px;
+    margin: 3px 0px 20px;
+    display: inline-block;
+    border: 1px solid #040303;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.topItems input:focus{
+    outline-color: #1a1a1a  !important;
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+.topItems textarea{
+    width: 100%;
+    padding:5px 5px;
+    margin: 3px 0px 20px;
+    display: inline-block;
+    border: 1px solid #040303;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 75px;
+    max-height: 75px;
+}
+
+.topItems textarea:focus{
+    outline-color: #1a1a1a  !important;
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+.pPosteaza{
+    font-size: 1.6rem;
+    font-family: "Montserrat ExtraBold", sans-serif;
+}
+
+.pStep{
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: "Montserrat ExtraBold", sans-serif;
+}
