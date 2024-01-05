@@ -3,6 +3,7 @@ import { useState } from 'react';
 import SimpleBarReact from "simplebar-react";
 import 'simplebar-react/dist/simplebar.min.css';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from "react-router-dom";
 
 const PosteazaOProblema = () => {
     const [fisierInput, setFisierInput] = useState(false);
@@ -18,6 +19,9 @@ const PosteazaOProblema = () => {
         }
         console.log(fisierInput);
     }
+
+
+
 
     const [pas, setPas] = useState(1);
     console.log(pas);
@@ -66,6 +70,8 @@ const PosteazaOProblema = () => {
 
 
 
+    
+
     const [inputList, setInputList] = useState([{ name: "restrictii1" }]);
     const [marginBottom, setMarginBottom] = useState(90);
  
@@ -95,21 +101,63 @@ const PosteazaOProblema = () => {
         }
     };
 
+
+
+    const navigate = useNavigate();
+    const [timpHome, setTimpHome] = useState(10);
+
+    const handlePosteazaClick = () =>{
+        setPas('postat');
+        setInterval(() => {
+            setTimpHome((prevTimpHome) => prevTimpHome - 1);
+        }, 1000);
+        setTimeout(() =>{
+            navigate('/home');
+        }, 10000);
+    }
     return ( 
         <div class="PosteazaOProblemaDivPrincipal">
             <SimpleBarReact style={{ maxHeight: 750}}>
             <div class = "topItems">
+                {pas === 3 || pas === 2 || pas === 1 ? (
                 <div style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
                     <p class="pPosteaza">POSTEAZA O PROBLEMA</p>
                 </div>
+                ): pas === 'postat' ? 
+                <div style={{width: '470px', margin: '0 auto', marginBottom:'40px'}}>
+                    <p class="pPosteaza">PROBLEMA POSTATA CU SUCCES!</p>
+                </div>
+                :<></>}
                 <div class="progress" style={{marginBottom:'10px'}}>
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" 
                     style={{width: variabile.width}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                {pas === 3 || pas === 2 || pas === 1 ? (
                 <div class="pStep" style={{marginBottom:'40px'}}>
                     <p style={{width:'250px', height: '20px'}}>{variabile.paragraph}</p>
                     <p style={{width:'80px', height: '20px'}}>Pasul {pas}/3</p>
                 </div>
+                ) : pas === 'postat' ? (
+                    <div>
+                        <div class="pStep" style={{marginBottom:'40px'}}>
+                            <p style={{width:'250px', height: '20px'}}>Multumim pentru ajutor!</p>
+                            <p style={{width:'90px', height: '20px'}}>FINALIZAT</p>
+                        </div>
+                        <div class="success-animation">
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                            </svg>
+
+                            <div style={{width: '440px', margin: '0 auto', marginTop:'50px'}}>
+                                <h4> Redirectionare catre pagina principala in:</h4>
+                                <div style={{margin: '0 auto', width:'35px'}}>
+                                    <h3> {timpHome} </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ) : <></>}
                 <form>
                 {pas === 1 ? (
                     <div>
@@ -225,7 +273,7 @@ const PosteazaOProblema = () => {
                     <button type="button" class="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handleNextClick}>NEXT</button>
                 ) : <></>}
                 {pas === 3 ? (
-                    <button type="button" class="btn btn-dark" style={{marginLeft: 'auto'}}>POSTEAZA</button>
+                    <button type="button" class="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handlePosteazaClick}>POSTEAZA</button>
                 ) : <></>}
             </div>
             </SimpleBarReact>
