@@ -6,6 +6,21 @@ import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
 
 const PosteazaOProblema = () => {
+    const [numeProblema, setNumeProblema] = useState('');
+    const [cerinta, setCerinta] = useState('');
+    const [explicatie, setExplicatie] = useState('');
+    const [dateDeIntrare, setDateDeIntrare] = useState('');
+    const [dateDeIesire, setDateDeIesire] = useState('');
+    const [dificultate, setDificultate] = useState('');
+    const [operatii, setOperatii] = useState('');
+    const [numeFisierOutput, setNumeFisierOutput] = useState('');
+    const [numeFisierInput, setNumeFisierInput] = useState('');
+    const [exempleInput, setExempleInput] = useState('');
+    const [exempleOutput, setExempleOutput] = useState('');
+
+
+
+
     const [fisierInput, setFisierInput] = useState(false);
     const [marginBottom2, setMarginBottom2] = useState('95px')
 
@@ -17,14 +32,12 @@ const PosteazaOProblema = () => {
             setFisierInput(false);
             setMarginBottom2('95px');
         }
-        console.log(fisierInput);
     }
 
 
 
 
     const [pas, setPas] = useState(1);
-    console.log(pas);
     const [variabile, setVariabile] = useState({
         width: '33.3%',
         paragraph: 'Informatii despre problema:',
@@ -32,7 +45,6 @@ const PosteazaOProblema = () => {
 
     const handleBackClick = () =>{
         setPas(pas-1);
-        console.log(pas);
         switch (pas) {
             case 2:
                 setVariabile({
@@ -50,7 +62,6 @@ const PosteazaOProblema = () => {
     }
     const handleNextClick = () =>{
         setPas(pas+1);
-        console.log(pas);
             switch (pas) {
                 case 1:
                     setVariabile({
@@ -162,16 +173,22 @@ const PosteazaOProblema = () => {
                 {pas === 1 ? (
                     <div>
                         <div>
-                            <label for="numeProblema">Numele problemei:</label>
-                            <input type="text" id="numeProblema" name="numeProblema" className="bg-dark text-light"/>
+                            <label htmlFor="numeProblema">Numele problemei:</label>
+                            <input type="text" id="numeProblema" value={numeProblema}
+                            onChange={(e) => setNumeProblema(e.target.value)}
+                            name="numeProblema" className="bg-dark text-light"/>
                         </div>
                         <div>
-                            <label for="cerinta">Cerinta:</label>
-                            <textarea id="cerinta" name="cerinta" className="bg-dark text-light"/>
+                            <label htmlFor="cerinta">Cerinta:</label>
+                            <textarea id="cerinta" value={cerinta}
+                            onChange={(e) => setCerinta(e.target.value)}
+                            name="cerinta" className="bg-dark text-light"/>
                         </div>
                         <div>
-                            <label for="explicatie">Explicatie (optional):</label>
-                            <textarea id="explicatie" name="explicatie" className="bg-dark text-light"/>
+                            <label htmlFor="explicatie">Explicatie (optional):</label>
+                            <textarea id="explicatie" value={explicatie}
+                            onChange={(e) => setExplicatie(e.target.value)}
+                            name="explicatie" className="bg-dark text-light"/>
                         </div>
                     </div>
                 ) : <></>}
@@ -203,7 +220,10 @@ const PosteazaOProblema = () => {
                                         <input
                                             name={x.name}
                                             value={x.value}
-                                            onChange={e => handleInputChange(e, i)}
+                                            onChange={e => {
+                                                x.value = e.target.value; 
+                                                handleInputChange(e, i); 
+                                            }}
                                             className="bg-dark text-light"
                                         />
                                     </div>
@@ -211,30 +231,39 @@ const PosteazaOProblema = () => {
                             })}
                         </div>
                         <div>
-                            <label for="dateDeIntrare">Date de intrare:</label>
-                            <input type="text" id="dateDeIntrare" name="dateDeIntrare" className="bg-dark text-light"/>
+                            <label htmlFor="dateDeIntrare">Date de intrare:</label>
+                            <input type="text" id="dateDeIntrare" value={dateDeIntrare}
+                            onChange={(e) => setDateDeIntrare(e.target.value)} 
+                            name="dateDeIntrare" className="bg-dark text-light"/>
                         </div>
                         <div>
-                            <label for="dateDeIesire">Date de iesire:</label>
-                            <input type="text" id="dateDeIesire" name="dateDeIesire" className="bg-dark text-light"/>
+                            <label htmlFor="dateDeIesire">Date de iesire:</label>
+                            <input type="text" id="dateDeIesire" value={dateDeIesire}
+                            onChange={(e) => setDateDeIesire(e.target.value)} 
+                            name="dateDeIesire" className="bg-dark text-light"/>
                         </div>
                     </div>
                 ) : <></>}
                 {pas === 3 ? (
                     <div> 
-                        <label for="dificultate">Dificultate:</label>
+                        <label htmlFor="dificultate">Dificultate:</label>
                         <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
-                        id="dificultate" name="dificultate" className="bg-dark text-light">
-                            <option value="1"> </option>
-                            <option value="2"> Easy </option>
-                            <option value="3"> Medium </option>
-                            <option value="4"> Hard </option>
-                            <option value="5"> Concurs </option>
+                        id="dificultate" name="dificultate" className="bg-dark text-light" value={dificultate}
+                        onChange={(e) => setDificultate(e.target.value)}> 
+                            <option value=""> </option>
+                            <option value="Easy"> Easy </option>
+                            <option value="Medium"> Medium </option>
+                            <option value="Hard"> Hard </option>
+                            <option value="Concurs"> Concurs </option>
                         </Form.Select>
 
-                        <label for="operatii">Operatii intrare/iesire:</label>
+                        <label htmlFor="operatii">Operatii intrare/iesire:</label>
                         <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
-                        id="operatii" name="operatii" className="bg-dark text-light" onChange={handleFisierClick}>
+                        id="operatii" name="operatii" className="bg-dark text-light" value={operatii}
+                        onChange={(e) => {
+                            setOperatii(e.target.value);
+                            handleFisierClick(e);
+                        }}>
                             <option value="1"> </option>
                             <option value="2"> Tastatura/ecran </option>
                             <option value="3"> Fisier </option>
@@ -242,23 +271,31 @@ const PosteazaOProblema = () => {
                         {fisierInput === true ? (
                             <div>
                                 <div style={{display:'flex', justifyContent:'space-between', width: '80%'}}>
-                                    <label for="numeFisierInput">Nume fisier input:</label>
-                                    <label for="numeFisierOutput">Nume fisier output:</label>
+                                    <label htmlFor="numeFisierInput">Nume fisier input:</label>
+                                    <label htmlFor="numeFisierOutput">Nume fisier output:</label>
                                 </div>
                                 <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <input className="bg-dark text-light" type="text" id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
-                                    <input className="bg-dark text-light" type="text" id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
+                                    <input className="bg-dark text-light" type="text" value={numeFisierInput}
+                                    onChange={(e) => setNumeFisierInput(e.target.value)}
+                                    id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
+                                    <input className="bg-dark text-light" type="text" value={numeFisierOutput}
+                                    onChange={(e) => setNumeFisierOutput(e.target.value)}
+                                    id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
                                 </div>
                             </div>
                         ): <></>}
                         <div style={{marginBottom:marginBottom2}}>
                             <div style={{display:'flex', justifyContent:'space-between', width: '76.7%'}}>
-                                <label for="exempleInput">Exemple input:</label>
-                                <label for="exempleOutput">Exemple output:</label>
+                                <label htmlFor="exempleInput">Exemple input:</label>
+                                <label htmlFor="exempleOutput">Exemple output:</label>
                             </div>
                             <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                <input className="bg-dark text-light" type="text" id="exempleInput" name="exempleInput" style={{width:'45%'}} />
-                                <input className="bg-dark text-light" type="text" id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
+                                <input className="bg-dark text-light" type="text" value={exempleInput}
+                                onChange={(e) => setExempleInput(e.target.value)}
+                                id="exempleInput" name="exempleInput" style={{width:'45%'}} />
+                                <input className="bg-dark text-light" type="text" value={exempleOutput}
+                                onChange={(e) => setExempleOutput(e.target.value)}
+                                id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
                             </div>
                         </div>
                     </div>
