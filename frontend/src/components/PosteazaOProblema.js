@@ -2,8 +2,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import SimpleBarReact from "simplebar-react";
 import 'simplebar-react/dist/simplebar.min.css';
+import Form from 'react-bootstrap/Form';
 
 const PosteazaOProblema = () => {
+    const [fisierInput, setFisierInput] = useState(false);
+    const [marginBottom2, setMarginBottom2] = useState('95px')
+
+    function handleFisierClick(e) {
+        if (e.target.value === "3") {
+            setFisierInput(true);
+            setMarginBottom2('7px');
+        }else{
+            setFisierInput(false);
+            setMarginBottom2('95px');
+        }
+        console.log(fisierInput);
+    }
+
     const [pas, setPas] = useState(1);
     console.log(pas);
     const [variabile, setVariabile] = useState({
@@ -125,7 +140,7 @@ const PosteazaOProblema = () => {
                                         Remove
                                     </button>
                                 }
-                                <button 
+                                <button
                                     style={{ height:'25px', padding: '0px 10px', backgroundColor: '#28A745', color: 'white', border: 'none', borderRadius: '5px' }} 
                                     onClick={(event) => handleAddClick(event)}
                                 >
@@ -153,6 +168,49 @@ const PosteazaOProblema = () => {
                         <div>
                             <label for="dateDeIesire">Date de iesire:</label>
                             <input type="text" id="dateDeIesire" name="dateDeIesire"/>
+                        </div>
+                    </div>
+                ) : <></>}
+                {pas === 3 ? (
+                    <div> 
+                        <label for="dificultate">Dificultate:</label>
+                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px'}}
+                        id="dificultate" name="dificultate" className="bg-light text-dark">
+                            <option value="1"> </option>
+                            <option value="2"> Easy </option>
+                            <option value="3"> Medium </option>
+                            <option value="4"> Hard </option>
+                            <option value="5"> Concurs </option>
+                        </Form.Select>
+
+                        <label for="operatii">Operatii intrare/iesire:</label>
+                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px'}}
+                        id="operatii" name="operatii" className="bg-light text-dark" onChange={handleFisierClick}>
+                            <option value="1"> </option>
+                            <option value="2"> Tastatura/ecran </option>
+                            <option value="3"> Fisier </option>
+                        </Form.Select>
+                        {fisierInput === true ? (
+                            <div>
+                                <div style={{display:'flex', justifyContent:'space-between', width: '80%'}}>
+                                    <label for="numeFisierInput">Nume fisier input:</label>
+                                    <label for="numeFisierOutput">Nume fisier output:</label>
+                                </div>
+                                <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                                    <input type="text" id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
+                                    <input type="text" id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
+                                </div>
+                            </div>
+                        ): <></>}
+                        <div style={{marginBottom:marginBottom2}}>
+                            <div style={{display:'flex', justifyContent:'space-between', width: '76.7%'}}>
+                                <label for="exempleInput">Exemple input:</label>
+                                <label for="exempleOutput">Exemple output:</label>
+                            </div>
+                            <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                                <input type="text" id="exempleInput" name="exempleInput" style={{width:'45%'}} />
+                                <input type="text" id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
+                            </div>
                         </div>
                     </div>
                 ) : <></>}

@@ -88,12 +88,28 @@
     max-width: 325px;
 }
 
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0%);
+        opacity: 1;
+    }
+}
+
 .PosteazaOProblemaDivPrincipal{
     margin: 0 auto;
     margin-top: 20px;
     width: 600px;
     height: 650px;
     border: 1px solid #ffffff;
+    animation: slideFromRight 1s ease-in-out;
 }
 
 .bottomItems{
@@ -121,9 +137,9 @@
 }
 
 .topItems input:focus{
-    outline-color: #1a1a1a  !important;
+    outline-color: #fbecec  !important;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 3px;
 }
 
 .topItems textarea{
@@ -139,9 +155,15 @@
 }
 
 .topItems textarea:focus{
-    outline-color: #1a1a1a  !important;
+    outline-color: #fbecec  !important;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 3px;
+}
+
+.topItems select:focus{
+    outline-color: #fbecec  !important;
+    outline-style: solid;
+    outline-width: 3px;
 }
 
 .pPosteaza{

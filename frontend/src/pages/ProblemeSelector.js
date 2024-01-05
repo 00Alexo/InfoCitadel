@@ -23,7 +23,7 @@ const ProblemeSelector = () => {
                         <Form className="bg-dark text-light p-3">
                                 <h5 style={{marginBottom:'3px'}}> Clasa</h5>
                                 <Form.Select aria-label="Default select example" className="bg-dark text-light">
-                                    <option value="2"></option>
+                                    <option value="1"></option>
                                     <option value="2">Clasa a IX a</option>
                                     <option value="3">Clasa a X a</option>
                                     <option value="4">Clasa a XI a</option>

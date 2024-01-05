@@ -1,12 +1,11 @@
 body{
-    padding: 0;
-    margin: 0;
     /*
     background: #44A08D;    
     background: -webkit-linear-gradient(to right, #093637, #093028);  
     background: linear-gradient(to right, #093637, #093028); 
     animation: slideIn 1s ease-in-out;*/
     /*background-color: #222 !important;*/
+    overflow-x: hidden !important;
 }
 
 * {
