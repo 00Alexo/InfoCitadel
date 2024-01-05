@@ -115,15 +115,15 @@ const PosteazaOProblema = () => {
                     <div>
                         <div>
                             <label for="numeProblema">Numele problemei:</label>
-                            <input type="text" id="numeProblema" name="numeProblema"/>
+                            <input type="text" id="numeProblema" name="numeProblema" className="bg-dark text-light"/>
                         </div>
                         <div>
                             <label for="cerinta">Cerinta:</label>
-                            <textarea id="cerinta" name="cerinta"/>
+                            <textarea id="cerinta" name="cerinta" className="bg-dark text-light"/>
                         </div>
                         <div>
                             <label for="explicatie">Explicatie (optional):</label>
-                            <textarea id="explicatie" name="explicatie"/>
+                            <textarea id="explicatie" name="explicatie" className="bg-dark text-light"/>
                         </div>
                     </div>
                 ) : <></>}
@@ -156,6 +156,7 @@ const PosteazaOProblema = () => {
                                             name={x.name}
                                             value={x.value}
                                             onChange={e => handleInputChange(e, i)}
+                                            className="bg-dark text-light"
                                         />
                                     </div>
                                 );
@@ -163,19 +164,19 @@ const PosteazaOProblema = () => {
                         </div>
                         <div>
                             <label for="dateDeIntrare">Date de intrare:</label>
-                            <input type="text" id="dateDeIntrare" name="dateDeIntrare" />
+                            <input type="text" id="dateDeIntrare" name="dateDeIntrare" className="bg-dark text-light"/>
                         </div>
                         <div>
                             <label for="dateDeIesire">Date de iesire:</label>
-                            <input type="text" id="dateDeIesire" name="dateDeIesire"/>
+                            <input type="text" id="dateDeIesire" name="dateDeIesire" className="bg-dark text-light"/>
                         </div>
                     </div>
                 ) : <></>}
                 {pas === 3 ? (
                     <div> 
                         <label for="dificultate">Dificultate:</label>
-                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px'}}
-                        id="dificultate" name="dificultate" className="bg-light text-dark">
+                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
+                        id="dificultate" name="dificultate" className="bg-dark text-light">
                             <option value="1"> </option>
                             <option value="2"> Easy </option>
                             <option value="3"> Medium </option>
@@ -184,8 +185,8 @@ const PosteazaOProblema = () => {
                         </Form.Select>
 
                         <label for="operatii">Operatii intrare/iesire:</label>
-                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px'}}
-                        id="operatii" name="operatii" className="bg-light text-dark" onChange={handleFisierClick}>
+                        <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
+                        id="operatii" name="operatii" className="bg-dark text-light" onChange={handleFisierClick}>
                             <option value="1"> </option>
                             <option value="2"> Tastatura/ecran </option>
                             <option value="3"> Fisier </option>
@@ -197,8 +198,8 @@ const PosteazaOProblema = () => {
                                     <label for="numeFisierOutput">Nume fisier output:</label>
                                 </div>
                                 <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <input type="text" id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
-                                    <input type="text" id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
+                                    <input className="bg-dark text-light" type="text" id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
+                                    <input className="bg-dark text-light" type="text" id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
                                 </div>
                             </div>
                         ): <></>}
@@ -208,8 +209,8 @@ const PosteazaOProblema = () => {
                                 <label for="exempleOutput">Exemple output:</label>
                             </div>
                             <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                <input type="text" id="exempleInput" name="exempleInput" style={{width:'45%'}} />
-                                <input type="text" id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
+                                <input className="bg-dark text-light" type="text" id="exempleInput" name="exempleInput" style={{width:'45%'}} />
+                                <input className="bg-dark text-light" type="text" id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
                             </div>
                         </div>
                     </div>

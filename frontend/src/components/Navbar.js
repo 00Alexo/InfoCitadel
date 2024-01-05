@@ -2,6 +2,7 @@ import { useState, useEffect, useRef} from 'react'
 import LoginComponent from "../components/LoginComponent";
 import { Link } from "react-router-dom";
 import CloseIcon from '@mui/icons-material/Close';
+import logoCTD from '../assets/logoCTD.gif';
 
 
 
@@ -278,7 +279,7 @@ useEffect(() => {
         </div>
             <div className = {`${activeTheme}MyNavbar MyNavbar`}>
                 <div className = "dropdownHead" >
-                    <Link to="/" style={{textDecoration: 'none'}}> <img src="logoCTD.gif" alt='InfoCitadel' style={{width:'178px',height:'55px', marginTop: '-15px'}}/></Link>
+                    <Link to="/" style={{textDecoration: 'none'}}> <img src={logoCTD} alt='InfoCitadel' style={{width:'178px',height:'55px', marginTop: '-15px'}}/></Link>
                 </div>
                 <div className = "otherNavbarElements">
                     <div className = "dropdownHead">

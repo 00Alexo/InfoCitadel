@@ -1,6 +1,9 @@
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
+import EnderDatslt from '../assets/EnderDatslt.png'
+import veryadelin from '../assets/veryadelin.png'
+import AlexoProfilePicture from '../assets/AlexoProfilePicture.png'
 
 const LoginComponent = ({activeTheme}) => {
     const [componentVisibility, setComponentVisibility] = useState(false)
@@ -191,7 +194,7 @@ const LoginComponent = ({activeTheme}) => {
                     {buttonColor === 1 ? (
                         <div className = "personData">
                             <div className = "personDataPhoto">
-                                <img className="photoPersonDataPhoto" src = "AlexoProfilePicture.png"/>
+                                <img className="photoPersonDataPhoto" src = {AlexoProfilePicture}/>
                             </div>
                             <div className = {`${activeTheme}personDataText personDataText`}>
                                 <span className = "namePersonDataText"> SuperYang </span>
@@ -202,7 +205,7 @@ const LoginComponent = ({activeTheme}) => {
                     {buttonColor === 2 ? (
                         <div className = "personData">
                             <div className = "personDataPhoto">
-                                <img className="photoPersonDataPhoto" src = "veryadelin.png"/>
+                                <img className="photoPersonDataPhoto" src = {veryadelin}/>
                             </div>
                             <div className = {`${activeTheme}personDataText personDataText`}>
                                 <span className = "namePersonDataText"> xndadelin </span>
@@ -213,7 +216,7 @@ const LoginComponent = ({activeTheme}) => {
                     {buttonColor === 3 ? (
                         <div className = "personData">
                             <div className = "personDataPhoto">
-                                <img className="photoPersonDataPhoto" src = "EnderDatslt.png"/>
+                                <img className="photoPersonDataPhoto" src = {EnderDatslt}/>
                             </div>
                             <div className = {`${activeTheme}personDataText personDataText`}>
                                 <span className = "namePersonDataText"> GigelPapucel </span>

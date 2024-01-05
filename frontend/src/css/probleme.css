@@ -15,7 +15,7 @@
     max-height: 300px;
     background-color: #171a1c;
     width: 90%;
-    border-radius:16px;
+    border-radius:4px;
 }
 
 .problemeSubcategorii{
@@ -131,39 +131,48 @@
     padding:5px 5px;
     margin: 3px 0px 20px;
     display: inline-block;
-    border: 1px solid #040303;
-    border-radius: 5px;
+    border-radius: 4px;
     box-sizing: border-box;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15)!important;
 }
 
 .topItems input:focus{
     outline-color: #fbecec  !important;
     outline-style: solid;
-    outline-width: 3px;
-}
+    outline-width: 1px;
+} 
 
 .topItems textarea{
     width: 100%;
     padding:5px 5px;
     margin: 3px 0px 20px;
     display: inline-block;
-    border: 1px solid #040303;
     border-radius: 5px;
     box-sizing: border-box;
     height: 75px;
     max-height: 75px;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15)!important;
 }
 
 .topItems textarea:focus{
     outline-color: #fbecec  !important;
     outline-style: solid;
-    outline-width: 3px;
+    outline-width: 1px;
 }
 
 .topItems select:focus{
     outline-color: #fbecec  !important;
     outline-style: solid;
-    outline-width: 3px;
+    outline-width: 1px;
+} 
+.topItems select{
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15)!important;
 }
 
 .pPosteaza{
@@ -179,3 +188,7 @@
     font-size: 1rem;
     font-family: "Montserrat ExtraBold", sans-serif;
 }
+
+
+
+
