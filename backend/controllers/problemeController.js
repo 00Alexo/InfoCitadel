@@ -20,6 +20,82 @@ const createProblema = async (req, res) =>{
     }
 }
 
-module.exports = {
-    createProblema
+// render la toate problemele
+
+const getProbleme = async (req, res) =>{
+    try{
+        const probleme = await Problema.find({}).sort({createdAt: -1})
+        res.status(200).json(probleme);
+    }catch (error){
+        res.status(400).json({ error: error.message })
+    }
+
 }
+
+
+// render la o singura problema
+
+const getProblema = async (req, res) =>{
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+
+    const problema = await Problema.findById(id)
+
+    if(!problema) {
+      return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+  
+    res.status(200).json(problema)
+}
+
+
+// sterge o problema
+
+const deleteProblema = async (req, res) =>{
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+
+    const problema = await Problema.findOneAndDelete({_id: id})
+
+    if(!problema) {
+      return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+  
+    res.status(200).json(problema)
+}
+
+
+const updateProblema = async (req, res) =>{
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+
+    const problema = await Problema.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if (!problema) {
+        return res.status(400).json({error: 'Problema nu a fost gasita'})
+    }
+
+    res.status(200).json(problema)
+}
+
+
+module.exports = {
+    createProblema,
+    getProbleme,
+    deleteProblema,
+    getProblema,
+    updateProblema
+}
+
+
