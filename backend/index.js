@@ -1,32 +1,34 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const hbs = require('hbs');
-const bcrypt = require('bcryptjs');
-const collection= require('./models/login.js');
 require('dotenv').config();
 
-const templatePath = path.join(__dirname);
+const mongoose = require('mongoose');
+const express = require('express');
+const app = express();
+const bcrypt = require('bcryptjs');
+const collection= require('./models/login.js');
+const problemeRoutes = require('./routes/problemeRoutes.js')
+
+mongoose.connect(process.env.mongoDB)
+  .then(() => {
+    console.log("MongoDB connected");
+  })
+  .catch((error) => {
+    console.error("MongoDB connection failed:", error);
+  }); 
+
 const saltRounds= 12;
 
 app.use(express.json());
-app.set('view engine', 'hbs');
-app.set('views', templatePath);
 app.use(express.urlencoded({extended:false}));
-app.use('/FirstPage', express.static(path.join(__dirname, '../FirstPage')));
-app.use('/Fonts', express.static(path.join(__dirname, '../Fonts')));
 
 
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(templatePath, '../frontend/src/index.js'));
-});
 
 
 app.use((req, res, next) =>{
     console.log(req.path, req.method)
     next();
  })
+
+app.use('/api/probleme', problemeRoutes)
 
 
 app.post("/register", async (req, res) => {
@@ -56,7 +58,6 @@ app.post("/register", async (req, res) => {
         throw error;
       }
 
-      res.redirect('https://infocitadel.netlify.app');
     } catch (error) {
 
       console.error("Error in signup:", error);
@@ -70,21 +71,6 @@ app.post("/register", async (req, res) => {
       
     }
   });
-
-  /*app.get("/backend/templates/leaderboard.hbs", async (req, res) => {
-    try {
-      // Fetch the top 3 users based on the number of solutions (descending order)
-      const topUsers = await collection.find({})
-        .sort({ 'userProgress.solutions': -1 })
-        .limit(3);
-  
-        res.render('leaderboard', { topUsers });
-    } catch (error) {
-      console.error("Error fetching leaderboard:", error);
-      res.status(500).send("Internal Server Error");
-    }
-  });*/
-
 
   app.post("/login", async (req, res) => {
     try {
@@ -109,7 +95,6 @@ app.post("/register", async (req, res) => {
         const passwordMatch = await bcrypt.compare(req.body.password, check.password);
 
         if (passwordMatch) {
-            res.redirect('https://infocitadel.netlify.app');
             console.log("User logged in: \n", check);
         } else {
             res.send("Wrong password");
@@ -125,15 +110,10 @@ app.post("/register", async (req, res) => {
 
 
 
-/*app.listen(3000, () => {
-    console.log('listening on port 3000');
-});*/
 
 app.listen(process.env.PORT, () => {
   console.log('listening on port', process.env.PORT);
 });
  
 
-// TODO: WHEN DEPLOYING: 
-                    // Modify HTML ACTIONS WITH https://infocitadeltest.onrender.com
-                    // Modifiy post redirects to https://infocitadel.netlify.app 
+

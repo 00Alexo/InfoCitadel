@@ -195,7 +195,7 @@ const PosteazaOProblema = () => {
                 {pas === 2 ? (
                     <div style={{marginBottom: marginBottom}}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <label htmlFor="restrictii">Restrictii:</label>
+                            <label htmlFor="restrictii">Restrictii (optional):</label>
                             <div>
                                 {inputList.length > 1 && 
                                     <button 

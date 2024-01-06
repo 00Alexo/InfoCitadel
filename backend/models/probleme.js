@@ -1,69 +1,60 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
 
-const ProblemsSchema = new Schema({
-  titlu: {
+const ProblemsSchema = new mongoose.Schema({
+  numeProblema: {
     type: String,
     required: true
   },
-  username: {
+  cerinta: {
     type: String,
     required: true
   },
-  // cerinta: {
+  explicatie:{
+    type: String,
+    required: false
+  },
+  restrictii:{
+    type: String,
+    required: false
+  },
+  dateDeIntrare: {
+    type: String,
+    required: true
+  },
+  dateDeIesire: {
+    type: String,
+    required: true
+  },
+  dificultate:{
+    type: String,
+    required: true
+  },
+  operatii: {
+    type: String,
+    required: true
+  },
+  numeFisierOutput:{
+    type: String,
+    required: false
+  },
+  numeFisierInput:{
+    type: String,
+    required: false
+  },
+  exempleInput: {
+    type: String,
+    required: true
+  },
+  exempleOutput: {
+    type: String,
+    required: true
+  },
+
+  // username: {
   //   type: String,
   //   required: true
-  // },
-  // descriere: {
-  //   type: String,
-  //   required: true
-  // },
-  // tip: {
-  //   type: String,
-  //   required: true
-  // },
-  // taguri: {
-  //   type: Array,
-  //   required: true
-  // },
-  // dificultate: {
-  //   type: String,
-  //   required: true
-  // },
-  // input: {
-  //   type: String,
-  //   required: true
-  // },
-  // output: {
-  //   type: String,
-  //   required: true
-  // },
-  // timpDeExecutie: {
-  //   type: String,
-  //   required: true
-  //   },
-  //   exemple: {
-  //       type: Array,
-  //       required: true
-  //   },
-  //   teste: {
-  //       type: Array,
-  //       required: true
-  //   },
-  //   limitaDeMemorie: {
-  //       type: String,
-  //       required: true
-  //   },
-  //   categorie:{
-  //       type: String,
-  //       required:true
-  //   },
-  //   subcategorie:{
-  //       type: String, 
-  //       required:true
-  //   },
-    
+  // },    
 }, { timestamps: true })
 
-module.exports = mongoose.model('Problems', ProblemsSchema)
+module.exports = mongoose.model('Problema', ProblemsSchema)
