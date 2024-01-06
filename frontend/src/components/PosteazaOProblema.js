@@ -131,7 +131,7 @@ const PosteazaOProblema = () => {
             <SimpleBarReact style={{ maxHeight: 750}}>
             <div class = "topItems">
                 {pas === 3 || pas === 2 || pas === 1 ? (
-                <div style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
+                <div class = "pPosteazadiv"style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
                     <p class="pPosteaza">POSTEAZA O PROBLEMA</p>
                 </div>
                 ): pas === 'postat' ? 

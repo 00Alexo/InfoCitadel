@@ -34,9 +34,7 @@
 .problemeSubcategorii h5{
     font-family: Cormorant;
 }
-.problemeSubcategorii p{
-    font-family: Cormorant;
-}
+
 .titluDiv h4{
     font-family: "Montserrat ExtraBold", sans-serif;
 }
@@ -244,5 +242,192 @@
 @keyframes fill {
     100% {
         box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .PosteazaOProblemaDivPrincipal{
+        width: 500px;
+    }
+}
+
+@media  (min-width: 400px) and (max-width: 575px) {
+    .PosteazaOProblemaDivPrincipal{
+        width: 90%;
+    }
+    .pStep{
+        height: 20px;
+        font-size: 0.7rem;
+        font-family: "Montserrat ExtraBold", sans-serif;
+    }
+    .pStep p:nth-child(2){
+        width: 60px !important;
+    }
+    .pPosteaza{
+        font-size: 1.5rem;
+    }
+    .PosteazaOProblemaDivPrincipal label{
+        font-size: 0.8rem;
+    }
+}
+
+@media  (max-width: 400px){
+    .PosteazaOProblemaDivPrincipal{
+        width: 90%;
+    }
+    .pStep{
+        height: 20px;
+        font-size: 0.6rem;
+        font-family: "Montserrat ExtraBold", sans-serif;
+    }
+    .pStep p:nth-child(2){
+        width: 65px !important;
+    }
+    .pPosteaza{
+        font-size: 1.1rem;
+    }
+    .PosteazaOProblemaDivPrincipal label{
+        font-size: 0.8rem;
+    }
+    .pPosteazadiv{
+        width: 240px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .problemeSubcategorii h5{
+        font-size: 0.85rem;
+        padding: 7px !important;
+    }
+    .problemeSubcategorii p{
+        font-size: 0.7rem !important;
+        padding-right: 5px !important;
+        padding-top: 30px !important;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 767px){
+    .problemeSubcategorii h5{
+        font-size: 0.8rem;
+        padding: 5px !important;
+        width: 120px !important; 
+    }
+    .problemeSubcategorii p{
+        font-size: 0.65rem !important;
+        padding-right: 5px !important;
+        padding-top: 30px !important;
+    }
+    .titluDiv h4{
+        font-size: 1.1rem;
+        padding: 10px !important;
+    }
+}
+
+@media  (min-width: 400px) and (max-width: 575px) {
+    .contineProbleme{
+        width: 48%;
+    }
+    .problemeSubcategorii h5{
+        font-size: 0.75rem;
+        padding: 5px !important;
+        width: 90px !important; 
+    }
+    .problemeSubcategorii p{
+        font-size: 0.55rem !important;
+        padding-right: 5px !important;
+        padding-top: 30px !important;
+    }
+    .titluDiv h4{
+        font-size: 1.1rem;
+        padding: 10px !important;
+    }
+}
+
+@media  (max-width: 400px){
+    .contineProbleme{
+        width: 48%;
+    }
+    .divCategorie {
+        max-height: 400px;
+    }
+    .problemeSubcategorii{
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    .problemeSubcategorii h5{
+        font-size: 0.7rem;
+        padding: 7px !important;
+        max-height: 25px !important;
+        width: 100% !important; 
+    }
+    .problemeSubcategorii p{
+        width: 100%;
+        font-size: 0.6rem !important;
+        padding-top: 15px !important;
+        text-align: right;
+    }
+    .titluDiv h4{
+        font-size: 0.8rem;
+        padding: 10px !important;
+    }
+}
+
+@media  (min-width: 768px) and (max-width: 1024px){
+    .filterDiv{
+        max-width: 250px;
+    }
+    .filtrareText h2{
+        font-size: 1.3rem;
+    }
+    .inputDivFilter{
+        margin-left: 10px;
+        max-width: 200px
+    }
+    .inputDivFilter h5{
+        font-size: 1rem;
+    }
+}
+
+@media  (min-width: 500px) and (max-width: 767px){
+    .filterDiv{
+        max-width: 175px;
+    }
+    .filtrareText h2{
+        font-size: 1.1rem;
+    }
+    .inputDivFilter{
+        margin-left: 10px;
+        max-width: 150px
+    }
+    .inputDivFilter h5{
+        font-size: 0.8rem;
+    }
+}
+
+@media  (min-width: 1px) and (max-width: 499px){
+    .filterDiv{
+        min-width: 75px;
+        max-width: 150px;
+    }
+    .filtrareText{
+        margin-left: -10px !important;
+    }
+    .filtrareText h2{
+        font-size: 0.9rem;
+    }
+    .inputDivFilter{
+        margin-left: 0px;
+        max-width: 150px
+    }
+    .inputDivFilter h5{
+        font-size: 0.7rem;
+    }
+    .inputDivFilter button{
+        width: 60px;
+        height: 30px;
+        font-size: 0.8rem;
+        padding: 0px;
     }
 }

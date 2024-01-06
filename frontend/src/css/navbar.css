@@ -56,6 +56,8 @@
     gap: 3rem;
 }
 .phone_NavBar{
+    position: absolute;
+    z-index: 999;
     display: none;
 }
 .dropdownHead a{
@@ -437,6 +439,8 @@
         display: block;
     }
     .phone_NavBar{
+        position: absolute;
+        z-index: 999;
         flex-direction: column;
     }
     .phone_dropDownNavbarDiv{

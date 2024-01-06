@@ -33,7 +33,7 @@ const Probleme = () => {
             titlu: 'Tablouri unidimensionale (vectori)',
             links: [
               { title: 'Parcurgerea vectorilor', nrpb: 0 },
-              { title: 'Stergerea/Inserarea elementelor in vector', nrpb: 0 },
+              { title: 'Stergerea/Inserarea elementelor', nrpb: 0 },
               { title: 'Sortarea vectorilor', nrpb: 0 },
               { title: 'Probleme cu secvențe', nrpb: 0 }
             ]
