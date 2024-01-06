@@ -249,7 +249,7 @@ const LoginComponent = ({activeTheme}) => {
                 <div className = "textSignIn">
                     <span className = {`${activeTheme}textSignInText textSignInText`}> SIGN-IN</span>
                 </div>
-                <form action="http://localhost:4000/login" method="post">
+                <form action="https://infocitadeltest.onrender.com/login" method="post">
                     <div className = {`${activeTheme}inputsDiv inputsDiv`} >
                         <div className="form-floating mb-3">
                             <input className="form-control" id="floatingInput" name="username" placeholder="Username" maxLength="32" required/>
@@ -299,7 +299,7 @@ const LoginComponent = ({activeTheme}) => {
             ):(
 
             <div className = "registerDiv">
-                <form action="http://localhost:4000/register" method="post">
+                <form action="https://infocitadeltest.onrender.com/register" method="post">
                     <div className = "textSignIn registerInText">
                         <span className = "textSignInText registerTextSignInText"> CREATE ACCOUNT</span>
                     </div>
