@@ -5,6 +5,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import {Link} from 'react-router-dom'
 import PosteazaOProblema from '../components/PosteazaOProblema';
 import { useParams } from 'react-router-dom';
+import {useState} from 'react'
 
 const Probleme = () => {
     const {category} = useParams();;
@@ -49,6 +50,14 @@ const Probleme = () => {
           }
     ]
 
+
+    const eventBus = require('../hooks/EventBus');
+    const [error, setError] = useState(null);
+
+    eventBus.on('error', (errorMessage) => {
+      console.log(errorMessage);
+      setError(errorMessage);
+    });
     return ( 
         <div className="container problemeContainer">
             <ProblemeContainer/>
@@ -84,10 +93,12 @@ const Probleme = () => {
                 ))}
             </SimpleBarReact> 
             ) : <></>}
-
+            <div style={{display: 'flex', justifyContent:'row'}}>
             {category==="Posteaza o problema" ? (
               <PosteazaOProblema/>
             ): <></>}
+            {error && <div className="error">{error}</div>}
+            </div>
         </div> 
     );
 }

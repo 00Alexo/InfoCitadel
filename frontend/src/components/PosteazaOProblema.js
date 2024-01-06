@@ -5,6 +5,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
 
+
 const PosteazaOProblema = () => {
     const [numeProblema, setNumeProblema] = useState('');
     const [cerinta, setCerinta] = useState('');
@@ -114,22 +115,62 @@ const PosteazaOProblema = () => {
 
 
 
+
+
+    const [error, setError] = useState(null)
     const navigate = useNavigate();
     const [timpHome, setTimpHome] = useState(10);
+    const eventBus = require('../hooks/EventBus');
 
-    const handlePosteazaClick = () =>{
-        setPas('postat');
-        setInterval(() => {
-            setTimpHome((prevTimpHome) => prevTimpHome - 1);
-        }, 1000);
-        setTimeout(() =>{
-            navigate('/home');
-        }, 10000);
+    const handlePosteazaClick = async (e) =>{
+        const restrictiiValues = inputList.map(item => item.value);
+        const problema = {numeProblema, cerinta, explicatie, dateDeIntrare, dateDeIesire, restrictii: restrictiiValues,
+        dificultate, operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput
+        };
+
+        const response = await fetch('/api/probleme/create', {
+            method: 'POST',
+            body: JSON.stringify(problema),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+
+        const json = await response.json();
+
+        if(!response.ok){
+            setError(json.error);
+            eventBus.emit('error', json.error);
+        }
+
+        if(response.ok){
+            setError(null);
+            setNumeProblema('');
+            setCerinta('');
+            setExplicatie('');
+            setDateDeIntrare('');
+            setDateDeIesire('');
+            setDificultate('');
+            setOperatii('');
+            setNumeFisierOutput('');
+            setNumeFisierInput('');
+            setExempleInput('');
+            setExempleOutput('');
+            console.log('new workout added:', json)
+            setPas('postat');
+            setInterval(() => {
+                setTimpHome((prevTimpHome) => prevTimpHome - 1);
+            }, 1000);
+            // setTimeout(() =>{
+            //     navigate('/home');
+            // }, 10000);
+        }
     }
     return ( 
         <div class="PosteazaOProblemaDivPrincipal">
             <SimpleBarReact style={{ maxHeight: 750}}>
             <div class = "topItems">
+                {/* {error && <div className="error">{error}</div>} */}
                 {pas === 3 || pas === 2 || pas === 1 ? (
                 <div class = "pPosteazadiv"style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
                     <p class="pPosteaza">POSTEAZA O PROBLEMA</p>

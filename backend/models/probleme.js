@@ -15,7 +15,7 @@ const ProblemsSchema = new mongoose.Schema({
     required: false
   },
   restrictii:{
-    type: String,
+    type: Array,
     required: false
   },
   dateDeIntrare: {

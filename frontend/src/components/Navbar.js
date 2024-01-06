@@ -36,11 +36,6 @@ const Navbar = () => {
         setActiveTheme(theme)
         localStorage.setItem('theme', theme);
     }
-    function toggleChatGPTTheme(theme) {
-        window.location.reload()
-        setActiveTheme(theme)
-        localStorage.setItem('theme', theme);
-    }
     function toggleDefaultTheme(theme) {
         window.location.reload()
         setActiveTheme(theme)
@@ -51,9 +46,6 @@ const Navbar = () => {
         switch(theme){
             case 'christmasTheme':
                 toggleChristmasTheme('christmasTheme');
-                break;
-            case 'chatGPTTheme':
-                toggleChatGPTTheme('chatGPTTheme');
                 break;
             default:
                 toggleDefaultTheme('defaultTheme');
@@ -200,7 +192,6 @@ useEffect(() => {
                                         <ul>
                                             <li className="phone_changeThemeButtonDefault" data-value="phone_defaultTheme"> Default</li>
                                             <li className="phone_changeThemeButtonNight1337Blue" data-value = "phone_skoskTheme"> Skosk</li>
-                                            <li className="phone_changeThemeButtonChatGPT" data-value = "phone_ChatGPTTheme"> ChatGPT</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -296,7 +287,6 @@ useEffect(() => {
                                         <ul>
                                             <li className="changeThemeButtonDefault" data-value="defaultTheme" onClick={() =>handleThemeChange("defaultTheme")}> Default</li>
                                             <li className="changeThemeButtonNight1337Blue" data-value = "skoskTheme" onClick={() =>handleThemeChange("christmasTheme")}> Christmas</li>
-                                            <li className="changeThemeButtonChatGPT" data-value = "ChatGPTTheme" onClick={() =>handleThemeChange("chatGPTTheme")}> ChatGPT</li>
                                         </ul> 
                                     </div>
                                     )}
