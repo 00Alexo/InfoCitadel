@@ -1,5 +1,5 @@
 # InfoCitadel
-https://infocitadel.vercel.app
+https://www.infocitadel.tech
 
 
 
