@@ -55,8 +55,10 @@ const Probleme = () => {
     const [error, setError] = useState(null);
 
     eventBus.on('error', (errorMessage) => {
-      console.log(errorMessage);
       setError(errorMessage);
+    });
+    eventBus.on('clearError', () => {
+      setError('');
     });
     return ( 
         <div className="container problemeContainer">

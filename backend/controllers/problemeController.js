@@ -8,7 +8,38 @@ const createProblema = async (req, res) =>{
     const {numeProblema, cerinta, explicatie, restrictii, dateDeIntrare, dateDeIesire, dificultate, 
     operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput} = req.body;
     console.log(numeProblema, cerinta, explicatie, restrictii, dateDeIntrare, dateDeIesire, dificultate, 
-        operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput)
+    operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput)
+    
+    let emptyFields = [];
+
+    if(!dificultate){
+        emptyFields.push('dificultate');
+    }
+
+    if(!operatii){
+        emptyFields.push('operatii');
+    }
+
+    if(!exempleInput){
+        emptyFields.push('exempleInput');
+    }
+
+    if(!exempleOutput){
+        emptyFields.push('exempleOutput');
+    }
+
+    if(operatii === '3'){
+        if(!numeFisierInput){
+            emptyFields.push('numeFisierInput');
+        }
+        if(!numeFisierOutput){
+            emptyFields.push('numeFisierOutput');
+        }
+    }
+
+    if (emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Toate campurile sunt obligatorii pentru a trece la urmatorul pas!', emptyFields })
+    }
 
     try{
         const problema = await Problema.create({numeProblema, cerinta, explicatie, restrictii, 

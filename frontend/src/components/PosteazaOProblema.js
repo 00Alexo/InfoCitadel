@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SimpleBarReact from "simplebar-react";
 import 'simplebar-react/dist/simplebar.min.css';
 import Form from 'react-bootstrap/Form';
@@ -35,49 +35,6 @@ const PosteazaOProblema = () => {
         }
     }
 
-
-
-
-    const [pas, setPas] = useState(1);
-    const [variabile, setVariabile] = useState({
-        width: '33.3%',
-        paragraph: 'Informatii despre problema:',
-    });
-
-    const handleBackClick = () =>{
-        setPas(pas-1);
-        switch (pas) {
-            case 2:
-                setVariabile({
-                    width: '33.3%',
-                    paragraph: 'Informatii despre problema:',
-                });
-                break;
-            case 3:
-                setVariabile({
-                    width: '66.6%',
-                    paragraph: 'Restrictii si date:',
-                });
-                break;
-        }
-    }
-    const handleNextClick = () =>{
-        setPas(pas+1);
-            switch (pas) {
-                case 1:
-                    setVariabile({
-                        width: '66.6%',
-                        paragraph: 'Restrictii si date:',
-                    });
-                    break;
-                case 2:
-                    setVariabile({
-                        width: '100%',
-                        paragraph: 'Alte detalii:',
-                    });
-                    break;
-            }
-    }
 
 
 
@@ -117,10 +74,112 @@ const PosteazaOProblema = () => {
 
 
 
+
+
+
+
     const [error, setError] = useState(null)
     const navigate = useNavigate();
     const [timpHome, setTimpHome] = useState(10);
     const eventBus = require('../hooks/EventBus');
+    const [pas, setPas] = useState(1);
+    const [variabile, setVariabile] = useState({
+        width: '33.3%',
+        paragraph: 'Informatii despre problema:',
+    });
+
+    const handleBackClick = () =>{
+        setError(null);
+        eventBus.emit('clearError');
+        setEmptyFields([]);
+        setPas(pas-1);
+        switch (pas) {
+            case 2:
+                setVariabile({
+                    width: '33.3%',
+                    paragraph: 'Informatii despre problema:',
+                });
+                break;
+            case 3:
+                setVariabile({
+                    width: '66.6%',
+                    paragraph: 'Restrictii si date:',
+                });
+                break;
+        }
+    }
+    const [emptyFields, setEmptyFields] = useState([]);
+
+
+    const handleNextClick = () =>{
+        let newEmptyFields = [...emptyFields];
+        if(pas === 1){
+            if(numeProblema === ''){
+                newEmptyFields.push('numeProblema');
+            }else{
+                newEmptyFields = newEmptyFields.filter(item => item !== 'numeProblema');
+            }
+            if(cerinta === ''){
+                newEmptyFields.push('cerinta');
+            }else{
+                newEmptyFields = newEmptyFields.filter(item => item !== 'cerinta');
+            }
+            if(newEmptyFields.length === 0){
+                setError(null);
+                eventBus.emit('clearError');
+                newEmptyFields = newEmptyFields.filter(item => item !== 'cerinta');
+                newEmptyFields = newEmptyFields.filter(item => item !== 'numeProblema');
+                setEmptyFields(newEmptyFields);
+            }
+            if(newEmptyFields.length > 0){
+                setError('Toate campurile sunt obligatorii pentru a trece la urmatorul pas!');
+                eventBus.emit('error', 'Toate campurile sunt obligatorii pentru a trece la urmatorul pas!');
+                setEmptyFields(newEmptyFields);
+                return
+            }
+        }
+        if(pas === 2){
+            if(dateDeIntrare === ''){
+                newEmptyFields.push('dateDeIntrare');
+            }else{
+                newEmptyFields = newEmptyFields.filter(item => item !== 'dateDeIntrare');
+            }
+            if(dateDeIesire === ''){
+                newEmptyFields.push('dateDeIesire');
+            }else{
+                newEmptyFields = newEmptyFields.filter(item => item !== 'dateDeIesire');
+            }
+            if(newEmptyFields.length === 0){
+                setError(null);
+                eventBus.emit('clearError');
+                newEmptyFields = newEmptyFields.filter(item => item !== 'dateDeIesire');
+                newEmptyFields = newEmptyFields.filter(item => item !== 'dateDeIntrare');
+                setEmptyFields(newEmptyFields);
+            }
+            if(newEmptyFields.length > 0){
+                setError('Toate campurile sunt obligatorii pentru a trece la urmatorul pas!');
+                eventBus.emit('error', 'Toate campurile sunt obligatorii pentru a trece la urmatorul pas!');
+                setEmptyFields(newEmptyFields);
+                return
+            }
+        }
+
+        setPas(pas+1);
+            switch (pas) {
+                case 1:
+                    setVariabile({
+                        width: '66.6%',
+                        paragraph: 'Restrictii si date:',
+                    });
+                    break;
+                case 2:
+                    setVariabile({
+                        width: '100%',
+                        paragraph: 'Alte detalii:',
+                    });
+                    break;
+            }
+    }
 
     const handlePosteazaClick = async (e) =>{
         const restrictiiValues = inputList.map(item => item.value);
@@ -139,12 +198,15 @@ const PosteazaOProblema = () => {
         const json = await response.json();
 
         if(!response.ok){
+            setEmptyFields(json.emptyFields)
             setError(json.error);
             eventBus.emit('error', json.error);
         }
 
         if(response.ok){
+            setEmptyFields([])
             setError(null);
+            eventBus.emit('clearError');
             setNumeProblema('');
             setCerinta('');
             setExplicatie('');
@@ -156,7 +218,7 @@ const PosteazaOProblema = () => {
             setNumeFisierInput('');
             setExempleInput('');
             setExempleOutput('');
-            console.log('new workout added:', json)
+            console.log('problema noua:', json)
             setPas('postat');
             setInterval(() => {
                 setTimpHome((prevTimpHome) => prevTimpHome - 1);
@@ -216,14 +278,14 @@ const PosteazaOProblema = () => {
                         <div>
                             <label htmlFor="numeProblema">Numele problemei:</label>
                             <input type="text" id="numeProblema" value={numeProblema}
-                            onChange={(e) => setNumeProblema(e.target.value)}
-                            name="numeProblema" className="bg-dark text-light"/>
+                            onChange={(e) => setNumeProblema(e.target.value)} name="numeProblema" 
+                            className={emptyFields.includes('numeProblema') ? 'bg-dark text-light error' : "bg-dark text-light"}/>
                         </div>
                         <div>
                             <label htmlFor="cerinta">Cerinta:</label>
                             <textarea id="cerinta" value={cerinta}
-                            onChange={(e) => setCerinta(e.target.value)}
-                            name="cerinta" className="bg-dark text-light"/>
+                            onChange={(e) => setCerinta(e.target.value)}name="cerinta"
+                            className={emptyFields.includes('cerinta') ? 'bg-dark text-light error' : "bg-dark text-light"}/>
                         </div>
                         <div>
                             <label htmlFor="explicatie">Explicatie (optional):</label>
@@ -274,14 +336,14 @@ const PosteazaOProblema = () => {
                         <div>
                             <label htmlFor="dateDeIntrare">Date de intrare:</label>
                             <input type="text" id="dateDeIntrare" value={dateDeIntrare}
-                            onChange={(e) => setDateDeIntrare(e.target.value)} 
-                            name="dateDeIntrare" className="bg-dark text-light"/>
+                            onChange={(e) => setDateDeIntrare(e.target.value)} name="dateDeIntrare" 
+                            className={emptyFields.includes('dateDeIntrare') ? 'bg-dark text-light error' : "bg-dark text-light"}/>
                         </div>
                         <div>
                             <label htmlFor="dateDeIesire">Date de iesire:</label>
                             <input type="text" id="dateDeIesire" value={dateDeIesire}
-                            onChange={(e) => setDateDeIesire(e.target.value)} 
-                            name="dateDeIesire" className="bg-dark text-light"/>
+                            onChange={(e) => setDateDeIesire(e.target.value)} name="dateDeIesire"
+                            className={emptyFields.includes('dateDeIesire') ? 'bg-dark text-light error' : "bg-dark text-light"}/>
                         </div>
                     </div>
                 ) : <></>}
@@ -289,8 +351,8 @@ const PosteazaOProblema = () => {
                     <div> 
                         <label htmlFor="dificultate">Dificultate:</label>
                         <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
-                        id="dificultate" name="dificultate" className="bg-dark text-light" value={dificultate}
-                        onChange={(e) => setDificultate(e.target.value)}> 
+                        id="dificultate" name="dificultate" className={emptyFields.includes('dificultate') ? 'bg-dark text-light error' : "bg-dark text-light"} 
+                        value={dificultate} onChange={(e) => setDificultate(e.target.value)}> 
                             <option value=""> </option>
                             <option value="Easy"> Easy </option>
                             <option value="Medium"> Medium </option>
@@ -300,8 +362,8 @@ const PosteazaOProblema = () => {
 
                         <label htmlFor="operatii">Operatii intrare/iesire:</label>
                         <Form.Select aria-label="Default select example" style={{marginBottom:'20px', borderRadius: '16px'}}
-                        id="operatii" name="operatii" className="bg-dark text-light" value={operatii}
-                        onChange={(e) => {
+                        id="operatii" name="operatii" className={emptyFields.includes('operatii') ? 'bg-dark text-light error' : "bg-dark text-light"} 
+                        value={operatii} onChange={(e) => {
                             setOperatii(e.target.value);
                             handleFisierClick(e);
                         }}>
@@ -316,10 +378,12 @@ const PosteazaOProblema = () => {
                                     <label htmlFor="numeFisierOutput">Nume fisier output:</label>
                                 </div>
                                 <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <input className="bg-dark text-light" type="text" value={numeFisierInput}
+                                    <input className={emptyFields.includes('numeFisierInput') ? 'bg-dark text-light error' : "bg-dark text-light"} 
+                                    type="text" value={numeFisierInput}
                                     onChange={(e) => setNumeFisierInput(e.target.value)}
                                     id="numeFisierInput" name="numeFisierInput" style={{width:'45%'}} />
-                                    <input className="bg-dark text-light" type="text" value={numeFisierOutput}
+                                    <input className={emptyFields.includes('numeFisierOutput') ? 'bg-dark text-light error' : "bg-dark text-light"} 
+                                    type="text" value={numeFisierOutput}
                                     onChange={(e) => setNumeFisierOutput(e.target.value)}
                                     id="numeFisierOutput" name="numeFisierOutput" style={{width:'45%'}}/>
                                 </div>
@@ -331,10 +395,12 @@ const PosteazaOProblema = () => {
                                 <label htmlFor="exempleOutput">Exemple output:</label>
                             </div>
                             <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                <input className="bg-dark text-light" type="text" value={exempleInput}
+                                <input className={emptyFields.includes('exempleInput') ? 'bg-dark text-light error' : "bg-dark text-light"}
+                                type="text" value={exempleInput}
                                 onChange={(e) => setExempleInput(e.target.value)}
                                 id="exempleInput" name="exempleInput" style={{width:'45%'}} />
-                                <input className="bg-dark text-light" type="text" value={exempleOutput}
+                                <input className={emptyFields.includes('exempleOutput') ? 'bg-dark text-light error' : "bg-dark text-light"}
+                                type="text" value={exempleOutput}
                                 onChange={(e) => setExempleOutput(e.target.value)}
                                 id="exempleOutput" name="exempleOutput" style={{width:'45%'}}/>
                             </div>
