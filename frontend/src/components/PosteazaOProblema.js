@@ -189,7 +189,7 @@ const PosteazaOProblema = () => {
         dificultate, operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput
         };
 
-        const response = await fetch('/api/probleme/create', {
+        const response = await fetch('https://infocitadeltest.onrender.com/api/probleme/create', {
             method: 'POST',
             body: JSON.stringify(problema),
             headers:{
