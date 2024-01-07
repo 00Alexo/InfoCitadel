@@ -223,9 +223,9 @@ const PosteazaOProblema = () => {
             setInterval(() => {
                 setTimpHome((prevTimpHome) => prevTimpHome - 1);
             }, 1000);
-            // setTimeout(() =>{
-            //     navigate('/home');
-            // }, 10000);
+            setTimeout(() =>{
+                navigate('/home');
+            }, 10000);
         }
     }
     return ( 

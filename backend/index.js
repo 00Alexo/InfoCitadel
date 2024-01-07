@@ -6,6 +6,11 @@ const app = express();
 const bcrypt = require('bcryptjs');
 const collection= require('./models/login.js');
 const problemeRoutes = require('./routes/problemeRoutes.js')
+const cors = require('cors');
+
+app.use(cors({
+  origin: ['http://localhost:3000/', 'https://www.infocitadel.tech', 'https://infocitadel.vercel.app', 'https://infocitadeltest.onrender.com']
+}))
 
 mongoose.connect(process.env.mongoDB)
   .then(() => {
