@@ -514,3 +514,69 @@ select.error {
     height: 692px;
     width: 945px;
 }
+
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .divPostateDeComunitate{
+        width: 765px;
+    }
+
+    .problemaDiv{
+        width: 40rem !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px){
+    .divPostateDeComunitate{
+        width: 585px;
+    }
+
+    .problemaDiv{
+        width: 32rem !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1023px){
+    .divPostateDeComunitate{
+        width: 710px;
+    }
+
+    .problemaDiv{
+        width: 40rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .divPostateDeComunitate{
+        width: 470px;
+    }
+
+    .problemaDiv{
+        width: 27rem !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .divPostateDeComunitate{
+        width: 340px;
+    }
+
+    .problemaDiv{
+        width: 20rem !important;
+    }
+}
+
+
+@media (max-width: 575px){
+    .divPostateDeComunitate{
+        width: 100%;
+    }
+
+    .problemaDiv{
+        width: 90% !important;
+    }
+
+    .filterDiv{
+        display:none
+    }
+}

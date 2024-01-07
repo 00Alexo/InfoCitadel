@@ -9,7 +9,7 @@ const ComunitateAll = () => {
 
     useEffect(() =>{
         const fetchProbleme = async () =>{
-            const response = await fetch('/api/probleme/getAll');
+            const response = await fetch('https://infocitadeltest.onrender.com/api/probleme/getAll');
             const json = await response.json();
 
             if(response.ok){
@@ -50,7 +50,7 @@ const ComunitateAll = () => {
                     </li>
                 </ul>
             </nav>
-            <SimpleBarReact style={{ maxHeight: 645, width: '100%'}} >
+            <SimpleBarReact style={{ maxHeight: 645, width: '100%', overflowX:'hidden'}} >
                         {probleme && probleme.slice((activePage - 1) * 10, activePage * 10).map(problema =>(
                         <div className="mb-4 problemaDiv card shadow bg-dark text-white rounded mx-auto" 
                         style={{width: '50rem', maxHeight:'15rem', minHeight:'10rem'}} key={problema._id}>
@@ -68,7 +68,6 @@ const ComunitateAll = () => {
                                 style={{backgroundColor: '#292E34', height:'2.5rem', padding:'10px', gap:'25px'}}>
                                     <span className="badge bg-primary">{problema.operatii}</span>
                                     <span className="badge bg-success">{problema.dificultate}</span>
-                                    <span className="badge bg-danger">Tag3</span>
                                 </div>
                                 <div>
                                     <p className="card-text mb-2">
