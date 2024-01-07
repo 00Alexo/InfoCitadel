@@ -508,3 +508,9 @@ select.error {
         min-width: 90%;
     }
 }
+
+.divPostateDeComunitate{
+    position: absolute;
+    height: 692px;
+    width: 945px;
+}

@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom'
 import Form from 'react-bootstrap/Form';
 import ProblemeContainer from '../components/ProblemeContainer';
+import ComunitateAll from './comunitateAll';
 
 const ProblemeSelector = () => {
     const {category, subcategory} = useParams();
@@ -13,6 +14,7 @@ const ProblemeSelector = () => {
     return ( 
         <div className="container problemeContainer">
             <ProblemeContainer></ProblemeContainer>
+            <ComunitateAll></ComunitateAll>
             <div className="filterDiv">
                 <div className="filtrareText">
                     <h2>FILTRARE</h2>
@@ -63,7 +65,7 @@ const ProblemeSelector = () => {
                             </Form.Select>
                     </Form>
 
-                    <button style={{marginLeft: '15px', marginTop: '25px'}} type="button" class="btn btn-secondary"> Search </button>
+                    <button style={{marginLeft: '15px', marginTop: '25px'}} type="button" className="btn btn-secondary"> Search </button>
                 </div>
             </div>
         </div>

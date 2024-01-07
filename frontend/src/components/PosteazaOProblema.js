@@ -26,7 +26,7 @@ const PosteazaOProblema = () => {
     const [marginBottom2, setMarginBottom2] = useState('95px')
 
     function handleFisierClick(e) {
-        if (e.target.value === "3") {
+        if (e.target.value === "Fisier") {
             setFisierInput(true);
             setMarginBottom2('7px');
         }else{
@@ -181,13 +181,15 @@ const PosteazaOProblema = () => {
             }
     }
 
+    const [clicked, setClicked] = useState(false);
+
     const handlePosteazaClick = async (e) =>{
         const restrictiiValues = inputList.map(item => item.value);
         const problema = {numeProblema, cerinta, explicatie, dateDeIntrare, dateDeIesire, restrictii: restrictiiValues,
         dificultate, operatii, numeFisierOutput, numeFisierInput, exempleInput, exempleOutput
         };
 
-        const response = await fetch('https://infocitadeltest.onrender.com/api/probleme/create', {
+        const response = await fetch('/api/probleme/create', {
             method: 'POST',
             body: JSON.stringify(problema),
             headers:{
@@ -204,6 +206,7 @@ const PosteazaOProblema = () => {
         }
 
         if(response.ok){
+            setClicked(true);
             setEmptyFields([])
             setError(null);
             eventBus.emit('clearError');
@@ -229,38 +232,37 @@ const PosteazaOProblema = () => {
         }
     }
     return ( 
-        <div class="PosteazaOProblemaDivPrincipal">
+        <div className="PosteazaOProblemaDivPrincipal">
             <SimpleBarReact style={{ maxHeight: 750}}>
-            <div class = "topItems">
-                {/* {error && <div className="error">{error}</div>} */}
+            <div className = "topItems">
                 {pas === 3 || pas === 2 || pas === 1 ? (
-                <div class = "pPosteazadiv"style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
-                    <p class="pPosteaza">POSTEAZA O PROBLEMA</p>
+                <div className = "pPosteazadiv"style={{width: '345px', margin: '0 auto', marginBottom:'40px'}}>
+                    <p className="pPosteaza">POSTEAZA O PROBLEMA</p>
                 </div>
                 ): pas === 'postat' ? 
                 <div style={{width: '470px', margin: '0 auto', marginBottom:'40px'}}>
-                    <p class="pPosteaza">PROBLEMA POSTATA CU SUCCES!</p>
+                    <p className="pPosteaza">PROBLEMA POSTATA CU SUCCES!</p>
                 </div>
                 :<></>}
-                <div class="progress" style={{marginBottom:'10px'}}>
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" 
+                <div className="progress" style={{marginBottom:'10px'}}>
+                    <div className="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" 
                     style={{width: variabile.width}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 {pas === 3 || pas === 2 || pas === 1 ? (
-                <div class="pStep" style={{marginBottom:'40px'}}>
+                <div className="pStep" style={{marginBottom:'40px'}}>
                     <p style={{width:'250px', height: '20px'}}>{variabile.paragraph}</p>
                     <p style={{width:'80px', height: '20px'}}>Pasul {pas}/3</p>
                 </div>
                 ) : pas === 'postat' ? (
                     <div>
-                        <div class="pStep" style={{marginBottom:'40px'}}>
+                        <div className="pStep" style={{marginBottom:'40px'}}>
                             <p style={{width:'250px', height: '20px'}}>Multumim pentru ajutor!</p>
                             <p style={{width:'90px', height: '20px'}}>FINALIZAT</p>
                         </div>
-                        <div class="success-animation">
-                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        <div className="success-animation">
+                            <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                             </svg>
 
                             <div style={{width: '440px', margin: '0 auto', marginTop:'50px'}}>
@@ -367,9 +369,9 @@ const PosteazaOProblema = () => {
                             setOperatii(e.target.value);
                             handleFisierClick(e);
                         }}>
-                            <option value="1"> </option>
-                            <option value="2"> Tastatura/ecran </option>
-                            <option value="3"> Fisier </option>
+                            <option value=""> </option>
+                            <option value="Tastatura/ecran"> Tastatura/ecran </option>
+                            <option value="Fisier"> Fisier </option>
                         </Form.Select>
                         {fisierInput === true ? (
                             <div>
@@ -409,15 +411,15 @@ const PosteazaOProblema = () => {
                 ) : <></>}
                 </form>
             </div>
-            <div class ="bottomItems">
+            <div className ="bottomItems">
                 {pas === 2 || pas === 3 ? (
-                    <button type="button" class="btn btn-dark" onClick={handleBackClick}>BACK</button>
+                    <button type="button" className="btn btn-dark" onClick={handleBackClick}>BACK</button>
                 ) : <></>}
                 {pas === 1 || pas === 2 ? (
-                    <button type="button" class="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handleNextClick}>NEXT</button>
+                    <button type="button" className="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handleNextClick}>NEXT</button>
                 ) : <></>}
                 {pas === 3 ? (
-                    <button type="button" class="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handlePosteazaClick}>POSTEAZA</button>
+                    <button type="button" disable={clicked} className="btn btn-dark" style={{marginLeft: 'auto'}} onClick={handlePosteazaClick}>POSTEAZA</button>
                 ) : <></>}
             </div>
             </SimpleBarReact>

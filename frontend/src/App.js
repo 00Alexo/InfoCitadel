@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import Probleme from './pages/Probleme'
 import PageNotFound from './pages/404'
 import ProblemeSelector from './pages/ProblemeSelector'
+import ProgHistory from './pages/ProgHistory'
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
           <Route 
             path="/home"
             element={<Home />}
+          />
+          <Route 
+            path="/istoria programarii"
+            element={<ProgHistory/>}
           />
           <Route 
             path="/probleme"
